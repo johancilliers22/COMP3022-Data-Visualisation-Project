@@ -2,7 +2,7 @@
   "name": "vast-mc1-vis",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/johancilliers22/COMP3022-Data-Visualisation-Project",
+  "homepage": "/",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
