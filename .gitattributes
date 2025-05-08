@@ -76,6 +76,4 @@ vast-mc1-vis/src/data/neighbourhoods_info.json filter=lfs diff=lfs merge=lfs -te
 vast-mc1-vis/src/data/processed/bsts_results/timeline_data.json filter=lfs diff=lfs merge=lfs -text
 vast-mc1-vis/src/data/mc1-reports-data.json filter=lfs diff=lfs merge=lfs -text
 vast-mc1-vis/src/data/processed/all_summary_aggregated.json filter=lfs diff=lfs merge=lfs -text
-
-# Add prepared_data.csv for LFS tracking
 vast-mc1-vis/src/data/processed/prepared_data.csv filter=lfs diff=lfs merge=lfs -text
