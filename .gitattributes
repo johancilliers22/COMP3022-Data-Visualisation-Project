@@ -73,4 +73,4 @@ vast-mc1-vis/src/data/processed/neighborhood_map.json filter=lfs diff=lfs merge=
 vast-mc1-vis/src/data/neighborhoods.geojson filter=lfs diff=lfs merge=lfs -text
 vast-mc1-vis/src/data/neighbourhoods_info.json filter=lfs diff=lfs merge=lfs -text
 vast-mc1-vis/src/data/processed/bsts_results/summary/all_bsts_results.csv filter=lfs diff=lfs merge=lfs -text
-vast-mc1-vis/src/data/processed/bsts_results/summary/timeline_data.json filter=lfs diff=lfs merge=lfs -text
+vast-mc1-vis/src/data/processed/bsts_results/timeline_data.json filter=lfs diff=lfs merge=lfs -text
