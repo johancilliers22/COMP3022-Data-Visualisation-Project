@@ -1,0 +1,53 @@
+.forecast-chart-container {
+  width: 100%;
+  height: 100%; /* Restore */
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.forecast-chart-area {
+  flex-grow: 1; /* Restore */
+  width: 100%; /* Restore */
+  height: 100%; /* Restore */
+  display: flex;
+  flex-direction: column;
+  /* Remove fixed width/height */
+}
+
+.forecast-chart-loading,
+.forecast-chart-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 5;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.forecast-chart-error p {
+  color: #d9534f;
+  margin-top: 0.5rem;
+}
+
+.forecast-chart-no-data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 100%; */ /* Let container determine height */
+  min-height: 100px; /* Give it some minimum space */
+  color: #6c757d;
+  font-style: italic;
+  padding: 20px;
+  /* position: static; */ /* Revert if needed, but often ok in flex */
+  width: 100%; /* Ensure it takes width */
+  box-sizing: border-box;
+} 

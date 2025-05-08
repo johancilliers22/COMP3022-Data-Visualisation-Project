@@ -1,0 +1,21 @@
+.category-selector {
+  margin-bottom: 15px;
+}
+
+.category-radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.category-radio {
+  min-width: 180px;
+  padding: 8px;
+  background-color: white;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.category-radio:hover {
+  background-color: #f8f9fa;
+} 

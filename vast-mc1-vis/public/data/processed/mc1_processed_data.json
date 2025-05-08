@@ -1,0 +1,367 @@
+{
+  "metadata": {
+    "description": "VAST Challenge 2019 MC1 processed data",
+    "categories": ["buildings", "medical", "power", "roads_and_bridges", "sewer_and_water", "shake_intensity"],
+    "locations": {
+      "Palace Hills": 1,
+      "Northwest": 2,
+      "Old Town": 3,
+      "Safe Town": 4,
+      "Southwest": 5,
+      "Downtown": 6,
+      "Wilson Forest": 7,
+      "Scenic Vista": 8,
+      "Broadview": 9,
+      "Chapparal": 10,
+      "Terrapin Springs": 11,
+      "Pepper Mill": 12,
+      "Cheddarford": 13,
+      "Easton": 14,
+      "Weston": 15,
+      "Southton": 16,
+      "Oak Willow": 17,
+      "East Parton": 18,
+      "West Parton": 19
+    },
+    "timeRange": ["2020-04-06", "2020-04-11"]
+  },
+  "frequencyData": {
+    "buildings": [
+      {
+        "category": "buildings",
+        "rating": 0,
+        "count": 2453
+      },
+      {
+        "category": "buildings",
+        "rating": 1,
+        "count": 5455
+      },
+      {
+        "category": "buildings",
+        "rating": 2,
+        "count": 7464
+      },
+      {
+        "category": "buildings",
+        "rating": 3,
+        "count": 8436
+      },
+      {
+        "category": "buildings",
+        "rating": 4,
+        "count": 10832
+      },
+      {
+        "category": "buildings",
+        "rating": 5,
+        "count": 16778
+      },
+      {
+        "category": "buildings",
+        "rating": 6,
+        "count": 13450
+      },
+      {
+        "category": "buildings",
+        "rating": 7,
+        "count": 9876
+      },
+      {
+        "category": "buildings",
+        "rating": 8,
+        "count": 4740
+      },
+      {
+        "category": "buildings",
+        "rating": 9,
+        "count": 1543
+      },
+      {
+        "category": "buildings",
+        "rating": 10,
+        "count": 1873
+      }
+    ],
+    "medical": [
+      {
+        "category": "medical",
+        "rating": 0,
+        "count": 1467
+      },
+      {
+        "category": "medical",
+        "rating": 1,
+        "count": 1987
+      },
+      {
+        "category": "medical",
+        "rating": 2,
+        "count": 2436
+      },
+      {
+        "category": "medical",
+        "rating": 3,
+        "count": 2634
+      },
+      {
+        "category": "medical",
+        "rating": 4,
+        "count": 3976
+      },
+      {
+        "category": "medical",
+        "rating": 5,
+        "count": 4647
+      },
+      {
+        "category": "medical",
+        "rating": 6,
+        "count": 4602
+      },
+      {
+        "category": "medical",
+        "rating": 7,
+        "count": 7271
+      },
+      {
+        "category": "medical",
+        "rating": 8,
+        "count": 3621
+      },
+      {
+        "category": "medical",
+        "rating": 9,
+        "count": 1615
+      },
+      {
+        "category": "medical",
+        "rating": 10,
+        "count": 1373
+      }
+    ],
+    "power": [
+      {
+        "category": "power",
+        "rating": 0,
+        "count": 3327
+      },
+      {
+        "category": "power",
+        "rating": 1,
+        "count": 3954
+      },
+      {
+        "category": "power",
+        "rating": 2,
+        "count": 5192
+      },
+      {
+        "category": "power",
+        "rating": 3,
+        "count": 6204
+      },
+      {
+        "category": "power",
+        "rating": 4,
+        "count": 6005
+      },
+      {
+        "category": "power",
+        "rating": 5,
+        "count": 6340
+      },
+      {
+        "category": "power",
+        "rating": 6,
+        "count": 8302
+      },
+      {
+        "category": "power",
+        "rating": 7,
+        "count": 13382
+      },
+      {
+        "category": "power",
+        "rating": 8,
+        "count": 11988
+      },
+      {
+        "category": "power",
+        "rating": 9,
+        "count": 9631
+      },
+      {
+        "category": "power",
+        "rating": 10,
+        "count": 8745
+      }
+    ],
+    "roads_and_bridges": [
+      {
+        "category": "roads_and_bridges",
+        "rating": 0,
+        "count": 2018
+      },
+      {
+        "category": "roads_and_bridges",
+        "rating": 1,
+        "count": 2481
+      },
+      {
+        "category": "roads_and_bridges",
+        "rating": 2,
+        "count": 4371
+      },
+      {
+        "category": "roads_and_bridges",
+        "rating": 3,
+        "count": 6737
+      },
+      {
+        "category": "roads_and_bridges",
+        "rating": 4,
+        "count": 9933
+      },
+      {
+        "category": "roads_and_bridges",
+        "rating": 5,
+        "count": 12188
+      },
+      {
+        "category": "roads_and_bridges",
+        "rating": 6,
+        "count": 13120
+      },
+      {
+        "category": "roads_and_bridges",
+        "rating": 7,
+        "count": 11973
+      },
+      {
+        "category": "roads_and_bridges",
+        "rating": 8,
+        "count": 7211
+      },
+      {
+        "category": "roads_and_bridges",
+        "rating": 9,
+        "count": 5610
+      },
+      {
+        "category": "roads_and_bridges",
+        "rating": 10,
+        "count": 7428
+      }
+    ],
+    "sewer_and_water": [
+      {
+        "category": "sewer_and_water",
+        "rating": 0,
+        "count": 3481
+      },
+      {
+        "category": "sewer_and_water",
+        "rating": 1,
+        "count": 3251
+      },
+      {
+        "category": "sewer_and_water",
+        "rating": 2,
+        "count": 6071
+      },
+      {
+        "category": "sewer_and_water",
+        "rating": 3,
+        "count": 10064
+      },
+      {
+        "category": "sewer_and_water",
+        "rating": 4,
+        "count": 6300
+      },
+      {
+        "category": "sewer_and_water",
+        "rating": 5,
+        "count": 5916
+      },
+      {
+        "category": "sewer_and_water",
+        "rating": 6,
+        "count": 11997
+      },
+      {
+        "category": "sewer_and_water",
+        "rating": 7,
+        "count": 12350
+      },
+      {
+        "category": "sewer_and_water",
+        "rating": 8,
+        "count": 8725
+      },
+      {
+        "category": "sewer_and_water",
+        "rating": 9,
+        "count": 7729
+      },
+      {
+        "category": "sewer_and_water",
+        "rating": 10,
+        "count": 7015
+      }
+    ],
+    "shake_intensity": [
+      {
+        "category": "shake_intensity",
+        "rating": 0,
+        "count": 9519
+      },
+      {
+        "category": "shake_intensity",
+        "rating": 1,
+        "count": 13176
+      },
+      {
+        "category": "shake_intensity",
+        "rating": 2,
+        "count": 14878
+      },
+      {
+        "category": "shake_intensity",
+        "rating": 3,
+        "count": 10518
+      },
+      {
+        "category": "shake_intensity",
+        "rating": 4,
+        "count": 7954
+      },
+      {
+        "category": "shake_intensity",
+        "rating": 5,
+        "count": 7326
+      },
+      {
+        "category": "shake_intensity",
+        "rating": 6,
+        "count": 5670
+      },
+      {
+        "category": "shake_intensity",
+        "rating": 7,
+        "count": 1765
+      },
+      {
+        "category": "shake_intensity",
+        "rating": 8,
+        "count": 118
+      },
+      {
+        "category": "shake_intensity",
+        "rating": 9,
+        "count": 2
+      }
+    ]
+  }
+}

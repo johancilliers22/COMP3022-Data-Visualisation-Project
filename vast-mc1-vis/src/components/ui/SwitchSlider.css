@@ -1,0 +1,11 @@
+.switch-slider {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.switch-text {
+  margin-left: 10px;
+  color: #333;
+  font-size: 0.9rem;
+} 

@@ -1,0 +1,904 @@
+/* Reset box-sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* General styling */
+:root {
+  --primary-color: #2196f3;
+  --primary-dark: #1976d2;
+  --secondary-color: #ff9800;
+  --text-color: #333;
+  --text-light: #666;
+  --border-color: #e0e0e0;
+  --card-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  --sidebar-width: 280px;
+  --sidebar-collapsed-width: 50px;
+  --header-height: 60px;
+  --footer-height: 40px;
+  --transition-speed: 0.3s;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  background-color: #f8f9fa;
+  line-height: 1.5;
+  overflow: hidden;
+  height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  font-weight: 500;
+}
+
+/* Dashboard Layout */
+.dashboard-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Header styling */
+.app-header {
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--card-shadow);
+  z-index: 10;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.app-header p {
+  margin: 0;
+  color: var(--text-light);
+  font-size: 0.85rem;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--text-light);
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.sidebar-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: var(--primary-color);
+}
+
+/* Main content area */
+.dashboard-main {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden; /* Prevent unwanted scrollbars on main area */
+}
+
+/* Sidebar styling */
+.dashboard-sidebar {
+  width: 320px; /* Default width for the sidebar */
+  flex-shrink: 0;
+  background-color: var(--sidebar-bg);
+  padding: 1rem;
+  overflow-y: auto;
+  transition: width 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+  border-right: 1px solid var(--border-color);
+}
+
+.dashboard-sidebar.collapsed {
+  width: 0;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.sidebar-content {
+  padding: 0.75rem;
+  min-width: var(--sidebar-width);
+}
+
+.dashboard-sidebar.collapsed .sidebar-content {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Filter card */
+.filter-card, .neighborhood-card {
+  margin-bottom: 0.75rem;
+  border: none;
+  box-shadow: var(--card-shadow);
+}
+
+.card-header {
+  background-color: #f9f9f9;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Main content */
+.dashboard-content {
+  flex-grow: 1;
+  padding: 1rem; /* Padding around the main content area */
+  overflow-y: auto; /* Allow scrolling for content taller than the viewport */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Consistent gap between content rows */
+}
+
+/* Content rows and columns */
+.content-row {
+  display: flex;
+  flex-direction: column; /* Default for rows unless specified */
+  gap: 1rem;
+  /* border: 1px dashed blue; */ /* For debugging row boundaries */
+}
+
+.controls-row {
+  flex-shrink: 0; /* Ensure timeline doesn't get squashed */
+  position: relative; /* For z-index stacking */
+  z-index: 10;      /* Ensure it's above the map row if any overlap quirks */
+}
+
+.content-column {
+  display: flex;
+  flex-direction: column; /* Default for columns */
+  flex-basis: 50%; /* Default for two columns */
+  min-width: 0; /* Important for flex shrinking */
+}
+
+/* Make map row taller */
+.map-row {
+  flex: 0 0 auto;
+}
+
+.map-column {
+  flex-grow: 1; /* Map column takes up remaining space */
+  display: flex;
+  flex-direction: column; /* Ensure card inside takes full height */
+  transition: width 0.3s ease, flex-basis 0.3s ease; /* Smooth transition */
+  min-width: 0; /* Allow map to shrink if needed */
+}
+
+.map-column.full-width {
+  flex-basis: 100%;
+  width: 100%;
+}
+
+.insights-column {
+  flex-basis: 300px; /* Fixed width for insights panel */
+  flex-shrink: 0;    /* Prevent insights panel from shrinking */
+  display: flex;      /* To allow the card inside to behave correctly */
+  flex-direction: column;
+  transition: flex-basis 0.3s ease, width 0.3s ease, opacity 0.3s ease, padding 0.3s ease, margin 0.3s ease;
+  overflow: hidden; /* Essential for the collapsing animation */
+  margin-left: 1rem; /* Add a gap when visible */
+}
+
+.insights-column.collapsed {
+  flex-basis: 0;
+  width: 0;
+  opacity: 0;
+  padding: 0;
+  margin-left: 0; /* No gap when collapsed */
+  overflow: hidden; /* Ensure content is clipped when collapsed */
+}
+
+.insights-column .insights-panel-card {
+  flex-grow: 1; /* Allow card to fill the column height */
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* If insights content is too long */
+}
+
+/* Map section */
+.map-card {
+  margin-bottom: 0;
+  box-shadow: var(--card-shadow);
+  border: none;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.map-container {
+  flex-grow: 1;
+  position: relative; /* Important for ECharts sizing */
+  min-height: 400px; /* Or adjust as needed - this acts as a minimum */
+  display: flex; /* To ensure chart inside can also flex/grow if needed */
+}
+
+.map-container > div /* Target the ECharts div or similar */ {
+  flex-grow: 1; /* Make the actual chart container take up space */
+  width: 100%;
+  height: 100%;
+}
+
+/* Timeline controls */
+.timeline-card {
+  margin-bottom: 0;
+  box-shadow: var(--card-shadow);
+  border: none;
+}
+
+/* Make TimeControls card body thinner */
+.timeline-card .card-body {
+  padding: 0.25rem 0.5rem; /* Further reduced padding, adjust if too tight or rely on TimeControls.css */
+}
+
+/* Charts section */
+.charts-row {
+  flex-direction: row; /* Keep charts side-by-side */
+  flex-wrap: nowrap; /* Prevent wrapping by default */
+  flex-shrink: 0; /* Ensure bottom charts row doesn't get squashed */
+  /* border: 1px dashed green; */ /* For debugging row boundaries */
+}
+
+.chart-card {
+  height: auto;
+  flex-grow: 1;
+  box-shadow: var(--card-shadow);
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-card .card-body {
+  flex: 1;
+  padding: 0;
+  overflow: hidden;
+}
+
+.chart-container {
+  width: 100%;
+  height: 100%;
+  min-height: 300px; /* Default minimum height for charts */
+  display: flex;
+  flex-direction: column;
+  position: relative; /* For loading/error overlays */
+  overflow: hidden;
+}
+
+/* Styles for the new full heatmap chart */
+.chart-card.full-heatmap-card {
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: auto !important;
+}
+
+.full-heatmap-card .card-body {
+  flex: 1;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.full-heatmap {
+  flex: 1;
+  padding: 0;
+  position: relative;
+}
+
+/* Ensure the heatmap axis labels are readable */
+.full-heatmap .vega-embed .mark-text text {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 12px;
+}
+
+.full-heatmap .vega-embed .axis text {
+  font-size: 12px;
+  fill: #333;
+}
+
+.full-heatmap .vega-embed .axis-title text {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.tall-chart-container {
+  flex: 1; /* Similar to .full-heatmap */
+  min-height: 300px; 
+  max-height: 100%;
+  overflow-y: auto; 
+  position: relative; 
+}
+
+/* Ensure Vega chart itself takes up the space of its direct container */
+.chart-container > .chart-area {
+  width: 100%;
+  height: 100%;
+  min-height: 300px; /* Keep a min-height for the chart drawing area */
+}
+
+/* Footer styling */
+.app-footer {
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  border-top: 1px solid var(--border-color);
+  height: var(--footer-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.app-footer p {
+  margin: 0;
+}
+
+/* Loading and error containers */
+.loading-container, .error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 2rem;
+}
+
+.loading-container p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.loading-container small {
+  color: var(--text-light);
+  margin-top: 0.5rem;
+}
+
+.error-container h3 {
+  color: #d9534f;
+  margin-bottom: 1rem;
+}
+
+/* Loading placeholder for charts */
+.loading-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+/* Info button */
+.info-button {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  background-color: var(--primary-color);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border: none;
+  font-size: 1.2rem;
+  z-index: 1000;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.info-button:hover {
+  background-color: var(--primary-dark);
+}
+
+/* StatsPanel styling */
+.stats-container {
+  font-size: 0.9rem;
+}
+
+.stats-container .stat-item {
+  margin-bottom: 0.75rem;
+}
+
+.stats-container .stat-label {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.stats-container .damage-level {
+  display: flex;
+  align-items: center;
+}
+
+.stats-container .damage-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .content-row.charts-row {
+    flex-direction: column;
+  }
+  
+  .chart-card {
+    height: 300px;
+  }
+  
+  .map-card {
+    height: 400px;
+  }
+  
+  .map-container {
+    height: calc(400px - 41px);
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-sidebar {
+    position: fixed;
+    top: var(--header-height);
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    transform: translateX(0);
+    transition: transform var(--transition-speed) ease;
+  }
+  
+  .dashboard-sidebar.collapsed {
+    transform: translateX(-100%);
+    width: var(--sidebar-width);
+  }
+  
+  .dashboard-sidebar.collapsed .sidebar-content {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .map-card {
+    height: 350px;
+  }
+  
+  .map-container {
+    height: calc(350px - 41px);
+  }
+  
+  .app-header h1 {
+    font-size: 1.1rem;
+  }
+  
+  .chart-card {
+    height: 250px;
+  }
+}
+
+/* General styles */
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 15px;
+  background-color: #f8f9fa;
+}
+
+/* Header styles */
+.header {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.header h1 {
+  margin-bottom: 5px;
+  font-size: 1.8rem;
+}
+
+.header p {
+  margin-bottom: 0;
+  color: #6c757d;
+}
+
+/* Panel styles */
+.panel {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.panel h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controls-panel {
+  height: 100%;
+}
+
+.visualization-panel {
+  height: 600px;
+}
+
+.map-wrapper {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Map toggle styles */
+.map-toggle {
+  margin-left: auto;
+}
+
+/* Loading and error states */
+.loading-container, .error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 400px;
+}
+
+.loading-container p {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.error-container {
+  color: #721c24;
+}
+
+.error-container button {
+  margin-top: 15px;
+}
+
+/* Time indicator */
+.time-indicator {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-left: 15px;
+}
+
+/* Selected neighborhood indicator */
+.selected-neighborhood-indicator {
+  font-size: 0.9rem;
+  margin-left: 10px;
+  color: #28a745;
+  font-weight: normal;
+}
+
+/* Bootstrap icons (for timeline controls) */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+/* Main content layout */
+.main-content {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.charts-row {
+  margin-bottom: 20px;
+}
+
+/* Footer styles */
+.footer {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid #dee2e6;
+  text-align: center;
+  color: #6c757d;
+  font-size: 0.9em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .panel {
+    padding: 15px;
+  }
+  
+  .controls-panel, .map-container {
+    margin-bottom: 15px;
+  }
+}
+
+/* Visualization specific styles */
+.time-series-chart {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+}
+
+.map-visualization, .enhanced-map-visualization {
+  width: 100%;
+  height: 380px;
+}
+
+/* Enhanced map visualization adjustments */
+.map-container .panel {
+  min-height: 450px;
+  overflow: hidden;
+}
+
+/* Map toggle navigation */
+.map-toggle .nav-link {
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px 4px 0 0;
+}
+
+.map-toggle .nav-link.active {
+  font-weight: 600;
+}
+
+/* Vega map visualization */
+.vega-map-visualization {
+  width: 100%;
+  height: 100%;
+}
+
+/* Vega specific containers */
+.vega-container {
+  width: 100%;
+  height: 100%;
+  background-color: #f8f9fa;
+}
+
+/* VSUP color legend */
+.color-legend {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.legend-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.color-sample {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+}
+
+.legend-label {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+/* Enhanced map legend and control styles (for in-panel use) */
+.enhanced-map-visualization .controls-container {
+  border-left: 1px solid #e9ecef;
+  background-color: #fff;
+}
+
+.enhanced-map-visualization .map-controls,
+.enhanced-map-visualization .map-legend {
+  box-shadow: none;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+/* Popup styling */
+.leaflet-popup-content-wrapper {
+  border-radius: 4px;
+}
+
+.leaflet-popup-content {
+  margin: 10px 12px;
+  line-height: 1.3;
+}
+
+.neighborhood-popup h4 {
+  color: #343a40;
+}
+
+/* Custom facility icons */
+.hospital-icon img {
+  filter: hue-rotate(230deg) saturate(1.5);
+}
+
+.nuclear-icon img {
+  filter: hue-rotate(90deg) saturate(1.5);
+}
+
+/* Neighborhood label adjustments */
+.neighborhood-label {
+  box-shadow: none !important;
+  font-weight: 600 !important;
+}
+
+/* Ensure the map container has proper height */
+.visualization-panel .panel {
+  height: calc(100% - 20px);
+  display: flex;
+  flex-direction: column;
+}
+
+.visualization-panel .panel h3 {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.visualization-panel .panel .map-wrapper {
+  flex: 1;
+  min-height: 400px;
+}
+
+/* Chart toggle styles */
+.chart-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 5;
+  font-size: 0.85rem;
+}
+
+.chart-toggle .nav-link {
+  padding: 0.3rem 0.8rem;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  color: #444;
+}
+
+.chart-toggle .nav-link.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #006be0;
+}
+
+/* New style for the category comparison chart card */
+.category-comparison-chart-card {
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* New styles for map and insights panel layout */
+.map-and-insights-row {
+  flex-direction: row; /* Override to row for side-by-side items */
+  flex-grow: 1; /* Allow this row to take available vertical space */
+  min-height: 680px; /* INCREASED: Make this row taller. Was 550px */
+  align-items: stretch; /* Explicitly make columns same height as row */
+  position: relative; /* Establish stacking context */
+  z-index: 5; /* Lower z-index than controls-row */
+  overflow: hidden; /* Prevent children from overflowing and causing issues */
+  /* border: 1px dashed red; */ /* For debugging row boundaries */
+}
+
+.map-column {
+  flex-grow: 1; /* Map column takes up remaining space */
+  display: flex;
+  flex-direction: column; /* Ensure card inside takes full height */
+  transition: width 0.3s ease, flex-basis 0.3s ease; /* Smooth transition */
+  min-width: 0; /* Allow map to shrink if needed */
+}
+
+.map-column.full-width {
+  flex-basis: 100%;
+  width: 100%;
+}
+
+.insights-column {
+  flex-basis: 300px; /* Fixed width for insights panel */
+  flex-shrink: 0;    /* Prevent insights panel from shrinking */
+  display: flex;      /* To allow the card inside to behave correctly */
+  flex-direction: column;
+  transition: flex-basis 0.3s ease, width 0.3s ease, opacity 0.3s ease, padding 0.3s ease, margin 0.3s ease;
+  overflow: hidden; /* Essential for the collapsing animation */
+  margin-left: 1rem; /* Add a gap when visible */
+}
+
+.insights-column.collapsed {
+  flex-basis: 0;
+  width: 0;
+  opacity: 0;
+  padding: 0;
+  margin-left: 0; /* No gap when collapsed */
+  overflow: hidden; /* Ensure content is clipped when collapsed */
+}
+
+.map-column .card .card-body,
+.insights-column .card .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Prevent card body from causing unexpected scroll if content doesn't manage its own scroll */
+  padding: 0; /* Map card body often has no padding for the map to fill edge-to-edge */
+}
+
+.map-card .card-body {
+  /* Ensure no padding if map needs to go edge to edge */
+  padding: 0 !important; 
+}
+
+/* For insights panel, we defined specific padding in its own CSS, but ensure its card-body can grow */
+.insights-column .insights-panel-card .card-body {
+  padding: 1rem; /* Restore padding if it was overridden by the general rule above, or manage in InsightsPanel.css */
+  overflow-y: auto; /* Allow scrolling for insights content */
+  flex-grow: 1; /* Ensure it can grow */
+  display: flex; /* Ensure it behaves as a flex container if its children need to flex */
+  flex-direction: column; /* Stack children vertically */
+}
+
+/* Styling for the new Forecast Chart Row */
+.forecast-chart-row {
+  flex-shrink: 0; /* Prevent it from being squashed */
+}
+
+.forecast-card .card-body {
+  /* Ensure the forecast chart has enough space and its container behaves as expected */
+  flex-grow: 1;
+  display: flex; /* For the ForecastChart component itself to fill if needed */
+  overflow: hidden; /* To contain the chart properly */
+}
+
+.forecast-card .chart-container, /* If ForecastChart wraps its content in a .chart-container */
+.forecast-card .forecast-chart-container {
+  min-height: 300px; /* Ensure a minimum height for the forecast chart */
+  height: 100%; /* Try to take up card body height */
+}

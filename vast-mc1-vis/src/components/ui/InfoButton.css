@@ -1,0 +1,95 @@
+.info-button {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  background-color: var(--primary-color);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border: none;
+  font-size: 1.25rem;
+  z-index: 1000;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.info-button:hover {
+  background-color: var(--primary-dark);
+}
+
+/* Modal styling */
+.modal-content {
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  border-bottom: 1px solid #eee;
+  background-color: #f8f9fa;
+  border-radius: 8px 8px 0 0;
+}
+
+.modal-body h5 {
+  color: var(--primary-color);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.modal-body h5:first-child {
+  margin-top: 0;
+}
+
+.modal-body p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.modal-body ul {
+  font-size: 0.9rem;
+  color: #555;
+  padding-left: 1.5rem;
+}
+
+.modal-body li {
+  margin-bottom: 0.5rem;
+}
+
+.modal-footer {
+  border-top: 1px solid #eee;
+  padding: 0.75rem 1rem;
+}
+
+.table-container {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.about-link {
+  color: #526488;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+#info-popover {
+  max-width: none;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .info-button {
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  #info-popover {
+    max-width: 90vw;
+  }
+} 

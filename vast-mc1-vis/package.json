@@ -1,0 +1,59 @@
+{
+  "name": "vast-mc1-vis",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://github.com/johancilliers22/COMP3022-Data-Visualisation-Project",
+  "dependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^14.1.2",
+    "@testing-library/user-event": "^14.4.3",
+    "antd": "^4.24.15",
+    "bootstrap": "^5.3.5",
+    "bootstrap-icons": "^1.11.3",
+    "d3": "^7.9.0",
+    "echarts": "^5.6.0",
+    "echarts-for-react": "^3.0.2",
+    "leaflet": "^1.9.4",
+    "papaparse": "^5.5.2",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.10.9",
+    "react-bootstrap-icons": "^1.11.3",
+    "react-dom": "^18.2.0",
+    "react-leaflet": "^4.2.1",
+    "react-scripts": "5.0.1",
+    "vega": "^5.33.0",
+    "vega-embed": "^6.29.0",
+    "vega-lite": "^5.23.0",
+    "vega-tooltip": "^0.33.0",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "gh-pages": "^6.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "lint": "eslint src/**/*.{js,jsx}",
+    "lint:fix": "eslint src/**/*.{js,jsx} --fix",
+    "optimize": "node src/utils/install-optimizations.js",
+    "build:optimized": "npm run optimize && npm run build"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

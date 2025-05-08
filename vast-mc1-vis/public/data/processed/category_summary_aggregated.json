@@ -1,0 +1,56 @@
+[
+  {
+    "category": "buildings",
+    "categoryName": "Buildings",
+    "averageMapValue": 5.5224,
+    "averageCIR": 1.6682,
+    "averageLowerCI95": 4.7251,
+    "averageUpperCI95": 6.3933,
+    "contributingLocations": 18
+  },
+  {
+    "category": "medical",
+    "categoryName": "Medical",
+    "averageMapValue": 5.0962,
+    "averageCIR": 2.4507,
+    "averageLowerCI95": 3.8343,
+    "averageUpperCI95": 6.285,
+    "contributingLocations": 18
+  },
+  {
+    "category": "power",
+    "categoryName": "Power",
+    "averageMapValue": 5.3645,
+    "averageCIR": 1.9573,
+    "averageLowerCI95": 4.3651,
+    "averageUpperCI95": 6.3225,
+    "contributingLocations": 19
+  },
+  {
+    "category": "roads_and_bridges",
+    "categoryName": "Roads & Bridges",
+    "averageMapValue": 5.2593,
+    "averageCIR": 1.5483,
+    "averageLowerCI95": 4.4621,
+    "averageUpperCI95": 6.0104,
+    "contributingLocations": 19
+  },
+  {
+    "category": "sewer_and_water",
+    "categoryName": "Sewer & Water",
+    "averageMapValue": 5.2022,
+    "averageCIR": 1.8785,
+    "averageLowerCI95": 4.2991,
+    "averageUpperCI95": 6.1775,
+    "contributingLocations": 18
+  },
+  {
+    "category": "shake_intensity",
+    "categoryName": "Shake Intensity",
+    "averageMapValue": 0.9333,
+    "averageCIR": 1.1732,
+    "averageLowerCI95": 0.4151,
+    "averageUpperCI95": 1.5882,
+    "contributingLocations": 19
+  }
+]

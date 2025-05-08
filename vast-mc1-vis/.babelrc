@@ -1,0 +1,10 @@
+{
+  "env": {
+    "production": {
+      "plugins": [
+        /* Temporarily comment this out to fix parsing errors */
+        /* "transform-remove-console" */
+      ]
+    }
+  }
+} 

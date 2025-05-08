@@ -1,0 +1,78 @@
+[
+  {
+    "id": 1,
+    "name": "Palace Hills"
+  },
+  {
+    "id": 2,
+    "name": "Northwest"
+  },
+  {
+    "id": 3,
+    "name": "Old Town"
+  },
+  {
+    "id": 4,
+    "name": "Safe Town"
+  },
+  {
+    "id": 5,
+    "name": "Southwest"
+  },
+  {
+    "id": 6,
+    "name": "Downtown"
+  },
+  {
+    "id": 7,
+    "name": "Wilson Forest"
+  },
+  {
+    "id": 8,
+    "name": "Scenic Vista"
+  },
+  {
+    "id": 9,
+    "name": "Broadview"
+  },
+  {
+    "id": 10,
+    "name": "Chapparal"
+  },
+  {
+    "id": 11,
+    "name": "Terrapin Springs"
+  },
+  {
+    "id": 12,
+    "name": "Pepper Mill"
+  },
+  {
+    "id": 13,
+    "name": "Cheddarford"
+  },
+  {
+    "id": 14,
+    "name": "Easton"
+  },
+  {
+    "id": 15,
+    "name": "Weston"
+  },
+  {
+    "id": 16,
+    "name": "Southton"
+  },
+  {
+    "id": 17,
+    "name": "Oak Willow"
+  },
+  {
+    "id": 18,
+    "name": "East Parton"
+  },
+  {
+    "id": 19,
+    "name": "West Parton"
+  }
+]

@@ -1,0 +1,125 @@
+.stats-container {
+  width: 100%;
+}
+
+.stats-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.stats-header h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.stats-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stat-item {
+  padding: 0.5rem;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.stat-label {
+  font-weight: 500;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+  color: #555;
+}
+
+.damage-bar {
+  margin-bottom: 0.25rem;
+}
+
+/* Renamed from .damage-level and updated */
+.damage-details {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: space-between; /* Space out value/CI and certainty */
+  align-items: center;
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.25rem; /* Add a little space above details */
+}
+
+/* Styles for the container of indicator, value, and CI */
+.damage-value-ci {
+  display: flex;
+  align-items: center;
+  flex-grow: 1; /* Allow this part to take available space */
+  margin-right: 0.5rem; /* Space before certainty text */
+}
+
+.damage-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the CI text */
+.ci-text {
+  margin-left: 0.35rem;
+  font-size: 0.75rem; /* Slightly smaller */
+  color: #777;
+}
+
+/* Styles for the certainty percentage text */
+.certainty-text {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #555;
+  white-space: nowrap; /* Prevent wrapping of "Cert: xx%" */
+}
+
+.stats-panel-empty {
+  padding: 1rem;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+/* Custom progress bar styles */
+.damage-bar .progress {
+  height: 8px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.damage-bar .progress-bar {
+  transition: width 0.5s ease;
+}
+
+/* Style based on category */
+.stat-item[data-category="shake_intensity"] .damage-indicator {
+  background-color: #3498db;
+}
+
+.stat-item[data-category="buildings"] .damage-indicator {
+  background-color: #9b59b6;
+}
+
+.stat-item[data-category="power"] .damage-indicator {
+  background-color: #f39c12;
+}
+
+.stat-item[data-category="roads_and_bridges"] .damage-indicator {
+  background-color: #2ecc71;
+}
+
+.stat-item[data-category="medical"] .damage-indicator {
+  background-color: #e74c3c;
+}
+
+.stat-item[data-category="sewer_and_water"] .damage-indicator {
+  background-color: #1abc9c;
+} 

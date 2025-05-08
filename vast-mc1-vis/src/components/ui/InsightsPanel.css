@@ -1,0 +1,139 @@
+.insights-panel-card {
+  margin-bottom: 1rem;
+  background-color: #f8f9fa; /* Light background for the card */
+  border: 1px solid #dee2e6; /* Standard border */
+}
+
+.insights-panel-card .card-header {
+  background-color: #e9ecef; /* Slightly darker header */
+  border-bottom: 1px solid #dee2e6;
+  padding: 0.5rem 1rem;
+}
+
+.insights-panel-card .card-header h4 {
+  margin-bottom: 0;
+  font-size: 1.1rem; /* Slightly smaller header text */
+  color: #495057; /* Darker text for header */
+}
+
+.insights-panel-card .card-body {
+  padding: 1rem;
+  font-size: 0.9rem; /* Adjust body font size */
+}
+
+.insights-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.insights-list li {
+  margin-bottom: 0.75rem; /* Spacing between list items */
+  display: flex;
+  align-items: center; /* Align icon and text */
+}
+
+.insights-list li:last-child {
+  margin-bottom: 0;
+}
+
+.insights-list span[role="img"] {
+  margin-right: 0.75rem; /* Space after icon */
+  font-size: 1.2em; /* Slightly larger icons */
+  color: #007bff; /* Primary color for icons, or choose specific colors */
+}
+
+.insights-list strong {
+  color: #343a40; /* Darker text for strong elements */
+}
+
+/* Loading and Error States */
+.loading-insights,
+.error-insights {
+  text-align: center;
+  color: #6c757d; /* Muted text color */
+}
+
+.loading-insights .spinner-border {
+  margin-right: 0.5rem;
+}
+
+.error-insights p {
+  color: #dc3545; /* Danger color for error text */
+  margin-bottom: 0;
+}
+
+/* Certainty Breakdown Styling */
+.certainty-breakdown {
+  margin-left: 0.5rem;
+  font-weight: 500;
+}
+
+.certainty-breakdown .cert-high {
+  color: #28a745; /* Green for high certainty */
+  margin-right: 0.5rem;
+}
+
+.certainty-breakdown .cert-medium {
+  color: #ffc107; /* Yellow for medium certainty */
+  margin-right: 0.5rem;
+}
+
+.certainty-breakdown .cert-low {
+  color: #dc3545; /* Red for low certainty */
+}
+
+/* Event Flag Styling */
+.event-flag {
+  margin-left: 0.75rem;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 0.25rem;
+  background-color: #6c757d; /* Default badge background */
+  color: white;
+  white-space: nowrap;
+}
+
+/* Specific event flag styling can be added here if needed, e.g.: */
+/*
+.event-flag.quake {
+  background-color: #ffc107;
+  color: #333;
+}
+*/
+
+/* Reliability Highlights Section */
+.reliability-highlight-section {
+  /* Add some top margin if it feels too close to the item above */
+  margin-top: 8px;
+}
+
+.reliability-header {
+  margin-bottom: 4px; /* Space between header and the lists */
+}
+
+.reliable-list {
+  padding-left: 22px; /* Indent under the shield icon + a bit more */
+  margin-bottom: 3px; /* Small space between most/least reliable lists */
+  font-size: 0.9em; /* Slightly smaller text for the lists */
+}
+
+.reliability-label {
+  font-weight: 500; /* Make "Most Reliable:" bold */
+  margin-right: 5px;
+}
+
+.reliability-values {
+  /* Allow values to wrap if they are very long */
+  display: inline; /* Or block if you want them on a new line always */
+  word-break: break-word; /* Help with long strings of names */
+}
+
+.most-reliable .reliability-label {
+  color: #28a745; /* Green for reliable */
+}
+
+.least-reliable .reliability-label {
+  color: #dc3545; /* Red for less reliable */
+} 

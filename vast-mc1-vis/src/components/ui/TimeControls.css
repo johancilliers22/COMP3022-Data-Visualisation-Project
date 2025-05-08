@@ -1,0 +1,162 @@
+.timeline-controls {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.8rem;
+  max-height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.2rem;
+  flex-shrink: 0;
+}
+
+.current-time {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.time-label {
+  font-weight: 500;
+  color: #555;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.progress-text {
+  color: #777;
+  font-size: 0.75rem;
+  background: #f0f0f0;
+  padding: 0.1rem 0.3rem;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+.event-badge {
+  font-size: 0.7rem;
+  font-weight: normal;
+  padding: 0.15rem 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  white-space: nowrap;
+}
+
+.timeline-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  flex-shrink: 0;
+}
+
+.time-range {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.time-start, .time-end {
+  font-size: 0.7rem;
+  color: #555;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.time-slider-container {
+  flex: 1;
+  min-width: 120px;
+  padding: 0.2rem 0;
+}
+
+.time-slider {
+  height: 0.4rem;
+  margin: 0.1rem 0;
+}
+
+.timeline-controls-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+}
+
+.control-buttons,
+.events-buttons {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.control-buttons .btn,
+.events-buttons .btn {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+
+.events-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
+.event-button {
+  white-space: nowrap;
+}
+
+.speed-button {
+}
+
+/* Custom styling for form elements */
+.time-slider-container .form-range {
+  height: 0.4rem;
+  padding: 0;
+  margin: 0.2rem 0;
+}
+
+.time-slider-container .form-range::-webkit-slider-thumb {
+  height: 0.9rem;
+  width: 0.9rem;
+}
+
+.time-slider-container .form-range::-moz-range-thumb {
+  height: 0.9rem;
+  width: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .timeline-controls {
+    max-height: none;
+  }
+  .timeline-header .current-time {
+    flex-wrap: wrap;
+  }
+  .timeline-controls-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .events-buttons {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .control-buttons {
+    justify-content: space-around;
+    width: 100%;
+  }
+} 
