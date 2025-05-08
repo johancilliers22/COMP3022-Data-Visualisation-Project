@@ -1,11 +1,13 @@
 # Visual Analytics for Earthquake Damage in St. Himark: A COMP3022 Report
 
-**Group Name/Number:** `[Insert Group Name/Number]`
-**Date:** 7 May 2025
-**Authors:** `[Insert Author Names, e.g., Student Name 1 (ID: 123456), Student Name 2 (ID: 654321), ...]`
+**Course:** COMP3022 - Data Visualisation Project
+**Term:** Third Year, Spring Term
+**University:** University of Nottingham, Computer Science
+**Group Name/Number:** Group 16 (Solo Project)
+**Date:** 08/05/2025 (Submitted: 08/05/2025, Due: 07/05/2025)
+**Author:** Johannes Cilliers (University ID: 20228856, Username: psyjc20)
 
-**GitHub Repository:** `[Insert GitHub Repository URL, e.g., https://github.com/user/repo]`
-**Live Application URL:** `[Insert Live Application URL (e.g., GitHub Pages, Vercel) or N/A]`
+**GitHub Repository:** https://github.com/johancilliers22/COMP3022-Data-Visualisation-Project
 **Key Runtime Requirements:** `Node.js (v14+ recommended), R (version 4.0+ for preprocessing), Modern Web Browser (Chrome, Firefox)`
 
 ---
@@ -133,7 +135,9 @@ This section details the methodologies employed for data processing, the algorit
 
 ### 2.4 System Interface Design
 *   **Overall Layout and Structure:** `[Describe the dashboard layout: e.g., a main map view, with temporal controls at the bottom, filter panels on a side, and supplementary charts/panels arranged logically around the map. Justify this arrangement for workflow, e.g., map as a central focus for spatial tasks, filters easily accessible, temporal context always visible.]`
-    *   **Visual Justification of Layout:** `[Placeholder for Full Dashboard Screenshot/Wireframe with Annotations Explaining Layout and Navigation Flow. This visual should illustrate how a user might typically interact with the tool, moving from overview (map, timeline) to detailed views (forecast chart, stats panel) guided by filters and selections.]`
+    *   **Visual Justification of Layout:** 
+        ![Fig: Overview of the St. Himark Earthquake Damage Visualization Dashboard.](images/report/report-dashboard-overview.png)
+        *Fig: Overview of the St. Himark Earthquake Damage Visualization Dashboard, showcasing the main components: interactive map, timeline, damage category comparison, heatmap, filter/control panel, and insights panel.*
     *   Refer to `docs/component-structure.md` for a detailed breakdown of individual components if not fully covered by the visual justification.
 *   **Interactivity and User Controls:** Users can interact via:
     *   **Time Navigation:** Timeline slider, play/pause/speed controls.
@@ -143,6 +147,20 @@ This section details the methodologies employed for data processing, the algorit
     *   **Control Panel Toggles:** Show/hide neighborhood labels, switch color schemes, open information modals.
     *   These controls empower users to tailor the views to their specific analytical questions and explore the dataset dynamically.
 *   **Narrative and Storytelling (if applicable):** `[If the tool includes features for annotation, saving states, or guided tours, describe them here. Otherwise, state that the primary mode of use is exploratory data analysis driven by the user.]`
+*   **UI Controls (`src/components/ui/`):**
+    *   Standard controls (`FilterPanel.jsx`, `TimeControls.jsx`, `StatsPanel.jsx`, `InsightsPanel.jsx`, `InfoButton.jsx`/Modal) implemented using React functional components and hooks, interacting with the `UIContext` to provide a cohesive user experience. `TimeControls.jsx` uses `requestAnimationFrame` for smooth animation, contributing to interaction responsiveness.
+
+        ![Fig: Filters and Controls Panel.](images/report/report-filterandcontrolpanel.png)
+        *Fig: The Filters & Controls Panel, allowing users to select the active damage category, choose visualization color schemes, toggle neighborhood names and the insights panel, and clear map selections.*
+
+        ![Fig: Current Situation Highlights Panel.](images/report/report-insightspanel.png)
+        *Fig: The Current Situation Highlights (Insights) Panel, providing dynamic textual summaries of the disaster situation, including most affected areas, top damage categories, and data reliability assessments.*
+
+        ![Fig: 'About This Visualization' Modal.](images/report/report-aboutpanel.png)
+        *Fig: The 'About This Visualization' modal, offering users information on data sources, how to use the tool, and guidance on interpreting uncertainty.*
+
+        ![Fig: Timeline Controls for Temporal Navigation.](images/report/report-timelinecontrols.png)
+        *Fig: Interactive Timeline Controls, enabling users to navigate through different time points of the disaster, play/pause the progression, and jump to significant event markers like 'First Reports', 'First Quake', 'Power Outages', 'Second Quake', and 'Recovery Starts'.*
 
 ---
 
@@ -257,7 +275,14 @@ This section presents the key findings derived from the visual analytics tool, d
 *   **Citizen Report Insights (Post-Quake):**
     *   Using your map visualisation, identify neighborhoods that show the highest levels of reported damage across various categories.
     *   Provide specific examples: "For instance, the map view on [Date/Time after quake] clearly indicated that Neighborhood X and Neighborhood Y reported significantly higher 'Building Damage' compared to others."
-    *   `[Placeholder for Screenshot: Map view showing high damage areas, with annotations pointing to key neighborhoods and damage levels.]`
+    *   ![Fig: Early dashboard view after initial reports.](images/report/report-firstreports-overview.png)
+        *Fig: Early dashboard view (06/04/2020, 14:40) after initial citizen reports. This view shows the 'Shake Intensity' map, timeline, and the 'Current Situation Highlights' panel indicating Weston as the most affected area at this time.*
+
+    *   ![Fig: Map visualization showing building damage.](images/report/report-poweroutages-highdamage-buildings-overview.png)
+        *Fig: Map visualization showing 'Buildings' damage severity across St. Himark on 08/04/2020, 18:00. Darker reds indicate more severe damage, highlighting areas like Old Town, Downtown, and Broadview.*
+
+    *   ![Fig: Interactive map displaying Power damage with VSUP Extended color scheme.](images/report/report-poweroutages-highdamage-VSUPExtended.png)
+        *Fig: Interactive map displaying 'Power' damage on 08/04/2020, 18:00, utilizing the VSUP Extended color scheme. This helps to clearly distinguish varying levels of damage intensity, with opacity also conveying data certainty.*
 *   **Discrepancies and Changes from Shake Map:**
     *   Compare the citizen-reported damage patterns with the initial shake map indications. Are there areas the shake map highlighted that received fewer citizen reports of severe damage, or vice-versa?
     *   "Our tool revealed that while the shake map suggested high impact in Area Z, citizen reports indicated more pressing issues in Area A, which had a lower shake intensity prediction. This suggests a need to re-allocate resources."
@@ -265,7 +290,11 @@ This section presents the key findings derived from the visual analytics tool, d
     *   Based on your tool's output (e.g., map, summary tables/charts), explain how you would advise emergency planners to prioritize neighborhoods.
     *   Consider factors like severity of damage (MAP values), type of damage (e.g., medical needs, infrastructure), and potentially the volume of reports.
     *   "Neighborhoods like Safe Town and Palace Hills should be prioritized due to consistently high reported damage across multiple critical categories (e.g., medical, structural) and relatively high certainty in these reports (see Task 2)."
-    *   `[Placeholder for Screenshot: Bar chart or boxplot comparing damage across neighborhoods for a key category, highlighting the worst-hit ones.]`
+    *   ![Fig: Damage Category Comparison chart with tooltip for 'Power'.](images/report/report-category-tooltip.png)
+        *Fig: Damage Category Comparison chart showing average damage levels (box plots) across infrastructure types. The tooltip for 'Power' indicates a median damage level of 6.1, with a 95% confidence interval and data based on 19 reports with 83% confidence.*
+
+    *   ![Fig: Comparison of average damage levels across different categories.](images/report/report-poweroutages-damagecategorycomparison.png)
+        *Fig: The Damage Category Comparison chart at a specific time point (06/04/2020, 17:05), illustrating the relative impact on different infrastructure. 'Power' shows the highest median damage, while 'Shake Intensity' reports are lower on average at this time.*
 
 ### 4.2 Task 2: Uncertainty and Reliability of Reports
 *"Use visual analytics to show uncertainty in the data. Compare the reliability of neighborhood reports. Which neighborhoods are providing reliable reports? Provide a rationale for your response."*
@@ -273,8 +302,14 @@ This section presents the key findings derived from the visual analytics tool, d
 *   **Visualizing Uncertainty:**
     *   Explain how your tool visually represents uncertainty (e.g., width of Confidence Intervals in line charts, saturation/opacity in VSUP-based map coloring, size of error bars in bar charts, tooltip information).
     *   "Uncertainty is visualized through 95% Credible Intervals (CIs) in the forecast line charts and as explicit certainty scores or CI ranges in map tooltips. VSUP principles may also be applied to map shading."
-    *   `[Placeholder for Screenshot: Forecast line chart showing MAP and CI for a specific neighborhood/category, with annotations explaining how to interpret uncertainty.]`
-    *   `[Placeholder for Screenshot: Map view with tooltips showing damage value AND uncertainty metric, or using VSUPs.]`
+    *   ![Fig: Damage forecast for 'Shake Intensity' with CI.](images/report/report-damageforecast-tooltip-firstquake-shakeintensity.png)
+        *Fig: Damage forecast for 'Shake Intensity' in Location 4, around the first quake event (red dashed line). The orange line represents the Mean MAP estimate, and the shaded orange area represents the 95% Credible Interval (CI), visualizing the range of uncertainty. The tooltip shows specific values at Apr 08, 08:00: Mean MAP 7.0, CI Lower 4.5, CI Upper 9.5.*
+
+    *   ![Fig: Damage forecast for 'Buildings' with CI and tooltip.](images/report/report-damageforecast-tooltip-firstquake.png)
+        *Fig: Damage forecast over time for 'Buildings' in Location 5 (Palace Hills). The tooltip at Apr 09, 23:00, indicates a Mean MAP of 4.5 with a CI of 2.0-7.0. The width of the shaded CI band illustrates the uncertainty in the damage estimate.*
+
+    *   ![Fig: Map view with tooltip showing uncertainty metrics for Old Town.](images/report/report-earthquakemap-tooltip.png)
+        *Fig: Map view displaying 'Buildings' damage for St. Himark (08/04/2020, 18:00). The tooltip for Old Town (ID:3) shows a Damage Level of 4.9 (Severe), a Confidence Interval of 4.6-5.2, a Certainty of 90%, and 13535 reports, indicating relatively high certainty for this assessment.*
 *   **Comparing Reliability Across Neighborhoods:**
     *   Identify neighborhoods with consistently reliable reports (narrow CIs, high certainty scores) and those with less reliable reports (wide CIs, low certainty).
     *   Provide specific examples: "Old Town, for example, consistently showed wider credible intervals and lower certainty scores for most damage categories compared to Downtown, suggesting that reports from Old Town were more varied or sparse, making assessments less reliable."
@@ -284,7 +319,8 @@ This section presents the key findings derived from the visual analytics tool, d
 *   **Rationale for Reliability Assessment:**
     *   Explain how users can use your tool to make these reliability judgments.
     *   "Users can compare the CI bands in the line charts side-by-side for different neighborhoods or observe the certainty encoding on the map. The boxplots also offer a visual comparison of the spread of reported values."
-    *   `[Placeholder for Screenshot: Comparative view, perhaps multiple small line charts or a table/chart summarizing certainty scores across neighborhoods.]`
+    *   ![Fig: Statistics Panel for Old Town.](images/report/report-statisticspanel-oldtown-broken.png)
+        *Fig: The Statistics Panel displaying detailed damage levels and certainty percentages for Old Town across all categories at a specific time. This panel updates upon clicking a neighborhood on the map, providing detailed reliability insights (Note: 0.0 values and 20% certainty in this image indicate a specific data state, possibly before sufficient reports were aggregated for Old Town at the selected time/category).*
 *   **Impact of Report Volume and Consistency:**
     *   Discuss how the volume and consistency of reports from a neighborhood affect the perceived reliability and the visualized uncertainty.
 
@@ -295,19 +331,32 @@ This section presents the key findings derived from the visual analytics tool, d
     *   Using your timeline control and time-series visualisations (line charts, heatmaps), describe how reported damage conditions evolved in St. Himark post-earthquake.
     *   Identify key periods of change (e.g., immediately after the main quake, aftershocks, periods of increased reporting).
     *   "The timeline playback feature, coupled with the forecast line chart, shows a rapid increase in reported 'Medical' needs in Downtown #6 immediately following the April 8th quake, which then stabilized after approximately 12 hours."
-    *   `[Placeholder for Screenshot: Line chart showing damage trend over time for a significant category/neighborhood, with annotations on key changes.]`
+    *   (You can re-use one of the forecast chart images from Task 2 here, e.g., `report-damageforecast-tooltip-firstquake-shakeintensity.png` or `report-damageforecast-tooltip-firstquake.png`, if your narrative describes the temporal trend shown in it.)
 *   **Tracking Uncertainty Over Time:**
     *   Describe how uncertainty (e.g., CI width) changed over time for various neighborhoods and categories.
     *   Were there periods when uncertainty was generally high or low?
     *   "Uncertainty, represented by the CI width, typically decreased shortly after spikes in reporting (e.g., post-quake) as more data became available. However, during lulls in reporting or for less frequently reported categories, uncertainty tended to increase over time." (Referencing example from Natthawut Adulyanukosol's report regarding CIs widening with fewer reports).
-    *   `[Placeholder for Screenshot: Line chart showing both MAP and CI, highlighting how CI width changes over time.]`
+    *   (Again, a forecast chart image like `report-damageforecast-tooltip-firstquake.png` can be used here, with the caption and text focusing on the CI band changes over time.)
 *   **Key Temporal Patterns and Events:**
     *   Highlight any significant temporal patterns or events observed.
         *   Did certain types of damage emerge or worsen later?
         *   Were there noticeable differences in the temporal patterns between neighborhoods?
         *   How did aftershocks (if identifiable from data patterns) affect reports and uncertainty?
     *   "The heatmap view revealed a secondary wave of 'Road System' damage reports in Broadview #9 approximately 24 hours after the initial quake, possibly due to delayed assessment or effects of aftershocks."
-    *   `[Placeholder for Screenshot: Heatmap showing damage categories over time for selected neighborhoods, highlighting temporal patterns.]`
+    *   ![Fig: Overview of the Neighborhoods & Categories Damage Heatmap.](images/report/report-heatmapoverview1.png)
+        *Fig: An overview of the Neighborhoods & Categories Damage Heatmap, showing damage intensity (color-coded) across all six categories for the top set of neighborhoods (Palace Hills to Wilson Forest) over the entire event duration (Mon 06 - Sat 11 April). Event markers are visible on the timeline at the top of the heatmap.*
+
+    *   ![Fig: Detailed view of the heatmap for Wilson Forest, Scenic Vista, and Broadview.](images/report/report-heatmapoverview2.png)
+        *Fig: A scrolled view of the heatmap, focusing on damage progression for Wilson Forest, Scenic Vista, Broadview, Chaparral, Terrapin Springs, Pepper Mill, Cheddarford, and Easton.*
+
+    *   ![Fig: Heatmap section focusing on Cheddarford, Easton, Weston, and other neighborhoods.](images/report/report-heatmapoverview3.png)
+        *Fig: Further scrolled view of the heatmap, detailing temporal damage patterns for neighborhoods from Cheddarford down to West Parton.*
+
+    *   ![Fig: Heatmap with tooltip for Old Town Power damage.](images/report/report-heatmap-tooltip.png)
+        *Fig: The Neighborhoods & Categories Damage Heatmap with a tooltip activated for Old Town, Category 'Power', at Time 08/04 09:00. It shows a MAP (damage estimate) of 9.7 and a CIR (Credible Interval Range) at Max MAP of 0.80, indicating high damage with relatively good certainty at that specific point.*
+
+    *   ![Fig: Dashboard view highlighting the heatmap during power outage discussions.](images/report/report-poweroutages-highdamage-category-heatmap-overview.png)
+        *Fig: A full dashboard screenshot from 09/04/2020, 01:00, with the 'Buildings' category selected on the map. The prominent Neighborhoods & Categories Damage Heatmap below shows the temporal evolution of all damage types across neighborhoods, useful for identifying correlations and widespread impacts like power outages.*
 *   **Relationship Between Report Volume and Uncertainty Dynamics:**
     *   Discuss the interplay between the frequency/volume of incoming reports and the observed changes in uncertainty over time.
 
