@@ -109,10 +109,6 @@ results/
 *.tmp
 VASTChallenge2019/
 VAST-Challenge-2019-MC1-master/
-# vast-mc1-vis/public/data/processed/ # Keep this commented to allow other processed files
-vast-mc1-vis/public/data/processed/bsts_results/*.csv
-vast-mc1-vis/public/data/processed/bsts_results/*.json
-vast-mc1-vis/public/data/processed/bsts_results/timeline_data.json
 # Keep frontend_data.json and potentially all_summary_processed.csv tracked (will use LFS)
 
 # Virtual Box
