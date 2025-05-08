@@ -3,15 +3,15 @@ import { Form } from 'react-bootstrap';
 import { useUI } from '../../App';
 import './ColorSchemeSelector.css';
 
-// Import images directly
-import vsupImage from '../../data/images/VSUP.png';
-import vsupExtImage from '../../data/images/VSUP_.png';
-// Normal.png is not present in src/data/images, so it will fallback if selected
+// REMOVE direct image imports
+// import vsupImage from '../../data/images/VSUP.png';
+// import vsupExtImage from '../../data/images/VSUP_.png';
 
+// Construct image paths relative to the public directory
 const imageMap = {
-  'VSUP': vsupImage,
-  'VSUP_': vsupExtImage,
-  // 'Normal': normalImage, // Would add if Normal.png existed and was imported
+  'VSUP': `${process.env.PUBLIC_URL}/data/images/VSUP.png`,
+  'VSUP_': `${process.env.PUBLIC_URL}/data/images/VSUP_.png`,
+  'Normal': `${process.env.PUBLIC_URL}/data/images/Normal.png`, // Assuming Normal.png exists or will be added
 };
 
 /**
@@ -43,12 +43,9 @@ const ColorSchemeSelector = () => {
       
       <div className="color-preview">
         <img 
-          src={imageMap[colorScheme] || vsupImage} // Fallback to VSUP.png if scheme's image not in map
+          src={imageMap[colorScheme] || `${process.env.PUBLIC_URL}/data/images/VSUP.png`} // Fallback to VSUP.png
           alt={`${colorScheme} color legend`} 
           className="legend-image-small" 
-          // onError logic can be simplified or removed if direct imports cover all cases
-          // or if a specific fallback image is always desired for missing ones.
-          // For now, direct import fallback handles missing Normal.png by using vsupImage.
         />
       </div>
     </div>

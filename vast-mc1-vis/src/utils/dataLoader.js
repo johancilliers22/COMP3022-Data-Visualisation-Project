@@ -465,6 +465,23 @@ export const loadCategoryComparisonSpec = async () => {
   }
 };
 
+export const loadHeatmapSpec = async () => {
+  if (dataCache.general.heatmapSpec) {
+    logger.debug('Using cached heatmap spec');
+    return dataCache.general.heatmapSpec;
+  }
+  try {
+    logger.debug('Fetching heatmap spec...');
+    const spec = await fetchJsonData('specs/heatmap-all-neighborhoods-spec.json');
+    dataCache.general.heatmapSpec = spec;
+    logger.debug('Heatmap spec loaded successfully');
+    return spec;
+  } catch (error) {
+    logger.error('Error loading heatmap spec:', error);
+    throw error;
+  }
+};
+
 export default {
   loadGeoJSON,
   loadNeighborhoodMap,
@@ -476,5 +493,6 @@ export default {
   loadRawReportsData,
   loadAggregatedSummaryData,
   loadAllData,
-  loadCategoryComparisonSpec
+  loadCategoryComparisonSpec,
+  loadHeatmapSpec
 }; 

@@ -4,6 +4,7 @@ import { DataProvider, useData } from './context/DataContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './App.css';
+import { loadCategoryComparisonSpec, loadHeatmapSpec } from './utils/dataLoader';
 
 // Import components
 import FilterPanel from './components/ui/FilterPanel';
@@ -14,10 +15,6 @@ import InfoButton from './components/ui/InfoButton';
 import StatsPanel from './components/ui/StatsPanel';
 import InsightsPanel from './components/ui/InsightsPanel';
 import ForecastChart from './components/charts/ForecastChart';
-
-// Import JSON specification files directly
-import categoryComparisonSpecData from './data/specs/category-comparison-spec.json';
-import fullHeatmapSpecData from './data/specs/heatmap-all-neighborhoods-spec.json';
 
 // Create UI context for sharing state between components
 export const UIContext = createContext();
@@ -112,12 +109,26 @@ const AppContent = () => {
   } = useUI();
   const [categoryComparisonSpec, setCategoryComparisonSpec] = useState(null);
   const [fullHeatmapSpec, setFullHeatmapSpec] = useState(null);
+  const [specsLoading, setSpecsLoading] = useState(true);
+  const [specsError, setSpecsError] = useState(null);
 
   // Load Vega specs for visualizations
   useEffect(() => {
-    // Set specs from imported data
-    setCategoryComparisonSpec(categoryComparisonSpecData);
-    setFullHeatmapSpec(fullHeatmapSpecData);
+    const fetchSpecs = async () => {
+      try {
+        setSpecsLoading(true);
+        const catSpec = await loadCategoryComparisonSpec();
+        const heatSpec = await loadHeatmapSpec();
+        setCategoryComparisonSpec(catSpec);
+        setFullHeatmapSpec(heatSpec);
+        setSpecsError(null);
+      } catch (err) {
+        console.error("Error loading Vega specs:", err);
+        setSpecsError("Failed to load visualization specs.");
+      }
+      setSpecsLoading(false);
+    };
+    fetchSpecs();
   }, []);
   
   // Toggle sidebar collapsed state
@@ -125,23 +136,23 @@ const AppContent = () => {
     setSidebarCollapsed(!sidebarCollapsed);
   };
 
-  if (loading) {
+  if (loading || specsLoading) {
     return (
       <div className="loading-container">
         <Spinner animation="border" role="status" variant="primary">
-          <span className="visually-hidden">Loading earthquake data...</span>
+          <span className="visually-hidden">Loading...</span>
         </Spinner>
-        <p>{loadingProgress || 'Loading earthquake data...'}</p>
-        <small>This may take a few moments for the full dataset</small>
+        <p>{loading ? loadingProgress : 'Loading visualization specs...'}</p>
+        {loading && <small>This may take a few moments for the full dataset</small>}
       </div>
     );
   }
 
-  if (error) {
+  if (error || specsError) {
     return (
       <div className="error-container">
         <h3>Error</h3>
-        <p>{error}</p>
+        <p>{error || specsError}</p>
         <button className="btn btn-primary" onClick={() => window.location.reload()}>
           Retry
         </button>
