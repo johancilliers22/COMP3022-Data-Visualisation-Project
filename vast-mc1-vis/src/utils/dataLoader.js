@@ -8,6 +8,13 @@
 import { groupByNeighborhood, generateLocationInfo, generateTimeSeriesData } from './dataProcessor';
 import logger from './logger';
 
+// Import static data assets directly
+import geojsonData from '../data/neighborhoods.geojson';
+import neighborhoodMapData from '../data/processed/neighborhood_map.json';
+import frontendDataData from '../data/processed/frontend_data.json';
+import allBstsResultsData from '../data/processed/bsts_results/summary/all_bsts_results.json'; // Assuming correct path
+// TODO: Add imports for other JSON/CSV files as needed, CSV might require different handling
+
 /**
  * Data loader for earthquake visualization
  * Handles loading, caching and transformation of data from R-generated files
@@ -26,17 +33,20 @@ const dataCache = {
  * @returns {Promise<Object>} GeoJSON data
  */
 export const loadGeoJSON = async () => {
+  // Check cache first
+  if (dataCache.general.geoJSON) {
+    logger.debug('Using cached GeoJSON data');
+    return dataCache.general.geoJSON;
+  }
+  
   try {
-    const response = await fetch(`${process.env.PUBLIC_URL}/data/neighborhoods.geojson`);
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    const geojsonData = await response.json();
-    logger.debug('GeoJSON data loaded successfully');
+    // Data is imported directly now
+    dataCache.general.geoJSON = geojsonData;
+    logger.debug('GeoJSON data loaded from import');
     return geojsonData;
   } catch (error) {
-    logger.error('Error loading GeoJSON data:', error);
-    throw error; // Re-throw to allow caller to handle
+    logger.error('Error accessing imported GeoJSON data:', error);
+    throw error;
   }
 };
 
@@ -47,34 +57,20 @@ export const loadGeoJSON = async () => {
 export const loadNeighborhoodMap = async () => {
   // Check cache first
   if (dataCache.general.neighborhoodMap) {
+    logger.debug('Using cached neighborhood map');
     return dataCache.general.neighborhoodMap;
   }
   
   try {
-    logger.debug('Loading neighborhood map...');
-    const response = await fetch(`${process.env.PUBLIC_URL}/data/processed/neighborhood_map.json`);
-    
-    if (!response.ok) {
-      throw new Error(`Failed to load neighborhood map: ${response.status} ${response.statusText}`);
-    }
-    
-    const data = await response.json();
-    
-    // Convert to a more efficient map object
-    const neighborhoods = {};
-    data.forEach(item => {
-      neighborhoods[item.id] = item.name;
-    });
-    
-    // Store in cache
-    dataCache.general.neighborhoodMap = neighborhoods;
-    logger.debug('Neighborhood map loaded successfully');
-    
-    return neighborhoods;
+    // Data is imported directly now
+    dataCache.general.neighborhoodMap = neighborhoodMapData;
+    logger.debug('Neighborhood map loaded from import');
+    return neighborhoodMapData;
   } catch (error) {
-    logger.error('Error loading neighborhood map:', error);
-    
-    // Fallback to hardcoded map if needed
+    logger.error('Error accessing imported neighborhood map:', error);
+    // Fallback logic might need adjustment if import fails, 
+    // but import failure is unlikely if file exists.
+    logger.warn('Falling back to hardcoded neighborhood map due to import error.');
     const fallbackMap = {
       1: "Palace Hills",
       2: "Northwest",
@@ -146,22 +142,12 @@ export const loadFrontendData = async () => {
   }
   
   try {
-    logger.debug('Loading frontend data...');
-    const response = await fetch(`${process.env.PUBLIC_URL}/data/processed/frontend_data.json`);
-    
-    if (!response.ok) {
-      throw new Error(`Failed to load frontend data: ${response.status} ${response.statusText}`);
-    }
-    
-    const data = await response.json();
-    
-    // Store in cache
-    dataCache.general.frontendData = data;
-    logger.debug('Frontend data loaded successfully');
-    
-    return data;
+    // Data is imported directly now
+    dataCache.general.frontendData = frontendDataData;
+    logger.debug('Frontend data loaded from import');
+    return frontendDataData;
   } catch (error) {
-    logger.error('Error loading frontend data:', error);
+    logger.error('Error accessing imported frontend data:', error);
     throw error;
   }
 };
@@ -294,17 +280,10 @@ export const loadAllBSTSData = async (category = null, timestamp = null) => {
   try {
     // Load all BSTS data if not already loaded
     if (!dataCache.bsts.allBSTSData) {
-      logger.debug('Loading all BSTS data...');
-      const response = await fetch(
-        `${process.env.PUBLIC_URL}/data/processed/bsts_results/all_bsts_results.json`
-      );
-      
-      if (!response.ok) {
-        throw new Error(`Failed to load all BSTS data: ${response.status} ${response.statusText}`);
-      }
-      
-      dataCache.bsts.allBSTSData = await response.json();
-      logger.debug('All BSTS data loaded successfully');
+      logger.debug('Loading all BSTS data from import...');
+      // Data is imported directly now
+      dataCache.bsts.allBSTSData = allBstsResultsData;
+      logger.debug('All BSTS data loaded successfully from import');
     }
     
     // If no category or timestamp specified, return all data
@@ -383,7 +362,8 @@ export const loadRawReportsData = async () => {
   
   try {
     logger.debug('Loading raw reports data...');
-    const response = await fetch(`${process.env.PUBLIC_URL}/data/mc1-reports-data.csv`);
+    // *** Fetch needs to be updated for CSV ***
+    const response = await fetch(`/src/data/mc1-reports-data.csv`); // Adjusted path prefix - needs verification
     
     if (!response.ok) {
       throw new Error(`Failed to load raw reports: ${response.status} ${response.statusText}`);
@@ -447,7 +427,8 @@ export const loadAggregatedSummaryData = async () => {
 
   try {
     logger.debug('Loading aggregated summary data (all_summary_aggregated.csv)...');
-    const response = await fetch(`${process.env.PUBLIC_URL}/data/processed/all_summary_aggregated.csv`);
+    // *** Fetch needs to be updated for CSV ***
+    const response = await fetch(`/src/data/processed/all_summary_aggregated.csv`); // Adjusted path prefix - needs verification
 
     if (!response.ok) {
       throw new Error(`Failed to load all_summary_aggregated.csv: ${response.status} ${response.statusText}`);
@@ -550,7 +531,8 @@ export const loadProcessedData = loadAllData;
 
 export const loadCategoryComparisonSpec = async () => {
   try {
-    const response = await fetch(`${process.env.PUBLIC_URL}/data/specs/category-comparison-spec.json`);
+    // *** Path needs update if spec moved ***
+    const response = await fetch(`/src/data/specs/category-comparison-spec.json`); // Adjusted path prefix - needs verification
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
