@@ -1,0 +1,2300 @@
+location,loc_name,category,dateHour,map,avgMAP,maxCIR,avgCIR,CIRatMaxMAP
+1,Palace Hills,medical,2020-04-06 00:00:00,5.9,5.9,5,4.845833333333333,5
+1,Palace Hills,medical,2020-04-06 01:00:00,6.1,6.1,5,4.453333333333333,5
+1,Palace Hills,medical,2020-04-06 02:00:00,6.96,6.96,5,3.8407142857142857,2.82
+1,Palace Hills,medical,2020-04-06 03:00:00,6.44,6.44,5,4.4191666666666665,2.54
+1,Palace Hills,medical,2020-04-06 04:00:00,5.83,5.83,5,4.595833333333333,5
+1,Palace Hills,medical,2020-04-06 05:00:00,5.61,5.61,5,4.806666666666667,5
+1,Palace Hills,medical,2020-04-06 06:00:00,5.8,5.8,5,4.2525,5
+1,Palace Hills,medical,2020-04-06 07:00:00,5.78,5.78,5,4.287692307692308,2.94
+1,Palace Hills,medical,2020-04-06 08:00:00,6.29,6.29,5,4.47,5
+1,Palace Hills,medical,2020-04-06 09:00:00,5.7,5.7,5,4.3933333333333335,5
+1,Palace Hills,medical,2020-04-06 10:00:00,5.48,5.48,5,4.475833333333333,2.75
+1,Palace Hills,medical,2020-04-06 11:00:00,5.45,5.45,5,4.266666666666667,5
+1,Palace Hills,medical,2020-04-06 12:00:00,5.72,5.72,5,4.550769230769231,2.93
+1,Palace Hills,medical,2020-04-06 13:00:00,5.97,5.97,5,4.823333333333333,5
+1,Palace Hills,medical,2020-04-06 14:00:00,5.44,5.44,5,3.5846153846153848,5
+1,Palace Hills,medical,2020-04-06 15:00:00,3.49,3.49,5,3.5557142857142856,5
+1,Palace Hills,medical,2020-04-06 16:00:00,2.6,2.6,5,2.8566666666666665,2.73
+1,Palace Hills,medical,2020-04-06 17:00:00,3.07,3.07,5,3.5613333333333332,5
+1,Palace Hills,medical,2020-04-06 18:00:00,3.35,3.35,5,4.673076923076923,5
+1,Palace Hills,medical,2020-04-06 19:00:00,5.03,5.03,5,4.035384615384616,5
+1,Palace Hills,medical,2020-04-06 20:00:00,4.83,4.83,5,4.626666666666667,5
+1,Palace Hills,medical,2020-04-06 21:00:00,5.08,5.08,5,4.645,5
+1,Palace Hills,medical,2020-04-06 22:00:00,5.45,5.45,5,3.9253846153846155,2.55
+1,Palace Hills,medical,2020-04-06 23:00:00,6.42,6.42,5,4.5975,5
+1,Palace Hills,medical,2020-04-07 00:00:00,6.59,6.59,5,4.6466666666666665,2.81
+1,Palace Hills,medical,2020-04-07 01:00:00,6.96,6.96,5,4.1625,5
+1,Palace Hills,medical,2020-04-07 02:00:00,6.58,6.58,5,4.279166666666667,2.54
+1,Palace Hills,medical,2020-04-07 03:00:00,5.85,5.85,5,4.484615384615385,5
+1,Palace Hills,medical,2020-04-07 04:00:00,6.27,6.27,5,4.445,5
+1,Palace Hills,medical,2020-04-07 05:00:00,6.83,6.83,5,4.434166666666667,5
+1,Palace Hills,medical,2020-04-07 06:00:00,6.47,6.47,5,4.458461538461538,5
+1,Palace Hills,medical,2020-04-07 07:00:00,6.98,6.98,5,3.9791666666666665,5
+1,Palace Hills,medical,2020-04-07 08:00:00,7.1,7.1,5,4.233846153846154,5
+1,Palace Hills,medical,2020-04-07 09:00:00,6.92,6.92,5,4.253846153846154,5
+1,Palace Hills,medical,2020-04-07 10:00:00,7.05,7.05,5,4.426666666666667,2.81
+1,Palace Hills,medical,2020-04-07 11:00:00,7.32,7.32,5,4.005833333333333,5
+1,Palace Hills,medical,2020-04-07 12:00:00,6.77,6.77,5,4.431538461538461,5
+1,Palace Hills,medical,2020-04-07 13:00:00,6.52,6.52,5,4.41,5
+1,Palace Hills,medical,2020-04-07 14:00:00,6.88,6.88,5,4.4125,5
+1,Palace Hills,medical,2020-04-07 15:00:00,6.98,6.98,5,4.829166666666667,5
+1,Palace Hills,medical,2020-04-07 16:00:00,7.07,7.07,5,4.610833333333334,2.92
+1,Palace Hills,medical,2020-04-07 17:00:00,7.21,7.21,5,4.586666666666667,5
+1,Palace Hills,medical,2020-04-07 18:00:00,7.57,7.57,5,4.8275,5
+1,Palace Hills,medical,2020-04-07 19:00:00,7.42,7.42,5,4.484615384615385,5
+1,Palace Hills,medical,2020-04-07 20:00:00,6.58,6.58,5,4.07923076923077,5
+1,Palace Hills,medical,2020-04-07 21:00:00,5.81,5.81,5,4.6325,5
+1,Palace Hills,medical,2020-04-07 22:00:00,5.58,5.58,5,4.614615384615385,2.48
+1,Palace Hills,medical,2020-04-07 23:00:00,6.7,6.7,5,3.9966666666666666,5
+1,Palace Hills,medical,2020-04-08 00:00:00,6.48,6.48,5,4.679230769230769,5
+1,Palace Hills,medical,2020-04-08 01:00:00,6.54,6.54,5,4.657692307692308,5
+1,Palace Hills,medical,2020-04-08 02:00:00,6.45,6.45,5,4.415384615384616,5
+1,Palace Hills,medical,2020-04-08 03:00:00,6.57,6.57,5,4.180833333333333,2.65
+1,Palace Hills,medical,2020-04-08 04:00:00,6.16,6.16,5,4.0275,5
+1,Palace Hills,medical,2020-04-08 05:00:00,5.67,5.67,5,4.7975,5
+1,Palace Hills,medical,2020-04-08 06:00:00,5.87,5.87,5,4.102,5
+1,Palace Hills,medical,2020-04-08 07:00:00,6.07,6.07,5,3.9453846153846155,2.74
+1,Palace Hills,medical,2020-04-08 08:00:00,7.2,7.2,5,2.7845945945945947,5
+1,Palace Hills,medical,2020-04-08 09:00:00,7.22,7.22,3.62,2.8425,2.96
+1,Palace Hills,medical,2020-04-08 10:00:00,6.82,6.82,3.37,2.7399999999999998,2.65
+1,Palace Hills,medical,2020-04-08 11:00:00,3.55,3.55,2.97,2.6605494505494507,2.75
+1,Palace Hills,medical,2020-04-08 12:00:00,3.28,3.28,5,2.724418604651163,2.5
+1,Palace Hills,medical,2020-04-08 13:00:00,4,4,5,2.791923076923077,2.97
+1,Palace Hills,medical,2020-04-08 14:00:00,4.69,4.69,5,3.0476470588235296,2.38
+1,Palace Hills,medical,2020-04-08 15:00:00,4.55,4.55,5,4.248333333333333,5
+1,Palace Hills,medical,2020-04-08 16:00:00,4.83,4.83,5,3.9646666666666666,5
+1,Palace Hills,medical,2020-04-08 17:00:00,4.84,4.84,5,4.1607692307692306,5
+1,Palace Hills,medical,2020-04-08 18:00:00,5.09,5.09,5,4.6025,5
+1,Palace Hills,medical,2020-04-08 19:00:00,5.39,5.39,5,4.803333333333334,5
+1,Palace Hills,medical,2020-04-08 20:00:00,6.46,6.46,5,3.503846153846154,2.73
+1,Palace Hills,medical,2020-04-08 21:00:00,5.97,5.97,5,3.98,5
+1,Palace Hills,medical,2020-04-08 22:00:00,5.7,5.7,5,3.4385714285714286,5
+1,Palace Hills,medical,2020-04-08 23:00:00,5.38,5.38,5,4.785833333333334,5
+1,Palace Hills,medical,2020-04-09 00:00:00,5.56,5.56,5,4.3741666666666665,5
+1,Palace Hills,medical,2020-04-09 01:00:00,5.79,5.79,5,4.441666666666666,5
+1,Palace Hills,medical,2020-04-09 02:00:00,6.4,6.4,5,4.24923076923077,3.11
+1,Palace Hills,medical,2020-04-09 03:00:00,5.47,5.47,5,4.659166666666667,5
+1,Palace Hills,medical,2020-04-09 04:00:00,4.92,4.92,5,4.485384615384615,5
+1,Palace Hills,medical,2020-04-09 05:00:00,5.11,5.11,5,4.5115384615384615,5
+1,Palace Hills,medical,2020-04-09 06:00:00,5.32,5.32,5,4.201666666666666,5
+1,Palace Hills,medical,2020-04-09 07:00:00,5.37,5.37,5,4.6075,5
+1,Palace Hills,medical,2020-04-09 08:00:00,6.34,6.34,5,4.065,2.58
+1,Palace Hills,medical,2020-04-09 09:00:00,6.2,6.2,5,4.190833333333333,5
+1,Palace Hills,medical,2020-04-09 10:00:00,5.37,5.37,5,4.454166666666667,2.8
+1,Palace Hills,medical,2020-04-09 11:00:00,6.09,6.09,5,3.6526666666666667,5
+1,Palace Hills,medical,2020-04-09 12:00:00,5.78,5.78,5,4.648461538461539,5
+1,Palace Hills,medical,2020-04-09 13:00:00,5.67,5.67,5,4.5808333333333335,5
+1,Palace Hills,medical,2020-04-09 14:00:00,5.24,5.24,5,4.264615384615385,2.42
+1,Palace Hills,medical,2020-04-09 15:00:00,4.9,4.9,3.06,2.708030303030303,2.79
+1,Palace Hills,medical,2020-04-09 16:00:00,3.91,3.91,2.91,2.654871794871795,2.76
+1,Palace Hills,medical,2020-04-09 17:00:00,3.63,3.63,5,2.876842105263158,2.47
+1,Palace Hills,medical,2020-04-09 18:00:00,3.46,3.46,5,3.736923076923077,2.39
+1,Palace Hills,medical,2020-04-09 19:00:00,3.52,3.52,5,4.616666666666666,2.64
+1,Palace Hills,medical,2020-04-09 20:00:00,4.49,4.49,5,4.46,5
+1,Palace Hills,medical,2020-04-09 21:00:00,4.8,4.8,5,4.091538461538462,5
+1,Palace Hills,medical,2020-04-09 22:00:00,5.03,5.03,5,4.5725,5
+1,Palace Hills,medical,2020-04-09 23:00:00,5.64,5.64,5,3.9292307692307693,2.76
+1,Palace Hills,medical,2020-04-10 00:00:00,5.39,5.39,5,4.3966666666666665,2.62
+1,Palace Hills,medical,2020-04-10 01:00:00,4.8,4.8,5,4.775,5
+1,Palace Hills,medical,2020-04-10 02:00:00,5.03,5.03,5,4.6025,5
+1,Palace Hills,medical,2020-04-10 03:00:00,5.47,5.47,5,4.493333333333333,5
+1,Palace Hills,medical,2020-04-10 04:00:00,5.79,5.79,5,4.84,5
+1,Palace Hills,medical,2020-04-10 05:00:00,5.86,5.86,5,4.443333333333333,5
+1,Palace Hills,medical,2020-04-10 06:00:00,5.32,5.32,5,4.631666666666667,5
+1,Palace Hills,medical,2020-04-10 07:00:00,5.5,5.5,5,4.495833333333334,5
+1,Palace Hills,medical,2020-04-10 08:00:00,6.72,6.72,5,4.0625,2.75
+1,Palace Hills,medical,2020-04-10 09:00:00,6.89,6.89,5,4.317692307692307,5
+1,Palace Hills,medical,2020-04-10 10:00:00,0,0,5,5,5
+1,Palace Hills,medical,2020-04-10 11:00:00,7.39,7.39,5,4.39,2.88
+1,Palace Hills,medical,2020-04-10 12:00:00,6.54,6.54,5,4.3015384615384615,5
+1,Palace Hills,medical,2020-04-10 13:00:00,0,0,5,5,5
+1,Palace Hills,medical,2020-04-10 14:00:00,5.82,5.82,5,4.829166666666667,5
+1,Palace Hills,medical,2020-04-10 15:00:00,5.9,5.9,5,4.278333333333333,5
+1,Palace Hills,medical,2020-04-10 16:00:00,5.74,5.74,5,4.626666666666667,5
+1,Palace Hills,medical,2020-04-10 17:00:00,6.49,6.49,5,4.003846153846154,2.52
+1,Palace Hills,medical,2020-04-10 18:00:00,6.55,6.55,5,4.342142857142857,5
+1,Palace Hills,medical,2020-04-10 19:00:00,5.58,5.58,5,3.7576923076923077,5
+1,Palace Hills,medical,2020-04-10 20:00:00,5.81,5.81,5,4.775,5
+1,Palace Hills,medical,2020-04-10 21:00:00,6.32,6.32,5,3.8558333333333334,5
+1,Palace Hills,medical,2020-04-10 22:00:00,5.83,5.83,5,4.6775,5
+1,Palace Hills,medical,2020-04-10 23:00:00,5.64,5.64,5,4.8725,5
+1,Palace Hills,medical,2020-04-11 00:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-06 00:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-06 01:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-06 02:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-06 03:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-06 04:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-06 05:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-06 06:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-06 07:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-06 08:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-06 09:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-06 10:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-06 11:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-06 12:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-06 13:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-06 14:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-06 15:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-06 16:00:00,4.8,4.8,5,4.550833333333333,5
+10,Chapparal,medical,2020-04-06 17:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-06 18:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-06 19:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-06 20:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-06 21:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-06 22:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-06 23:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-07 00:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-07 01:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-07 02:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-07 03:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-07 04:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-07 05:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-07 06:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-07 07:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-07 08:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-07 09:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-07 10:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-07 11:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-07 12:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-07 13:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-07 14:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-07 15:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-07 16:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-07 17:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-07 18:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-07 19:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-07 20:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-07 21:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-07 22:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-07 23:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-08 00:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-08 01:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-08 02:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-08 03:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-08 04:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-08 05:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-08 06:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-08 07:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-08 08:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-08 09:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-08 10:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-08 11:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-08 12:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-08 13:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-08 14:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-08 15:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-08 16:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-08 17:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-08 18:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-08 19:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-08 20:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-08 21:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-08 22:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-08 23:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-09 00:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-09 01:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-09 02:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-09 03:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-09 04:00:00,5.09,5.09,5,3.0128205128205128,5
+10,Chapparal,medical,2020-04-09 05:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-09 06:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-09 07:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-09 08:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-09 09:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-09 10:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-09 11:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-09 12:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-09 13:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-09 14:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-09 15:00:00,4.93,4.93,5,4.235384615384615,5
+10,Chapparal,medical,2020-04-09 16:00:00,4.72,4.72,5,4.804166666666666,5
+10,Chapparal,medical,2020-04-09 17:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-09 18:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-09 19:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-09 20:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-09 21:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-09 22:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-09 23:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-10 00:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-10 01:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-10 02:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-10 03:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-10 04:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-10 05:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-10 06:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-10 07:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-10 08:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-10 09:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-10 10:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-10 11:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-10 12:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-10 13:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-10 14:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-10 15:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-10 16:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-10 17:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-10 18:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-10 19:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-10 20:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-10 21:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-10 22:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-10 23:00:00,0,0,5,5,5
+10,Chapparal,medical,2020-04-11 00:00:00,0,0,5,5,5
+11,Terrapin Springs,medical,2020-04-06 00:00:00,0,0,5,5,5
+11,Terrapin Springs,medical,2020-04-06 01:00:00,5.65,5.65,5,3.9541666666666666,5
+11,Terrapin Springs,medical,2020-04-06 02:00:00,5.31,5.31,5,3.3807692307692307,5
+11,Terrapin Springs,medical,2020-04-06 03:00:00,4.7,4.7,5,4.690833333333333,1.29
+11,Terrapin Springs,medical,2020-04-06 04:00:00,4.67,4.67,5,4.684166666666667,1.21
+11,Terrapin Springs,medical,2020-04-06 05:00:00,4.5,4.5,5,4.68,5
+11,Terrapin Springs,medical,2020-04-06 06:00:00,4.48,4.48,5,4.675833333333333,5
+11,Terrapin Springs,medical,2020-04-06 07:00:00,4.38,4.38,5,4.6675,5
+11,Terrapin Springs,medical,2020-04-06 08:00:00,4.36,4.36,5,4.671666666666667,5
+11,Terrapin Springs,medical,2020-04-06 09:00:00,4.32,4.32,5,4.664166666666667,5
+11,Terrapin Springs,medical,2020-04-06 10:00:00,0,0,5,5,5
+11,Terrapin Springs,medical,2020-04-06 11:00:00,4.28,4.28,5,4.6625,0.95
+11,Terrapin Springs,medical,2020-04-06 12:00:00,0,0,5,5,5
+11,Terrapin Springs,medical,2020-04-06 13:00:00,4.18,4.18,5,4.308333333333334,5
+11,Terrapin Springs,medical,2020-04-06 14:00:00,3.99,3.99,5,4.659166666666667,5
+11,Terrapin Springs,medical,2020-04-06 15:00:00,3.84,3.84,5,3.6233333333333335,5
+11,Terrapin Springs,medical,2020-04-06 16:00:00,3.52,3.52,5,1.2228125,1.01
+11,Terrapin Springs,medical,2020-04-06 17:00:00,3.04,3.04,5,1.6636842105263159,1.11
+11,Terrapin Springs,medical,2020-04-06 18:00:00,3.13,3.13,5,2.7114285714285713,0.93
+11,Terrapin Springs,medical,2020-04-06 19:00:00,3.43,3.43,5,4.072307692307692,5
+11,Terrapin Springs,medical,2020-04-06 20:00:00,3.65,3.65,5,4.32,5
+11,Terrapin Springs,medical,2020-04-06 21:00:00,3.68,3.68,5,4.660833333333334,5
+11,Terrapin Springs,medical,2020-04-06 22:00:00,3.92,3.92,5,4.315833333333333,0.88
+11,Terrapin Springs,medical,2020-04-06 23:00:00,4.08,4.08,5,4.315833333333333,5
+11,Terrapin Springs,medical,2020-04-07 00:00:00,4.4,4.4,5,3.995833333333333,0.94
+11,Terrapin Springs,medical,2020-04-07 01:00:00,4.65,4.65,5,4.008333333333334,5
+11,Terrapin Springs,medical,2020-04-07 02:00:00,4.88,4.88,5,3.6858333333333335,5
+11,Terrapin Springs,medical,2020-04-07 03:00:00,4.97,4.97,5,4.0216666666666665,5
+11,Terrapin Springs,medical,2020-04-07 04:00:00,4.96,4.96,5,4.015,1.09
+11,Terrapin Springs,medical,2020-04-07 05:00:00,4.72,4.72,5,3.6458333333333335,5
+11,Terrapin Springs,medical,2020-04-07 06:00:00,4.51,4.51,5,3.995,5
+11,Terrapin Springs,medical,2020-04-07 07:00:00,4.54,4.54,5,4.335,5
+11,Terrapin Springs,medical,2020-04-07 08:00:00,4.52,4.52,5,4.378461538461538,5
+11,Terrapin Springs,medical,2020-04-07 09:00:00,4.43,4.43,5,4.6625,5
+11,Terrapin Springs,medical,2020-04-07 10:00:00,0,0,5,5,5
+11,Terrapin Springs,medical,2020-04-07 11:00:00,4.49,4.49,5,3.9808333333333334,5
+11,Terrapin Springs,medical,2020-04-07 12:00:00,4.64,4.64,5,3.6591666666666667,5
+11,Terrapin Springs,medical,2020-04-07 13:00:00,4.71,4.71,5,4.665,5
+11,Terrapin Springs,medical,2020-04-07 14:00:00,4.83,4.83,5,4.6625,5
+11,Terrapin Springs,medical,2020-04-07 15:00:00,4.93,4.93,5,3.9966666666666666,5
+11,Terrapin Springs,medical,2020-04-07 16:00:00,5.16,5.16,5,4.355833333333333,5
+11,Terrapin Springs,medical,2020-04-07 17:00:00,4.98,4.98,5,4.0075,5
+11,Terrapin Springs,medical,2020-04-07 18:00:00,0,0,5,5,5
+11,Terrapin Springs,medical,2020-04-07 19:00:00,4.87,4.87,5,4.6691666666666665,5
+11,Terrapin Springs,medical,2020-04-07 20:00:00,4.86,4.86,5,3.654166666666667,5
+11,Terrapin Springs,medical,2020-04-07 21:00:00,4.75,4.75,5,4.319166666666667,5
+11,Terrapin Springs,medical,2020-04-07 22:00:00,4.67,4.67,5,4.365384615384615,5
+11,Terrapin Springs,medical,2020-04-07 23:00:00,4.79,4.79,5,4.655833333333334,5
+11,Terrapin Springs,medical,2020-04-08 00:00:00,4.77,4.77,5,4.656666666666666,5
+11,Terrapin Springs,medical,2020-04-08 01:00:00,4.75,4.75,5,3.2775,5
+11,Terrapin Springs,medical,2020-04-08 02:00:00,4.58,4.58,5,4.66,5
+11,Terrapin Springs,medical,2020-04-08 03:00:00,4.58,4.58,5,4.656666666666666,5
+11,Terrapin Springs,medical,2020-04-08 04:00:00,4.61,4.61,5,4.655,5
+11,Terrapin Springs,medical,2020-04-08 05:00:00,4.6,4.6,5,3.743846153846154,0.91
+11,Terrapin Springs,medical,2020-04-08 06:00:00,4.64,4.64,5,4.655833333333334,5
+11,Terrapin Springs,medical,2020-04-08 07:00:00,4.69,4.69,5,3.9683333333333333,5
+11,Terrapin Springs,medical,2020-04-08 08:00:00,4.58,4.58,5,0.9867374517374518,5
+11,Terrapin Springs,medical,2020-04-08 09:00:00,4.4,4.4,5,1.0027964601769912,0.94
+11,Terrapin Springs,medical,2020-04-08 10:00:00,0,0,5,5,5
+11,Terrapin Springs,medical,2020-04-08 11:00:00,4.26,4.26,5,0.9730537974683544,5
+11,Terrapin Springs,medical,2020-04-08 12:00:00,4.3,4.3,1.11,0.9601612903225807,0.82
+11,Terrapin Springs,medical,2020-04-08 13:00:00,4.39,4.39,5,0.9746774193548388,0.94
+11,Terrapin Springs,medical,2020-04-08 14:00:00,4.25,4.25,1.07,0.9461538461538461,0.87
+11,Terrapin Springs,medical,2020-04-08 15:00:00,4.65,4.65,5,2.5753333333333335,1.07
+11,Terrapin Springs,medical,2020-04-08 16:00:00,4.78,4.78,5,1.9057142857142857,1.02
+11,Terrapin Springs,medical,2020-04-08 17:00:00,4.68,4.68,5,4.062307692307693,0.87
+11,Terrapin Springs,medical,2020-04-08 18:00:00,4.87,4.87,5,3.1276923076923078,5
+11,Terrapin Springs,medical,2020-04-08 19:00:00,5.01,5.01,5,3.4784615384615383,5
+11,Terrapin Springs,medical,2020-04-08 20:00:00,5.14,5.14,5,4.335,5
+11,Terrapin Springs,medical,2020-04-08 21:00:00,5.47,5.47,5,4.003333333333333,5
+11,Terrapin Springs,medical,2020-04-08 22:00:00,5.52,5.52,5,4.351666666666667,5
+11,Terrapin Springs,medical,2020-04-08 23:00:00,5.86,5.86,5,4.11,1.12
+11,Terrapin Springs,medical,2020-04-09 00:00:00,5.94,5.94,5,4.678333333333334,5
+11,Terrapin Springs,medical,2020-04-09 01:00:00,6.13,6.13,5,3.7466666666666666,5
+11,Terrapin Springs,medical,2020-04-09 02:00:00,6.03,6.03,5,4.3775,5
+11,Terrapin Springs,medical,2020-04-09 03:00:00,5.96,5.96,5,4.6866666666666665,5
+11,Terrapin Springs,medical,2020-04-09 04:00:00,6,6,5,3.716666666666667,5
+11,Terrapin Springs,medical,2020-04-09 05:00:00,5.93,5.93,5,4.675833333333333,5
+11,Terrapin Springs,medical,2020-04-09 06:00:00,5.89,5.89,5,4.675,1.1
+11,Terrapin Springs,medical,2020-04-09 07:00:00,5.72,5.72,5,3.6825,1.07
+11,Terrapin Springs,medical,2020-04-09 08:00:00,5.82,5.82,5,3.4784615384615383,5
+11,Terrapin Springs,medical,2020-04-09 09:00:00,5.87,5.87,5,3.7175,5
+11,Terrapin Springs,medical,2020-04-09 10:00:00,5.59,5.59,5,4.345,5
+11,Terrapin Springs,medical,2020-04-09 11:00:00,5.43,5.43,5,4.676666666666667,5
+11,Terrapin Springs,medical,2020-04-09 12:00:00,5.46,5.46,5,3.7715384615384617,5
+11,Terrapin Springs,medical,2020-04-09 13:00:00,4.78,4.78,5,4.323333333333333,5
+11,Terrapin Springs,medical,2020-04-09 14:00:00,0,0,5,5,5
+11,Terrapin Springs,medical,2020-04-09 15:00:00,4.62,4.62,1.11,0.94168,0.88
+11,Terrapin Springs,medical,2020-04-09 16:00:00,3.21,3.21,1.09,0.9601449275362319,0.94
+11,Terrapin Springs,medical,2020-04-09 17:00:00,3.46,3.46,1.07,0.9423529411764706,0.92
+11,Terrapin Springs,medical,2020-04-09 18:00:00,3.51,3.51,5,1.1534782608695653,1
+11,Terrapin Springs,medical,2020-04-09 19:00:00,3.54,3.54,5,1.366818181818182,0.95
+11,Terrapin Springs,medical,2020-04-09 20:00:00,3.87,3.87,5,3.6658333333333335,1.07
+11,Terrapin Springs,medical,2020-04-09 21:00:00,4.08,4.08,5,4.3125,5
+11,Terrapin Springs,medical,2020-04-09 22:00:00,4.29,4.29,5,4.6525,0.83
+11,Terrapin Springs,medical,2020-04-09 23:00:00,4.48,4.48,5,3.9675,5
+11,Terrapin Springs,medical,2020-04-10 00:00:00,4.53,4.53,5,4.6658333333333335,5
+11,Terrapin Springs,medical,2020-04-10 01:00:00,4.56,4.56,5,4.329166666666667,0.96
+11,Terrapin Springs,medical,2020-04-10 02:00:00,4.87,4.87,5,3.995,0.97
+11,Terrapin Springs,medical,2020-04-10 03:00:00,4.84,4.84,5,4.6625,5
+11,Terrapin Springs,medical,2020-04-10 04:00:00,5.03,5.03,5,3.9966666666666666,5
+11,Terrapin Springs,medical,2020-04-10 05:00:00,0,0,5,5,5
+11,Terrapin Springs,medical,2020-04-10 06:00:00,5.11,5.11,5,3.995833333333333,5
+11,Terrapin Springs,medical,2020-04-10 07:00:00,5.05,5.05,5,4.33,5
+11,Terrapin Springs,medical,2020-04-10 08:00:00,4.91,4.91,5,3.9883333333333333,0.95
+11,Terrapin Springs,medical,2020-04-10 09:00:00,0,0,5,5,5
+11,Terrapin Springs,medical,2020-04-10 10:00:00,4.78,4.78,5,4.6625,5
+11,Terrapin Springs,medical,2020-04-10 11:00:00,4.8,4.8,5,3.565714285714286,5
+11,Terrapin Springs,medical,2020-04-10 12:00:00,4.91,4.91,5,3.660833333333333,5
+11,Terrapin Springs,medical,2020-04-10 13:00:00,4.88,4.88,5,4.659166666666667,5
+11,Terrapin Springs,medical,2020-04-10 14:00:00,5.04,5.04,5,3.67,0.95
+11,Terrapin Springs,medical,2020-04-10 15:00:00,5.11,5.11,5,4.6691666666666665,1.03
+11,Terrapin Springs,medical,2020-04-10 16:00:00,0,0,5,5,5
+11,Terrapin Springs,medical,2020-04-10 17:00:00,5.34,5.34,5,4.004166666666666,5
+11,Terrapin Springs,medical,2020-04-10 18:00:00,0,0,5,5,5
+11,Terrapin Springs,medical,2020-04-10 19:00:00,5.43,5.43,5,4.335833333333333,1.04
+11,Terrapin Springs,medical,2020-04-10 20:00:00,5.72,5.72,5,3.7992307692307694,5
+11,Terrapin Springs,medical,2020-04-10 21:00:00,5.78,5.78,5,4.361666666666666,5
+11,Terrapin Springs,medical,2020-04-10 22:00:00,5.62,5.62,5,4.68,5
+11,Terrapin Springs,medical,2020-04-10 23:00:00,5.85,5.85,5,4.684166666666667,5
+11,Terrapin Springs,medical,2020-04-11 00:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-06 00:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-06 01:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-06 02:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-06 03:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-06 04:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-06 05:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-06 06:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-06 07:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-06 08:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-06 09:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-06 10:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-06 11:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-06 12:00:00,5.11,5.11,5,4.799166666666666,5
+12,Pepper Mill,medical,2020-04-06 13:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-06 14:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-06 15:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-06 16:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-06 17:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-06 18:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-06 19:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-06 20:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-06 21:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-06 22:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-06 23:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-07 00:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-07 01:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-07 02:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-07 03:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-07 04:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-07 05:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-07 06:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-07 07:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-07 08:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-07 09:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-07 10:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-07 11:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-07 12:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-07 13:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-07 14:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-07 15:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-07 16:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-07 17:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-07 18:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-07 19:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-07 20:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-07 21:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-07 22:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-07 23:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-08 00:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-08 01:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-08 02:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-08 03:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-08 04:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-08 05:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-08 06:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-08 07:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-08 08:00:00,5.07,5.07,5,4.789166666666667,5
+12,Pepper Mill,medical,2020-04-08 09:00:00,5.46,5.46,5,3.216875,5
+12,Pepper Mill,medical,2020-04-08 10:00:00,5.37,5.37,5,3.3385714285714285,5
+12,Pepper Mill,medical,2020-04-08 11:00:00,5.41,5.41,5,4.073076923076923,1.88
+12,Pepper Mill,medical,2020-04-08 12:00:00,5.6,5.6,5,3.517142857142857,2.07
+12,Pepper Mill,medical,2020-04-08 13:00:00,5.54,5.54,5,4.086923076923077,2
+12,Pepper Mill,medical,2020-04-08 14:00:00,5.52,5.52,5,4.52,5
+12,Pepper Mill,medical,2020-04-08 15:00:00,5.66,5.66,5,4.296666666666667,2.17
+12,Pepper Mill,medical,2020-04-08 16:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-08 17:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-08 18:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-08 19:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-08 20:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-08 21:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-08 22:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-08 23:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-09 00:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-09 01:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-09 02:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-09 03:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-09 04:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-09 05:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-09 06:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-09 07:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-09 08:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-09 09:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-09 10:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-09 11:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-09 12:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-09 13:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-09 14:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-09 15:00:00,5.62,5.62,5,4.233846153846153,5
+12,Pepper Mill,medical,2020-04-09 16:00:00,5.63,5.63,5,4.4225,5
+12,Pepper Mill,medical,2020-04-09 17:00:00,5.53,5.53,5,4.8116666666666665,5
+12,Pepper Mill,medical,2020-04-09 18:00:00,5.58,5.58,5,4.6258333333333335,5
+12,Pepper Mill,medical,2020-04-09 19:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-09 20:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-09 21:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-09 22:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-09 23:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-10 00:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-10 01:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-10 02:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-10 03:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-10 04:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-10 05:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-10 06:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-10 07:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-10 08:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-10 09:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-10 10:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-10 11:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-10 12:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-10 13:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-10 14:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-10 15:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-10 16:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-10 17:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-10 18:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-10 19:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-10 20:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-10 21:00:00,5.57,5.57,5,4.815,5
+12,Pepper Mill,medical,2020-04-10 22:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-10 23:00:00,0,0,5,5,5
+12,Pepper Mill,medical,2020-04-11 00:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-06 00:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-06 01:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-06 02:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-06 03:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-06 04:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-06 05:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-06 06:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-06 07:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-06 08:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-06 09:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-06 10:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-06 11:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-06 12:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-06 13:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-06 14:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-06 15:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-06 16:00:00,3.65,3.65,5,4.9225,5
+13,Cheddarford,medical,2020-04-06 17:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-06 18:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-06 19:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-06 20:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-06 21:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-06 22:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-06 23:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-07 00:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-07 01:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-07 02:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-07 03:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-07 04:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-07 05:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-07 06:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-07 07:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-07 08:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-07 09:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-07 10:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-07 11:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-07 12:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-07 13:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-07 14:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-07 15:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-07 16:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-07 17:00:00,3.54,3.54,5,4.903333333333333,5
+13,Cheddarford,medical,2020-04-07 18:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-07 19:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-07 20:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-07 21:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-07 22:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-07 23:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-08 00:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-08 01:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-08 02:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-08 03:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-08 04:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-08 05:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-08 06:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-08 07:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-08 08:00:00,3.87,3.87,5,4.733333333333333,5
+13,Cheddarford,medical,2020-04-08 09:00:00,4.03,4.03,5,4.59,5
+13,Cheddarford,medical,2020-04-08 10:00:00,3.94,3.94,5,4.698333333333333,3.28
+13,Cheddarford,medical,2020-04-08 11:00:00,3.88,3.88,5,4.836666666666667,3.04
+13,Cheddarford,medical,2020-04-08 12:00:00,3.99,3.99,5,4.87,5
+13,Cheddarford,medical,2020-04-08 13:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-08 14:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-08 15:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-08 16:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-08 17:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-08 18:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-08 19:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-08 20:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-08 21:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-08 22:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-08 23:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-09 00:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-09 01:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-09 02:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-09 03:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-09 04:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-09 05:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-09 06:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-09 07:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-09 08:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-09 09:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-09 10:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-09 11:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-09 12:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-09 13:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-09 14:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-09 15:00:00,3.93,3.93,5,4.715833333333333,5
+13,Cheddarford,medical,2020-04-09 16:00:00,3.94,3.94,5,4.780769230769231,5
+13,Cheddarford,medical,2020-04-09 17:00:00,4.01,4.01,5,4.585833333333333,2.9
+13,Cheddarford,medical,2020-04-09 18:00:00,3.92,3.92,5,4.683333333333334,5
+13,Cheddarford,medical,2020-04-09 19:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-09 20:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-09 21:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-09 22:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-09 23:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-10 00:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-10 01:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-10 02:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-10 03:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-10 04:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-10 05:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-10 06:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-10 07:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-10 08:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-10 09:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-10 10:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-10 11:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-10 12:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-10 13:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-10 14:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-10 15:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-10 16:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-10 17:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-10 18:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-10 19:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-10 20:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-10 21:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-10 22:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-10 23:00:00,0,0,5,5,5
+13,Cheddarford,medical,2020-04-11 00:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-06 00:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-06 01:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-06 02:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-06 03:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-06 04:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-06 05:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-06 06:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-06 07:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-06 08:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-06 09:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-06 10:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-06 11:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-06 12:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-06 13:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-06 14:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-06 15:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-06 16:00:00,4.99,4.99,5,4.7275,5
+14,Easton,medical,2020-04-06 17:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-06 18:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-06 19:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-06 20:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-06 21:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-06 22:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-06 23:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-07 00:00:00,5.04,5.04,5,4.7275,5
+14,Easton,medical,2020-04-07 01:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-07 02:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-07 03:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-07 04:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-07 05:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-07 06:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-07 07:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-07 08:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-07 09:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-07 10:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-07 11:00:00,4.9,4.9,5,4.725833333333333,5
+14,Easton,medical,2020-04-07 12:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-07 13:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-07 14:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-07 15:00:00,4.78,4.78,5,4.723333333333334,5
+14,Easton,medical,2020-04-07 16:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-07 17:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-07 18:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-07 19:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-07 20:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-07 21:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-07 22:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-07 23:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-08 00:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-08 01:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-08 02:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-08 03:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-08 04:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-08 05:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-08 06:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-08 07:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-08 08:00:00,4.94,4.94,5,3.1294444444444443,5
+14,Easton,medical,2020-04-08 09:00:00,4.83,4.83,5,1.7096153846153848,1.59
+14,Easton,medical,2020-04-08 10:00:00,4.83,4.83,5,3.144615384615385,5
+14,Easton,medical,2020-04-08 11:00:00,4.9,4.9,5,3.7742857142857145,5
+14,Easton,medical,2020-04-08 12:00:00,4.96,4.96,5,3.5366666666666666,1.52
+14,Easton,medical,2020-04-08 13:00:00,4.75,4.75,5,4.706666666666667,5
+14,Easton,medical,2020-04-08 14:00:00,4.77,4.77,5,4.708333333333333,5
+14,Easton,medical,2020-04-08 15:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-08 16:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-08 17:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-08 18:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-08 19:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-08 20:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-08 21:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-08 22:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-08 23:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-09 00:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-09 01:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-09 02:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-09 03:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-09 04:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-09 05:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-09 06:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-09 07:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-09 08:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-09 09:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-09 10:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-09 11:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-09 12:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-09 13:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-09 14:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-09 15:00:00,4.89,4.89,5,2.42,1.52
+14,Easton,medical,2020-04-09 16:00:00,4.91,4.91,5,3.368333333333333,1.66
+14,Easton,medical,2020-04-09 17:00:00,4.89,4.89,5,4.453333333333333,5
+14,Easton,medical,2020-04-09 18:00:00,4.9,4.9,5,4.191666666666666,1.77
+14,Easton,medical,2020-04-09 19:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-09 20:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-09 21:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-09 22:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-09 23:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-10 00:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-10 01:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-10 02:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-10 03:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-10 04:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-10 05:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-10 06:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-10 07:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-10 08:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-10 09:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-10 10:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-10 11:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-10 12:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-10 13:00:00,4.74,4.74,5,4.735,1.82
+14,Easton,medical,2020-04-10 14:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-10 15:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-10 16:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-10 17:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-10 18:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-10 19:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-10 20:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-10 21:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-10 22:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-10 23:00:00,0,0,5,5,5
+14,Easton,medical,2020-04-11 00:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-06 00:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-06 01:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-06 02:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-06 03:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-06 04:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-06 05:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-06 06:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-06 07:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-06 08:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-06 09:00:00,6.33,6.33,5,4.760833333333333,5
+15,Weston,medical,2020-04-06 10:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-06 11:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-06 12:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-06 13:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-06 14:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-06 15:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-06 16:00:00,6.24,6.24,5,4.523333333333333,5
+15,Weston,medical,2020-04-06 17:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-06 18:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-06 19:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-06 20:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-06 21:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-06 22:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-06 23:00:00,5.76,5.76,5,4.760833333333333,5
+15,Weston,medical,2020-04-07 00:00:00,6.19,6.19,5,4.754166666666666,5
+15,Weston,medical,2020-04-07 01:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-07 02:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-07 03:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-07 04:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-07 05:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-07 06:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-07 07:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-07 08:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-07 09:00:00,6.23,6.23,5,4.491666666666666,5
+15,Weston,medical,2020-04-07 10:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-07 11:00:00,6.21,6.21,5,4.498333333333333,5
+15,Weston,medical,2020-04-07 12:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-07 13:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-07 14:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-07 15:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-07 16:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-07 17:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-07 18:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-07 19:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-07 20:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-07 21:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-07 22:00:00,6.19,6.19,5,4.744166666666667,5
+15,Weston,medical,2020-04-07 23:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-08 00:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-08 01:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-08 02:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-08 03:00:00,5.89,5.89,5,4.493333333333333,2.08
+15,Weston,medical,2020-04-08 04:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-08 05:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-08 06:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-08 07:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-08 08:00:00,6.07,6.07,5,3.5176470588235293,5
+15,Weston,medical,2020-04-08 09:00:00,5.73,5.73,5,2.8826666666666667,1.75
+15,Weston,medical,2020-04-08 10:00:00,5.8,5.8,5,2.8453846153846154,5
+15,Weston,medical,2020-04-08 11:00:00,5.77,5.77,5,3.595833333333333,5
+15,Weston,medical,2020-04-08 12:00:00,5.72,5.72,5,4.225384615384615,5
+15,Weston,medical,2020-04-08 13:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-08 14:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-08 15:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-08 16:00:00,5.74,5.74,5,4.724166666666667,5
+15,Weston,medical,2020-04-08 17:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-08 18:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-08 19:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-08 20:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-08 21:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-08 22:00:00,5.73,5.73,5,4.7225,5
+15,Weston,medical,2020-04-08 23:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-09 00:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-09 01:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-09 02:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-09 03:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-09 04:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-09 05:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-09 06:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-09 07:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-09 08:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-09 09:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-09 10:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-09 11:00:00,5.75,5.75,5,4.723333333333334,5
+15,Weston,medical,2020-04-09 12:00:00,5.79,5.79,5,4.733333333333333,5
+15,Weston,medical,2020-04-09 13:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-09 14:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-09 15:00:00,5.77,5.77,5,3.5676923076923077,5
+15,Weston,medical,2020-04-09 16:00:00,5.35,5.35,5,3.556923076923077,1.92
+15,Weston,medical,2020-04-09 17:00:00,5.27,5.27,5,4.491666666666666,5
+15,Weston,medical,2020-04-09 18:00:00,5.32,5.32,5,4.744166666666667,5
+15,Weston,medical,2020-04-09 19:00:00,5.29,5.29,5,4.503333333333333,5
+15,Weston,medical,2020-04-09 20:00:00,5.12,5.12,5,4.759166666666666,5
+15,Weston,medical,2020-04-09 21:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-09 22:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-09 23:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-10 00:00:00,5.23,5.23,5,4.766666666666667,5
+15,Weston,medical,2020-04-10 01:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-10 02:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-10 03:00:00,5.19,5.19,5,4.766666666666667,5
+15,Weston,medical,2020-04-10 04:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-10 05:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-10 06:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-10 07:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-10 08:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-10 09:00:00,5.2,5.2,5,4.765,2.18
+15,Weston,medical,2020-04-10 10:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-10 11:00:00,5.23,5.23,5,4.7683333333333335,5
+15,Weston,medical,2020-04-10 12:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-10 13:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-10 14:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-10 15:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-10 16:00:00,5.24,5.24,5,4.7775,5
+15,Weston,medical,2020-04-10 17:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-10 18:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-10 19:00:00,5.39,5.39,5,4.780833333333334,5
+15,Weston,medical,2020-04-10 20:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-10 21:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-10 22:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-10 23:00:00,0,0,5,5,5
+15,Weston,medical,2020-04-11 00:00:00,0,0,5,5,5
+16,Southton,medical,2020-04-06 00:00:00,5.82,5.82,5,4.7975,5
+16,Southton,medical,2020-04-06 01:00:00,5.88,5.88,5,4.612307692307692,5
+16,Southton,medical,2020-04-06 02:00:00,5.9,5.9,5,4.545,5
+16,Southton,medical,2020-04-06 03:00:00,5.79,5.79,5,4.516666666666667,5
+16,Southton,medical,2020-04-06 04:00:00,5.77,5.77,5,4.759166666666666,5
+16,Southton,medical,2020-04-06 05:00:00,6.52,6.52,5,3.939230769230769,5
+16,Southton,medical,2020-04-06 06:00:00,6.58,6.58,5,3.7558333333333334,5
+16,Southton,medical,2020-04-06 07:00:00,6.1,6.1,5,4.055833333333333,5
+16,Southton,medical,2020-04-06 08:00:00,6.27,6.27,5,4.5633333333333335,5
+16,Southton,medical,2020-04-06 09:00:00,6.11,6.11,5,4.533333333333333,5
+16,Southton,medical,2020-04-06 10:00:00,5.85,5.85,5,3.1221428571428573,1.97
+16,Southton,medical,2020-04-06 11:00:00,5.43,5.43,5,3.763333333333333,2.18
+16,Southton,medical,2020-04-06 12:00:00,5.06,5.06,5,4.488333333333333,5
+16,Southton,medical,2020-04-06 13:00:00,4.7,4.7,5,3.9238461538461538,2.13
+16,Southton,medical,2020-04-06 14:00:00,4.39,4.39,5,3.4692307692307693,2.16
+16,Southton,medical,2020-04-06 15:00:00,3.23,3.23,5,3.2361538461538464,2.08
+16,Southton,medical,2020-04-06 16:00:00,1.95,1.95,2.6,2.0508823529411764,2.4
+16,Southton,medical,2020-04-06 17:00:00,2.61,2.61,5,2.2838709677419353,1.93
+16,Southton,medical,2020-04-06 18:00:00,3.16,3.16,5,3.084285714285714,2.19
+16,Southton,medical,2020-04-06 19:00:00,2.64,2.64,5,3.556923076923077,2.19
+16,Southton,medical,2020-04-06 20:00:00,3.97,3.97,5,3.1307692307692307,2.69
+16,Southton,medical,2020-04-06 21:00:00,3.75,3.75,5,4.543333333333333,5
+16,Southton,medical,2020-04-06 22:00:00,4.08,4.08,5,3.807142857142857,5
+16,Southton,medical,2020-04-06 23:00:00,4.43,4.43,5,4.144615384615385,2.4
+16,Southton,medical,2020-04-07 00:00:00,4.31,4.31,5,4.023333333333333,5
+16,Southton,medical,2020-04-07 01:00:00,4.83,4.83,5,4.133076923076923,5
+16,Southton,medical,2020-04-07 02:00:00,4.87,4.87,5,4.0616666666666665,5
+16,Southton,medical,2020-04-07 03:00:00,4.92,4.92,5,4.055,5
+16,Southton,medical,2020-04-07 04:00:00,5,5,5,4.33,5
+16,Southton,medical,2020-04-07 05:00:00,5.15,5.15,5,4.2575,5
+16,Southton,medical,2020-04-07 06:00:00,4.98,4.98,5,3.5784615384615384,1.9
+16,Southton,medical,2020-04-07 07:00:00,5.06,5.06,5,3.853076923076923,5
+16,Southton,medical,2020-04-07 08:00:00,5.44,5.44,5,3.7558333333333334,5
+16,Southton,medical,2020-04-07 09:00:00,5.22,5.22,5,4.27,2.04
+16,Southton,medical,2020-04-07 10:00:00,4.78,4.78,5,4.760833333333333,5
+16,Southton,medical,2020-04-07 11:00:00,5.41,5.41,5,4.028333333333333,5
+16,Southton,medical,2020-04-07 12:00:00,6.63,6.63,5,3.7035714285714287,5
+16,Southton,medical,2020-04-07 13:00:00,6.98,6.98,5,4.2075,5
+16,Southton,medical,2020-04-07 14:00:00,6.75,6.75,5,3.9492307692307693,2.55
+16,Southton,medical,2020-04-07 15:00:00,6.02,6.02,5,4.5216666666666665,5
+16,Southton,medical,2020-04-07 16:00:00,6.28,6.28,5,3.5735714285714284,5
+16,Southton,medical,2020-04-07 17:00:00,6.05,6.05,5,3.6,5
+16,Southton,medical,2020-04-07 18:00:00,5.67,5.67,5,3.0206666666666666,2.05
+16,Southton,medical,2020-04-07 19:00:00,4.77,4.77,5,4.785,5
+16,Southton,medical,2020-04-07 20:00:00,4.72,4.72,5,3.6175,2.45
+16,Southton,medical,2020-04-07 21:00:00,4.62,4.62,5,3.9084615384615384,5
+16,Southton,medical,2020-04-07 22:00:00,4.24,4.24,5,3.8316666666666666,5
+16,Southton,medical,2020-04-07 23:00:00,4.25,4.25,5,4.528333333333333,5
+16,Southton,medical,2020-04-08 00:00:00,4.15,4.15,5,4.753333333333333,2.04
+16,Southton,medical,2020-04-08 01:00:00,4.66,4.66,5,4.131538461538462,2.15
+16,Southton,medical,2020-04-08 02:00:00,5.09,5.09,5,4.171538461538462,2.23
+16,Southton,medical,2020-04-08 03:00:00,4.55,4.55,5,4.775,5
+16,Southton,medical,2020-04-08 04:00:00,4.67,4.67,5,4.382307692307692,5
+16,Southton,medical,2020-04-08 05:00:00,4.78,4.78,5,3.9591666666666665,5
+16,Southton,medical,2020-04-08 06:00:00,4.81,4.81,5,3.8658333333333332,5
+16,Southton,medical,2020-04-08 07:00:00,4.23,4.23,5,4.260833333333333,5
+16,Southton,medical,2020-04-08 08:00:00,4.56,4.56,5,2.291231884057971,5
+16,Southton,medical,2020-04-08 09:00:00,4.81,4.81,2.84,2.172111801242236,2.14
+16,Southton,medical,2020-04-08 10:00:00,4.64,4.64,2.5,2.1115151515151513,2.03
+16,Southton,medical,2020-04-08 11:00:00,4.37,4.37,2.43,2.064296875,2.16
+16,Southton,medical,2020-04-08 12:00:00,4.48,4.48,2.43,2.1029885057471263,2.16
+16,Southton,medical,2020-04-08 13:00:00,4.11,4.11,5,2.1304878048780487,2.08
+16,Southton,medical,2020-04-08 14:00:00,5.06,5.06,5,2.1960606060606063,1.96
+16,Southton,medical,2020-04-08 15:00:00,4.63,4.63,5,2.4377272727272725,1.98
+16,Southton,medical,2020-04-08 16:00:00,5.95,5.95,5,2.6675,2.03
+16,Southton,medical,2020-04-08 17:00:00,5.58,5.58,5,3.9385714285714286,5
+16,Southton,medical,2020-04-08 18:00:00,5.92,5.92,5,4.086923076923077,5
+16,Southton,medical,2020-04-08 19:00:00,5.46,5.46,5,4.52,5
+16,Southton,medical,2020-04-08 20:00:00,5.64,5.64,5,3.669230769230769,2.01
+16,Southton,medical,2020-04-08 21:00:00,0,0,5,5,5
+16,Southton,medical,2020-04-08 22:00:00,5.71,5.71,5,4.128461538461538,5
+16,Southton,medical,2020-04-08 23:00:00,5.34,5.34,5,3.92,2.02
+16,Southton,medical,2020-04-09 00:00:00,5.05,5.05,5,3.8935714285714287,5
+16,Southton,medical,2020-04-09 01:00:00,5.52,5.52,5,4.2475,5
+16,Southton,medical,2020-04-09 02:00:00,5.69,5.69,5,4.016666666666667,5
+16,Southton,medical,2020-04-09 03:00:00,5.64,5.64,5,4.2716666666666665,5
+16,Southton,medical,2020-04-09 04:00:00,5.32,5.32,5,4.748333333333333,5
+16,Southton,medical,2020-04-09 05:00:00,5.97,5.97,5,3.7535714285714286,5
+16,Southton,medical,2020-04-09 06:00:00,5.99,5.99,5,3.8669230769230767,5
+16,Southton,medical,2020-04-09 07:00:00,6.02,6.02,5,4.498333333333333,5
+16,Southton,medical,2020-04-09 08:00:00,5.76,5.76,5,4.251666666666667,5
+16,Southton,medical,2020-04-09 09:00:00,6.06,6.06,5,4.780833333333334,5
+16,Southton,medical,2020-04-09 10:00:00,6.31,6.31,5,3.8925,2.56
+16,Southton,medical,2020-04-09 11:00:00,5.96,5.96,5,4.161333333333333,5
+16,Southton,medical,2020-04-09 12:00:00,5.78,5.78,5,4.259166666666666,2.82
+16,Southton,medical,2020-04-09 13:00:00,5.53,5.53,5,4.3392307692307694,2.78
+16,Southton,medical,2020-04-09 14:00:00,4.69,4.69,5,3.8858333333333333,5
+16,Southton,medical,2020-04-09 15:00:00,4.16,4.16,2.88,2.260096899224806,2.3
+16,Southton,medical,2020-04-09 16:00:00,4.03,4.03,2.82,2.164156378600823,1.97
+16,Southton,medical,2020-04-09 17:00:00,4,4,2.68,2.127749077490775,2.49
+16,Southton,medical,2020-04-09 18:00:00,4.51,4.51,2.71,2.072611464968153,1.95
+16,Southton,medical,2020-04-09 19:00:00,4.4,4.4,2.41,2.0627966101694915,2.24
+16,Southton,medical,2020-04-09 20:00:00,4.47,4.47,2.48,2.1065454545454547,1.88
+16,Southton,medical,2020-04-09 21:00:00,4.42,4.42,5,2.136,2.05
+16,Southton,medical,2020-04-09 22:00:00,4.45,4.45,5,2.2852,2.2
+16,Southton,medical,2020-04-09 23:00:00,4.4,4.4,5,2.215294117647059,2.11
+16,Southton,medical,2020-04-10 00:00:00,4.46,4.46,5,3.5546153846153845,5
+16,Southton,medical,2020-04-10 01:00:00,5.13,5.13,5,3.6384615384615384,2.26
+16,Southton,medical,2020-04-10 02:00:00,5.97,5.97,5,3.7415384615384615,2.4
+16,Southton,medical,2020-04-10 03:00:00,5.72,5.72,5,4.11,2.27
+16,Southton,medical,2020-04-10 04:00:00,5.25,5.25,5,4.327692307692308,2.16
+16,Southton,medical,2020-04-10 05:00:00,5.29,5.29,5,4.086153846153846,5
+16,Southton,medical,2020-04-10 06:00:00,5.2,5.2,5,3.7342857142857144,5
+16,Southton,medical,2020-04-10 07:00:00,5.06,5.06,5,4.082307692307692,2.02
+16,Southton,medical,2020-04-10 08:00:00,5.21,5.21,5,3.5025,1.88
+16,Southton,medical,2020-04-10 09:00:00,5.58,5.58,5,3.6976923076923076,2.11
+16,Southton,medical,2020-04-10 10:00:00,5.61,5.61,5,3.679333333333333,5
+16,Southton,medical,2020-04-10 11:00:00,5.29,5.29,5,4.2525,2.1
+16,Southton,medical,2020-04-10 12:00:00,5.29,5.29,5,4.484166666666667,1.84
+16,Southton,medical,2020-04-10 13:00:00,5.29,5.29,5,4.505833333333333,5
+16,Southton,medical,2020-04-10 14:00:00,5.6,5.6,5,4.763333333333334,5
+16,Southton,medical,2020-04-10 15:00:00,5.85,5.85,5,3.0473333333333334,2.18
+16,Southton,medical,2020-04-10 16:00:00,5.17,5.17,5,4.371666666666667,2.4
+16,Southton,medical,2020-04-10 17:00:00,5.36,5.36,5,3.8208333333333333,5
+16,Southton,medical,2020-04-10 18:00:00,5.65,5.65,5,3.8184615384615386,1.94
+16,Southton,medical,2020-04-10 19:00:00,5.92,5.92,5,3.4469230769230768,1.9
+16,Southton,medical,2020-04-10 20:00:00,5.57,5.57,5,4.076153846153846,5
+16,Southton,medical,2020-04-10 21:00:00,5.23,5.23,5,4.295833333333333,5
+16,Southton,medical,2020-04-10 22:00:00,5.15,5.15,5,4.308333333333334,2.43
+16,Southton,medical,2020-04-10 23:00:00,4.98,4.98,5,3.85,5
+16,Southton,medical,2020-04-11 00:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-06 00:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-06 01:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-06 02:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-06 03:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-06 04:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-06 05:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-06 06:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-06 07:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-06 08:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-06 09:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-06 10:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-06 11:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-06 12:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-06 13:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-06 14:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-06 15:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-06 16:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-06 17:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-06 18:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-06 19:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-06 20:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-06 21:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-06 22:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-06 23:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-07 00:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-07 01:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-07 02:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-07 03:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-07 04:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-07 05:00:00,4.4,4.4,5,4.9225,5
+17,Oak Willow,medical,2020-04-07 06:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-07 07:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-07 08:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-07 09:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-07 10:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-07 11:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-07 12:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-07 13:00:00,4.49,4.49,5,4.863333333333333,5
+17,Oak Willow,medical,2020-04-07 14:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-07 15:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-07 16:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-07 17:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-07 18:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-07 19:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-07 20:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-07 21:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-07 22:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-07 23:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-08 00:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-08 01:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-08 02:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-08 03:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-08 04:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-08 05:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-08 06:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-08 07:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-08 08:00:00,4.91,4.91,5,4.6692307692307695,5
+17,Oak Willow,medical,2020-04-08 09:00:00,4.9,4.9,5,4.469230769230769,5
+17,Oak Willow,medical,2020-04-08 10:00:00,4.7,4.7,5,4.240833333333334,5
+17,Oak Willow,medical,2020-04-08 11:00:00,4.75,4.75,5,4.554166666666666,3.23
+17,Oak Willow,medical,2020-04-08 12:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-08 13:00:00,4.54,4.54,5,4.6325,5
+17,Oak Willow,medical,2020-04-08 14:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-08 15:00:00,4.46,4.46,5,4.8225,5
+17,Oak Willow,medical,2020-04-08 16:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-08 17:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-08 18:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-08 19:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-08 20:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-08 21:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-08 22:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-08 23:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-09 00:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-09 01:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-09 02:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-09 03:00:00,4.5,4.5,5,4.845,5
+17,Oak Willow,medical,2020-04-09 04:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-09 05:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-09 06:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-09 07:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-09 08:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-09 09:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-09 10:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-09 11:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-09 12:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-09 13:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-09 14:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-09 15:00:00,4.39,4.39,5,4.348571428571429,3.75
+17,Oak Willow,medical,2020-04-09 16:00:00,4.37,4.37,5,4.685833333333333,5
+17,Oak Willow,medical,2020-04-09 17:00:00,4.5,4.5,5,4.880833333333333,5
+17,Oak Willow,medical,2020-04-09 18:00:00,4.33,4.33,5,4.918333333333333,5
+17,Oak Willow,medical,2020-04-09 19:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-09 20:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-09 21:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-09 22:00:00,4.59,4.59,5,4.954166666666667,5
+17,Oak Willow,medical,2020-04-09 23:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-10 00:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-10 01:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-10 02:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-10 03:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-10 04:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-10 05:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-10 06:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-10 07:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-10 08:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-10 09:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-10 10:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-10 11:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-10 12:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-10 13:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-10 14:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-10 15:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-10 16:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-10 17:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-10 18:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-10 19:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-10 20:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-10 21:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-10 22:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-10 23:00:00,0,0,5,5,5
+17,Oak Willow,medical,2020-04-11 00:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-06 00:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-06 01:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-06 02:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-06 03:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-06 04:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-06 05:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-06 06:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-06 07:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-06 08:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-06 09:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-06 10:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-06 11:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-06 12:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-06 13:00:00,4.54,4.54,5,4.734166666666667,5
+18,East Parton,medical,2020-04-06 14:00:00,4.65,4.65,5,4.7316666666666665,5
+18,East Parton,medical,2020-04-06 15:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-06 16:00:00,4.68,4.68,5,4.733333333333333,5
+18,East Parton,medical,2020-04-06 17:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-06 18:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-06 19:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-06 20:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-06 21:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-06 22:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-06 23:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-07 00:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-07 01:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-07 02:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-07 03:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-07 04:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-07 05:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-07 06:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-07 07:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-07 08:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-07 09:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-07 10:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-07 11:00:00,4.65,4.65,5,4.734166666666667,5
+18,East Parton,medical,2020-04-07 12:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-07 13:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-07 14:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-07 15:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-07 16:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-07 17:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-07 18:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-07 19:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-07 20:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-07 21:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-07 22:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-07 23:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-08 00:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-08 01:00:00,4.67,4.67,5,4.735,5
+18,East Parton,medical,2020-04-08 02:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-08 03:00:00,4.62,4.62,5,4.733333333333333,5
+18,East Parton,medical,2020-04-08 04:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-08 05:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-08 06:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-08 07:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-08 08:00:00,4.67,4.67,5,2.8461904761904764,5
+18,East Parton,medical,2020-04-08 09:00:00,4.67,4.67,5,2.285,1.73
+18,East Parton,medical,2020-04-08 10:00:00,4.5,4.5,5,2.4669230769230768,1.62
+18,East Parton,medical,2020-04-08 11:00:00,4.52,4.52,5,3.9175,5
+18,East Parton,medical,2020-04-08 12:00:00,4.52,4.52,5,4.179166666666666,5
+18,East Parton,medical,2020-04-08 13:00:00,4.53,4.53,5,4.18,5
+18,East Parton,medical,2020-04-08 14:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-08 15:00:00,4.44,4.44,5,4.726666666666667,1.72
+18,East Parton,medical,2020-04-08 16:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-08 17:00:00,4.51,4.51,5,4.7325,5
+18,East Parton,medical,2020-04-08 18:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-08 19:00:00,4.45,4.45,5,4.725833333333333,1.71
+18,East Parton,medical,2020-04-08 20:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-08 21:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-08 22:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-08 23:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-09 00:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-09 01:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-09 02:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-09 03:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-09 04:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-09 05:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-09 06:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-09 07:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-09 08:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-09 09:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-09 10:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-09 11:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-09 12:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-09 13:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-09 14:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-09 15:00:00,4.53,4.53,5,3.4058333333333333,1.76
+18,East Parton,medical,2020-04-09 16:00:00,4.44,4.44,5,4.206666666666667,5
+18,East Parton,medical,2020-04-09 17:00:00,4.44,4.44,5,4.7375,5
+18,East Parton,medical,2020-04-09 18:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-09 19:00:00,4.45,4.45,5,4.743333333333333,5
+18,East Parton,medical,2020-04-09 20:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-09 21:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-09 22:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-09 23:00:00,4.48,4.48,5,4.736666666666666,5
+18,East Parton,medical,2020-04-10 00:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-10 01:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-10 02:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-10 03:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-10 04:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-10 05:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-10 06:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-10 07:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-10 08:00:00,4.47,4.47,5,4.740833333333334,5
+18,East Parton,medical,2020-04-10 09:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-10 10:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-10 11:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-10 12:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-10 13:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-10 14:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-10 15:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-10 16:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-10 17:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-10 18:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-10 19:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-10 20:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-10 21:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-10 22:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-10 23:00:00,0,0,5,5,5
+18,East Parton,medical,2020-04-11 00:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-06 00:00:00,4.57,4.57,5.93,5.0775,5
+19,West Parton,medical,2020-04-06 01:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-06 02:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-06 03:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-06 04:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-06 05:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-06 06:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-06 07:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-06 08:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-06 09:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-06 10:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-06 11:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-06 12:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-06 13:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-06 14:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-06 15:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-06 16:00:00,4.72,4.72,5.29,4.9825,5
+19,West Parton,medical,2020-04-06 17:00:00,4.96,4.96,5,4.875,5
+19,West Parton,medical,2020-04-06 18:00:00,4.99,4.99,5,4.9125,5
+19,West Parton,medical,2020-04-06 19:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-06 20:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-06 21:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-06 22:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-06 23:00:00,5.01,5.01,5,4.881666666666667,5
+19,West Parton,medical,2020-04-07 00:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-07 01:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-07 02:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-07 03:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-07 04:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-07 05:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-07 06:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-07 07:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-07 08:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-07 09:00:00,5.02,5.02,5,4.909166666666667,5
+19,West Parton,medical,2020-04-07 10:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-07 11:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-07 12:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-07 13:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-07 14:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-07 15:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-07 16:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-07 17:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-07 18:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-07 19:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-07 20:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-07 21:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-07 22:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-07 23:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-08 00:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-08 01:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-08 02:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-08 03:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-08 04:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-08 05:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-08 06:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-08 07:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-08 08:00:00,5.09,5.09,5,4.7575,5
+19,West Parton,medical,2020-04-08 09:00:00,5.16,5.16,5,4.9075,5
+19,West Parton,medical,2020-04-08 10:00:00,5.08,5.08,5,4.9366666666666665,5
+19,West Parton,medical,2020-04-08 11:00:00,5.27,5.27,5,4.831666666666667,3.95
+19,West Parton,medical,2020-04-08 12:00:00,5.46,5.46,5.12,4.855833333333333,5
+19,West Parton,medical,2020-04-08 13:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-08 14:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-08 15:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-08 16:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-08 17:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-08 18:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-08 19:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-08 20:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-08 21:00:00,5.32,5.32,5,4.964166666666666,5
+19,West Parton,medical,2020-04-08 22:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-08 23:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-09 00:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-09 01:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-09 02:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-09 03:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-09 04:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-09 05:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-09 06:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-09 07:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-09 08:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-09 09:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-09 10:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-09 11:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-09 12:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-09 13:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-09 14:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-09 15:00:00,5.65,5.65,5,4.825,5
+19,West Parton,medical,2020-04-09 16:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-09 17:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-09 18:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-09 19:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-09 20:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-09 21:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-09 22:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-09 23:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-10 00:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-10 01:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-10 02:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-10 03:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-10 04:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-10 05:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-10 06:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-10 07:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-10 08:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-10 09:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-10 10:00:00,5.66,5.66,5.09,5.0075,5
+19,West Parton,medical,2020-04-10 11:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-10 12:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-10 13:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-10 14:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-10 15:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-10 16:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-10 17:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-10 18:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-10 19:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-10 20:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-10 21:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-10 22:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-10 23:00:00,0,0,5,5,5
+19,West Parton,medical,2020-04-11 00:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-06 00:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-06 01:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-06 02:00:00,4.94,4.94,5,4.7525,5
+2,Northwest,medical,2020-04-06 03:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-06 04:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-06 05:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-06 06:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-06 07:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-06 08:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-06 09:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-06 10:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-06 11:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-06 12:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-06 13:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-06 14:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-06 15:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-06 16:00:00,4.93,4.93,5,4.744166666666667,5
+2,Northwest,medical,2020-04-06 17:00:00,4.99,4.99,5,4.483333333333333,1.9
+2,Northwest,medical,2020-04-06 18:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-06 19:00:00,4.99,4.99,5,4.745,1.94
+2,Northwest,medical,2020-04-06 20:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-06 21:00:00,4.96,4.96,5,4.735833333333334,5
+2,Northwest,medical,2020-04-06 22:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-06 23:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-07 00:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-07 01:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-07 02:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-07 03:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-07 04:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-07 05:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-07 06:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-07 07:00:00,5.13,5.13,5,4.729166666666667,1.75
+2,Northwest,medical,2020-04-07 08:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-07 09:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-07 10:00:00,5.2,5.2,5,4.729166666666667,5
+2,Northwest,medical,2020-04-07 11:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-07 12:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-07 13:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-07 14:00:00,5.23,5.23,5,4.7275,5
+2,Northwest,medical,2020-04-07 15:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-07 16:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-07 17:00:00,5.19,5.19,5,4.73,5
+2,Northwest,medical,2020-04-07 18:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-07 19:00:00,5.06,5.06,5,4.723333333333334,5
+2,Northwest,medical,2020-04-07 20:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-07 21:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-07 22:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-07 23:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-08 00:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-08 01:00:00,5.07,5.07,5,4.721666666666667,5
+2,Northwest,medical,2020-04-08 02:00:00,5.06,5.06,5,4.7283333333333335,5
+2,Northwest,medical,2020-04-08 03:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-08 04:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-08 05:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-08 06:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-08 07:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-08 08:00:00,5.14,5.14,5,3.6342857142857143,5
+2,Northwest,medical,2020-04-08 09:00:00,5.18,5.18,5,1.8352,1.75
+2,Northwest,medical,2020-04-08 10:00:00,5.09,5.09,5,2.420625,1.62
+2,Northwest,medical,2020-04-08 11:00:00,4.87,4.87,5,3.730769230769231,1.66
+2,Northwest,medical,2020-04-08 12:00:00,4.93,4.93,5,3.9692307692307693,5
+2,Northwest,medical,2020-04-08 13:00:00,5.06,5.06,5,3.6325,5
+2,Northwest,medical,2020-04-08 14:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-08 15:00:00,4.92,4.92,5,4.4525,5
+2,Northwest,medical,2020-04-08 16:00:00,4.83,4.83,5,4.730833333333333,5
+2,Northwest,medical,2020-04-08 17:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-08 18:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-08 19:00:00,4.91,4.91,5,4.7225,5
+2,Northwest,medical,2020-04-08 20:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-08 21:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-08 22:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-08 23:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-09 00:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-09 01:00:00,4.9,4.9,5,4.720833333333333,5
+2,Northwest,medical,2020-04-09 02:00:00,4.9,4.9,5,4.7316666666666665,5
+2,Northwest,medical,2020-04-09 03:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-09 04:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-09 05:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-09 06:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-09 07:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-09 08:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-09 09:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-09 10:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-09 11:00:00,4.88,4.88,5,4.730833333333333,5
+2,Northwest,medical,2020-04-09 12:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-09 13:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-09 14:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-09 15:00:00,4.87,4.87,5,3.348333333333333,1.77
+2,Northwest,medical,2020-04-09 16:00:00,4.92,4.92,5,2.9892307692307694,5
+2,Northwest,medical,2020-04-09 17:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-09 18:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-09 19:00:00,5.01,5.01,5,4.720833333333333,5
+2,Northwest,medical,2020-04-09 20:00:00,4.73,4.73,5,4.724166666666667,5
+2,Northwest,medical,2020-04-09 21:00:00,4.96,4.96,5,4.7316666666666665,5
+2,Northwest,medical,2020-04-09 22:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-09 23:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-10 00:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-10 01:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-10 02:00:00,4.84,4.84,5,4.7325,5
+2,Northwest,medical,2020-04-10 03:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-10 04:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-10 05:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-10 06:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-10 07:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-10 08:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-10 09:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-10 10:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-10 11:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-10 12:00:00,4.79,4.79,5,4.733333333333333,5
+2,Northwest,medical,2020-04-10 13:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-10 14:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-10 15:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-10 16:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-10 17:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-10 18:00:00,4.73,4.73,5,4.729166666666667,5
+2,Northwest,medical,2020-04-10 19:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-10 20:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-10 21:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-10 22:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-10 23:00:00,0,0,5,5,5
+2,Northwest,medical,2020-04-11 00:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-06 00:00:00,5.83,5.83,5,1.9613333333333334,0.93
+3,Old Town,medical,2020-04-06 01:00:00,5.65,5.65,5,1.795,0.79
+3,Old Town,medical,2020-04-06 02:00:00,5.74,5.74,5,3.0292307692307694,5
+3,Old Town,medical,2020-04-06 03:00:00,5.73,5.73,5,3.1664285714285714,0.71
+3,Old Town,medical,2020-04-06 04:00:00,5.73,5.73,5,4.6475,5
+3,Old Town,medical,2020-04-06 05:00:00,5.81,5.81,5,2.59625,5
+3,Old Town,medical,2020-04-06 06:00:00,5.86,5.86,5,2.019375,0.66
+3,Old Town,medical,2020-04-06 07:00:00,6.09,6.09,5,2.1413333333333333,0.7
+3,Old Town,medical,2020-04-06 08:00:00,6.07,6.07,5,1.7875,0.68
+3,Old Town,medical,2020-04-06 09:00:00,5.52,5.52,5,2.1358333333333333,5
+3,Old Town,medical,2020-04-06 10:00:00,5.27,5.27,5,3.1925,0.66
+3,Old Town,medical,2020-04-06 11:00:00,5.19,5.19,5,1.9807692307692308,5
+3,Old Town,medical,2020-04-06 12:00:00,5.1,5.1,5,2.2335714285714285,5
+3,Old Town,medical,2020-04-06 13:00:00,4.78,4.78,5,1.786875,0.69
+3,Old Town,medical,2020-04-06 14:00:00,4.28,4.28,5,0.9953191489361702,0.75
+3,Old Town,medical,2020-04-06 15:00:00,2.59,2.59,0.77,0.7037037037037037,0.69
+3,Old Town,medical,2020-04-06 16:00:00,2.55,2.55,0.84,0.6889385474860336,0.75
+3,Old Town,medical,2020-04-06 17:00:00,2.95,2.95,0.77,0.6862244897959183,0.73
+3,Old Town,medical,2020-04-06 18:00:00,3.79,3.79,5,0.80125,0.6
+3,Old Town,medical,2020-04-06 19:00:00,4.19,4.19,5,1.125,5
+3,Old Town,medical,2020-04-06 20:00:00,4.74,4.74,5,1.5188235294117647,0.71
+3,Old Town,medical,2020-04-06 21:00:00,5.27,5.27,5,1.419,0.8
+3,Old Town,medical,2020-04-06 22:00:00,5.51,5.51,5,2.46,0.73
+3,Old Town,medical,2020-04-06 23:00:00,5.68,5.68,5,2.736666666666667,0.8
+3,Old Town,medical,2020-04-07 00:00:00,5.67,5.67,5,3.3584615384615386,0.71
+3,Old Town,medical,2020-04-07 01:00:00,5.86,5.86,5,2.370769230769231,0.77
+3,Old Town,medical,2020-04-07 02:00:00,5.87,5.87,5,3.002307692307692,5
+3,Old Town,medical,2020-04-07 03:00:00,5.98,5.98,5,3.329230769230769,5
+3,Old Town,medical,2020-04-07 04:00:00,6.1,6.1,5,1.802,0.62
+3,Old Town,medical,2020-04-07 05:00:00,6.16,6.16,5,2.4964285714285714,5
+3,Old Town,medical,2020-04-07 06:00:00,6.2,6.2,5,3.2225,5
+3,Old Town,medical,2020-04-07 07:00:00,6.17,6.17,5,2.5414285714285714,5
+3,Old Town,medical,2020-04-07 08:00:00,6.03,6.03,5,1.5706666666666667,0.71
+3,Old Town,medical,2020-04-07 09:00:00,5.52,5.52,5,1.9447058823529413,5
+3,Old Town,medical,2020-04-07 10:00:00,5.42,5.42,5,2.098333333333333,0.7
+3,Old Town,medical,2020-04-07 11:00:00,5.49,5.49,5,2.4583333333333335,0.65
+3,Old Town,medical,2020-04-07 12:00:00,5.48,5.48,5,2.9876923076923076,5
+3,Old Town,medical,2020-04-07 13:00:00,5.64,5.64,5,2.6553846153846155,5
+3,Old Town,medical,2020-04-07 14:00:00,5.75,5.75,5,2.8314285714285714,0.66
+3,Old Town,medical,2020-04-07 15:00:00,5.85,5.85,5,3.352307692307692,0.7
+3,Old Town,medical,2020-04-07 16:00:00,5.96,5.96,5,3.5733333333333333,0.71
+3,Old Town,medical,2020-04-07 17:00:00,6.06,6.06,5,2.8466666666666667,5
+3,Old Town,medical,2020-04-07 18:00:00,6.12,6.12,5,3.006153846153846,5
+3,Old Town,medical,2020-04-07 19:00:00,6.1,6.1,5,1.9594117647058824,5
+3,Old Town,medical,2020-04-07 20:00:00,6.03,6.03,5,2.3415384615384616,0.69
+3,Old Town,medical,2020-04-07 21:00:00,6.06,6.06,5,2.104,5
+3,Old Town,medical,2020-04-07 22:00:00,6.02,6.02,5,2.68,0.64
+3,Old Town,medical,2020-04-07 23:00:00,6.11,6.11,5,1.9492857142857143,0.75
+3,Old Town,medical,2020-04-08 00:00:00,6.07,6.07,5,2.8307142857142855,5
+3,Old Town,medical,2020-04-08 01:00:00,6.08,6.08,5,2.9846153846153847,0.65
+3,Old Town,medical,2020-04-08 02:00:00,6.08,6.08,5,2.836666666666667,0.64
+3,Old Town,medical,2020-04-08 03:00:00,6.19,6.19,5,3.1614285714285715,5
+3,Old Town,medical,2020-04-08 04:00:00,6.4,6.4,5,2.32,5
+3,Old Town,medical,2020-04-08 05:00:00,6.4,6.4,5,2.6538461538461537,0.66
+3,Old Town,medical,2020-04-08 06:00:00,6.45,6.45,5,2.336153846153846,0.65
+3,Old Town,medical,2020-04-08 07:00:00,6.3,6.3,5,2.72,0.65
+3,Old Town,medical,2020-04-08 08:00:00,7.29,7.29,5,0.7064473684210526,5
+3,Old Town,medical,2020-04-08 09:00:00,8.83,8.83,5,0.7250435793143521,0.7
+3,Old Town,medical,2020-04-08 10:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-08 11:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-08 12:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-08 13:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-08 14:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-08 15:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-08 16:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-08 17:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-08 18:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-08 19:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-08 20:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-08 21:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-08 22:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-08 23:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-09 00:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-09 01:00:00,9.28,9.28,5,0.703672153024911,0.69
+3,Old Town,medical,2020-04-09 02:00:00,6.52,6.52,5,2.521764705882353,5
+3,Old Town,medical,2020-04-09 03:00:00,5.85,5.85,5,3.0507692307692307,0.78
+3,Old Town,medical,2020-04-09 04:00:00,6.03,6.03,5,2.231176470588235,0.75
+3,Old Town,medical,2020-04-09 05:00:00,6.06,6.06,5,2.334375,0.72
+3,Old Town,medical,2020-04-09 06:00:00,6.02,6.02,5,2.827857142857143,0.66
+3,Old Town,medical,2020-04-09 07:00:00,6.12,6.12,5,3.5608333333333335,5
+3,Old Town,medical,2020-04-09 08:00:00,6.19,6.19,5,2.5164285714285715,0.7
+3,Old Town,medical,2020-04-09 09:00:00,6.22,6.22,5,1.9347058823529413,5
+3,Old Town,medical,2020-04-09 10:00:00,6.13,6.13,5,1.9214285714285715,5
+3,Old Town,medical,2020-04-09 11:00:00,5.9,5.9,5,2.340625,5
+3,Old Town,medical,2020-04-09 12:00:00,5.72,5.72,5,2.842142857142857,0.66
+3,Old Town,medical,2020-04-09 13:00:00,5.68,5.68,5,2.527142857142857,0.66
+3,Old Town,medical,2020-04-09 14:00:00,6.02,6.02,5,2.301875,5
+3,Old Town,medical,2020-04-09 15:00:00,7.21,7.21,5,0.9566836734693878,0.71
+3,Old Town,medical,2020-04-09 16:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-09 17:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-09 18:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-09 19:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-09 20:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-09 21:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-09 22:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-09 23:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-10 00:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-10 01:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-10 02:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-10 03:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-10 04:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-10 05:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-10 06:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-10 07:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-10 08:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-10 09:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-10 10:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-10 11:00:00,0,0,5,5,5
+3,Old Town,medical,2020-04-10 12:00:00,7.27,7.27,5,0.7041523906929175,0.67
+3,Old Town,medical,2020-04-10 13:00:00,5.83,5.83,5,2.4266666666666667,0.68
+3,Old Town,medical,2020-04-10 14:00:00,5.62,5.62,5,1.9528571428571428,0.72
+3,Old Town,medical,2020-04-10 15:00:00,5.38,5.38,5,2.1,5
+3,Old Town,medical,2020-04-10 16:00:00,5.34,5.34,5,2.4529411764705884,5
+3,Old Town,medical,2020-04-10 17:00:00,5.28,5.28,5,2.9593333333333334,5
+3,Old Town,medical,2020-04-10 18:00:00,5.23,5.23,5,3.44,5
+3,Old Town,medical,2020-04-10 19:00:00,5.2,5.2,5,2.050625,0.69
+3,Old Town,medical,2020-04-10 20:00:00,5.18,5.18,5,1.9464285714285714,0.73
+3,Old Town,medical,2020-04-10 21:00:00,5.05,5.05,5,2.868333333333333,5
+3,Old Town,medical,2020-04-10 22:00:00,5.34,5.34,5,2.2764285714285712,0.72
+3,Old Town,medical,2020-04-10 23:00:00,5.52,5.52,5,3.1076923076923078,5
+3,Old Town,medical,2020-04-11 00:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-06 00:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-06 01:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-06 02:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-06 03:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-06 04:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-06 05:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-06 06:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-06 07:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-06 08:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-06 09:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-06 10:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-06 11:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-06 12:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-06 13:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-06 14:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-06 15:00:00,5.03,5.03,5,4.791666666666667,5
+4,Safe Town,medical,2020-04-06 16:00:00,5.1,5.1,5,4.399230769230769,5
+4,Safe Town,medical,2020-04-06 17:00:00,5.18,5.18,5,4.783333333333333,2.4
+4,Safe Town,medical,2020-04-06 18:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-06 19:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-06 20:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-06 21:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-06 22:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-06 23:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-07 00:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-07 01:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-07 02:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-07 03:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-07 04:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-07 05:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-07 06:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-07 07:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-07 08:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-07 09:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-07 10:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-07 11:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-07 12:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-07 13:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-07 14:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-07 15:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-07 16:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-07 17:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-07 18:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-07 19:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-07 20:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-07 21:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-07 22:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-07 23:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-08 00:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-08 01:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-08 02:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-08 03:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-08 04:00:00,5.12,5.12,5,4.788333333333333,5
+4,Safe Town,medical,2020-04-08 05:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-08 06:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-08 07:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-08 08:00:00,5.16,5.16,5,4.5633333333333335,5
+4,Safe Town,medical,2020-04-08 09:00:00,5.46,5.46,5,3.004375,5
+4,Safe Town,medical,2020-04-08 10:00:00,5.56,5.56,5,3.5730769230769233,5
+4,Safe Town,medical,2020-04-08 11:00:00,5.72,5.72,5,3.5646153846153847,5
+4,Safe Town,medical,2020-04-08 12:00:00,5.58,5.58,5,4.501666666666667,2.01
+4,Safe Town,medical,2020-04-08 13:00:00,5.58,5.58,5,4.504166666666666,5
+4,Safe Town,medical,2020-04-08 14:00:00,5.43,5.43,5,4.743333333333333,1.92
+4,Safe Town,medical,2020-04-08 15:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-08 16:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-08 17:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-08 18:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-08 19:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-08 20:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-08 21:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-08 22:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-08 23:00:00,5.49,5.49,5,4.744166666666667,5
+4,Safe Town,medical,2020-04-09 00:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-09 01:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-09 02:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-09 03:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-09 04:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-09 05:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-09 06:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-09 07:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-09 08:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-09 09:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-09 10:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-09 11:00:00,5.67,5.67,5,4.756666666666667,5
+4,Safe Town,medical,2020-04-09 12:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-09 13:00:00,5.71,5.71,5,4.7575,5
+4,Safe Town,medical,2020-04-09 14:00:00,5.78,5.78,5,4.7575,2.09
+4,Safe Town,medical,2020-04-09 15:00:00,5.62,5.62,5,4.306666666666667,5
+4,Safe Town,medical,2020-04-09 16:00:00,5.8,5.8,5,4.098571428571429,5
+4,Safe Town,medical,2020-04-09 17:00:00,5.7,5.7,5,4.3975,5
+4,Safe Town,medical,2020-04-09 18:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-09 19:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-09 20:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-09 21:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-09 22:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-09 23:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-10 00:00:00,5.69,5.69,5,4.8,5
+4,Safe Town,medical,2020-04-10 01:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-10 02:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-10 03:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-10 04:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-10 05:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-10 06:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-10 07:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-10 08:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-10 09:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-10 10:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-10 11:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-10 12:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-10 13:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-10 14:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-10 15:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-10 16:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-10 17:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-10 18:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-10 19:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-10 20:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-10 21:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-10 22:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-10 23:00:00,0,0,5,5,5
+4,Safe Town,medical,2020-04-11 00:00:00,0,0,5,5,5
+5,Southwest,medical,2020-04-06 00:00:00,6.22,6.22,5,3.9546153846153844,5
+5,Southwest,medical,2020-04-06 01:00:00,6.01,6.01,5,4.5075,5
+5,Southwest,medical,2020-04-06 02:00:00,5.97,5.97,5,4.748333333333333,5
+5,Southwest,medical,2020-04-06 03:00:00,6.07,6.07,5,3.786153846153846,1.98
+5,Southwest,medical,2020-04-06 04:00:00,5.58,5.58,5,3.8707142857142856,5
+5,Southwest,medical,2020-04-06 05:00:00,5.95,5.95,5,3.3783333333333334,5
+5,Southwest,medical,2020-04-06 06:00:00,5.82,5.82,5,4.019230769230769,5
+5,Southwest,medical,2020-04-06 07:00:00,5.53,5.53,5,4.7316666666666665,1.78
+5,Southwest,medical,2020-04-06 08:00:00,5.87,5.87,5,3.9916666666666667,5
+5,Southwest,medical,2020-04-06 09:00:00,5.89,5.89,5,4.0225,2.01
+5,Southwest,medical,2020-04-06 10:00:00,5.67,5.67,5,4.740833333333334,5
+5,Southwest,medical,2020-04-06 11:00:00,5.62,5.62,5,4.245833333333334,1.97
+5,Southwest,medical,2020-04-06 12:00:00,5.16,5.16,5,3.665,5
+5,Southwest,medical,2020-04-06 13:00:00,4.83,4.83,5,4.510769230769231,5
+5,Southwest,medical,2020-04-06 14:00:00,4.28,4.28,5,3.269230769230769,5
+5,Southwest,medical,2020-04-06 15:00:00,2.92,2.92,5,2.8723076923076922,1.89
+5,Southwest,medical,2020-04-06 16:00:00,2.66,2.66,1.98,1.6082,1.95
+5,Southwest,medical,2020-04-06 17:00:00,1.6,1.6,5,2.0020689655172412,2.01
+5,Southwest,medical,2020-04-06 18:00:00,2.42,2.42,5,2.9173333333333336,2.06
+5,Southwest,medical,2020-04-06 19:00:00,3.27,3.27,5,3.042222222222222,5
+5,Southwest,medical,2020-04-06 20:00:00,4.06,4.06,5,2.8335714285714286,1.55
+5,Southwest,medical,2020-04-06 21:00:00,4.26,4.26,5,3.514,5
+5,Southwest,medical,2020-04-06 22:00:00,4.75,4.75,5,3.039230769230769,5
+5,Southwest,medical,2020-04-06 23:00:00,4.98,4.98,5,3.76,5
+5,Southwest,medical,2020-04-07 00:00:00,5.41,5.41,5,3.3230769230769233,5
+5,Southwest,medical,2020-04-07 01:00:00,5.17,5.17,5,4.03923076923077,5
+5,Southwest,medical,2020-04-07 02:00:00,4.98,4.98,5,4.446666666666666,5
+5,Southwest,medical,2020-04-07 03:00:00,5.43,5.43,5,4.166666666666667,5
+5,Southwest,medical,2020-04-07 04:00:00,5.58,5.58,5,4.716666666666667,5
+5,Southwest,medical,2020-04-07 05:00:00,5.69,5.69,5,3.3013333333333335,5
+5,Southwest,medical,2020-04-07 06:00:00,5.7,5.7,5,4.474166666666667,5
+5,Southwest,medical,2020-04-07 07:00:00,5.52,5.52,5,3.9825,1.92
+5,Southwest,medical,2020-04-07 08:00:00,5.67,5.67,5,3.333846153846154,2.12
+5,Southwest,medical,2020-04-07 09:00:00,5.6,5.6,5,4.28,5
+5,Southwest,medical,2020-04-07 10:00:00,5.5,5.5,5,4.236666666666666,5
+5,Southwest,medical,2020-04-07 11:00:00,5.35,5.35,5,4.743333333333333,5
+5,Southwest,medical,2020-04-07 12:00:00,5.55,5.55,5,4.2058333333333335,5
+5,Southwest,medical,2020-04-07 13:00:00,5.56,5.56,5,4.200833333333334,5
+5,Southwest,medical,2020-04-07 14:00:00,5.39,5.39,5,4.455,5
+5,Southwest,medical,2020-04-07 15:00:00,5.64,5.64,5,3.4953846153846153,1.75
+5,Southwest,medical,2020-04-07 16:00:00,5.54,5.54,5,4.510769230769231,5
+5,Southwest,medical,2020-04-07 17:00:00,5.82,5.82,5,3.2016666666666667,5
+5,Southwest,medical,2020-04-07 18:00:00,5.96,5.96,5,4.122142857142857,5
+5,Southwest,medical,2020-04-07 19:00:00,5.75,5.75,5,3.8230769230769233,5
+5,Southwest,medical,2020-04-07 20:00:00,5.22,5.22,5,4.045384615384616,5
+5,Southwest,medical,2020-04-07 21:00:00,5.04,5.04,5,4.2058333333333335,1.84
+5,Southwest,medical,2020-04-07 22:00:00,5.64,5.64,5,3.75,5
+5,Southwest,medical,2020-04-07 23:00:00,6.03,6.03,5,3.2553846153846155,1.65
+5,Southwest,medical,2020-04-08 00:00:00,6.22,6.22,5,3.388333333333333,1.76
+5,Southwest,medical,2020-04-08 01:00:00,5.94,5.94,5,4.734166666666667,5
+5,Southwest,medical,2020-04-08 02:00:00,6.36,6.36,5,3.9375,5
+5,Southwest,medical,2020-04-08 03:00:00,6.29,6.29,5,4.4783333333333335,5
+5,Southwest,medical,2020-04-08 04:00:00,6.29,6.29,5,3.425,5
+5,Southwest,medical,2020-04-08 05:00:00,6.17,6.17,5,3.8146153846153847,5
+5,Southwest,medical,2020-04-08 06:00:00,5.59,5.59,5,4.03923076923077,5
+5,Southwest,medical,2020-04-08 07:00:00,4.87,4.87,5,4.74,5
+5,Southwest,medical,2020-04-08 08:00:00,4.76,4.76,5,1.9276470588235295,1.8
+5,Southwest,medical,2020-04-08 09:00:00,1.73,1.73,2.15,1.8423853211009174,2.04
+5,Southwest,medical,2020-04-08 10:00:00,1.47,1.47,2.18,1.846298076923077,1.76
+5,Southwest,medical,2020-04-08 11:00:00,1.81,1.81,2.16,1.8343312101910827,1.84
+5,Southwest,medical,2020-04-08 12:00:00,1.69,1.69,2.15,1.8909375,1.82
+5,Southwest,medical,2020-04-08 13:00:00,2.16,2.16,2.34,1.8868421052631579,1.7
+5,Southwest,medical,2020-04-08 14:00:00,2.98,2.98,5,2.3975,1.91
+5,Southwest,medical,2020-04-08 15:00:00,3.58,3.58,5,2.49875,2.05
+5,Southwest,medical,2020-04-08 16:00:00,3.39,3.39,5,3.5776923076923075,1.95
+5,Southwest,medical,2020-04-08 17:00:00,3.48,3.48,5,3.4192857142857145,5
+5,Southwest,medical,2020-04-08 18:00:00,3.56,3.56,5,4.016153846153846,1.73
+5,Southwest,medical,2020-04-08 19:00:00,3.35,3.35,5,3.743333333333333,5
+5,Southwest,medical,2020-04-08 20:00:00,4.35,4.35,5,3.8978571428571427,5
+5,Southwest,medical,2020-04-08 21:00:00,0,0,5,5,5
+5,Southwest,medical,2020-04-08 22:00:00,5.06,5.06,5,4.0183333333333335,2.1
+5,Southwest,medical,2020-04-08 23:00:00,4.98,4.98,5,4.743333333333333,5
+5,Southwest,medical,2020-04-09 00:00:00,5.28,5.28,5,3.8115384615384613,1.89
+5,Southwest,medical,2020-04-09 01:00:00,5.52,5.52,5,3.374615384615385,5
+5,Southwest,medical,2020-04-09 02:00:00,5.63,5.63,5,4.493333333333333,5
+5,Southwest,medical,2020-04-09 03:00:00,5.81,5.81,5,3.3838461538461537,1.98
+5,Southwest,medical,2020-04-09 04:00:00,5.72,5.72,5,4.76,5
+5,Southwest,medical,2020-04-09 05:00:00,5.75,5.75,5,4.280833333333334,2.09
+5,Southwest,medical,2020-04-09 06:00:00,5.67,5.67,5,3.97,1.96
+5,Southwest,medical,2020-04-09 07:00:00,0,0,5,5,5
+5,Southwest,medical,2020-04-09 08:00:00,5.55,5.55,5,4.5176923076923075,5
+5,Southwest,medical,2020-04-09 09:00:00,0,0,5,5,5
+5,Southwest,medical,2020-04-09 10:00:00,5.11,5.11,5,3.7575,2.13
+5,Southwest,medical,2020-04-09 11:00:00,4.83,4.83,5,4.223333333333334,5
+5,Southwest,medical,2020-04-09 12:00:00,4.92,4.92,5,4.740833333333334,5
+5,Southwest,medical,2020-04-09 13:00:00,4.82,4.82,5,3.6161538461538463,2.05
+5,Southwest,medical,2020-04-09 14:00:00,3.75,3.75,5,3.7784615384615385,1.91
+5,Southwest,medical,2020-04-09 15:00:00,2.82,2.82,2.08,1.8237593984962406,1.68
+5,Southwest,medical,2020-04-09 16:00:00,1.71,1.71,2.07,1.84296875,1.97
+5,Southwest,medical,2020-04-09 17:00:00,2.17,2.17,2.11,1.8475,1.94
+5,Southwest,medical,2020-04-09 18:00:00,3.76,3.76,5,2.5853333333333333,1.58
+5,Southwest,medical,2020-04-09 19:00:00,4.14,4.14,5,2.9876470588235295,5
+5,Southwest,medical,2020-04-09 20:00:00,4.28,4.28,5,3.5684615384615386,2.02
+5,Southwest,medical,2020-04-09 21:00:00,4.45,4.45,5,3.793076923076923,1.75
+5,Southwest,medical,2020-04-09 22:00:00,4.86,4.86,5,3.265,1.77
+5,Southwest,medical,2020-04-09 23:00:00,4.56,4.56,5,4.489166666666667,5
+5,Southwest,medical,2020-04-10 00:00:00,5.2,5.2,5,3.125384615384615,1.94
+5,Southwest,medical,2020-04-10 01:00:00,5.3,5.3,5,4.219166666666666,1.89
+5,Southwest,medical,2020-04-10 02:00:00,5.74,5.74,5,3.975,5
+5,Southwest,medical,2020-04-10 03:00:00,5.64,5.64,5,3.586923076923077,1.94
+5,Southwest,medical,2020-04-10 04:00:00,5.82,5.82,5,4.2058333333333335,5
+5,Southwest,medical,2020-04-10 05:00:00,5.61,5.61,5,4.178333333333334,5
+5,Southwest,medical,2020-04-10 06:00:00,5.23,5.23,5,4.7125,5
+5,Southwest,medical,2020-04-10 07:00:00,5.45,5.45,5,3.8121428571428573,5
+5,Southwest,medical,2020-04-10 08:00:00,5.24,5.24,5,3.9525,1.83
+5,Southwest,medical,2020-04-10 09:00:00,5.2,5.2,5,4.746666666666667,5
+5,Southwest,medical,2020-04-10 10:00:00,5.31,5.31,5,3.8053846153846154,5
+5,Southwest,medical,2020-04-10 11:00:00,5.13,5.13,5,4.132142857142857,5
+5,Southwest,medical,2020-04-10 12:00:00,4.75,4.75,5,3.709285714285714,5
+5,Southwest,medical,2020-04-10 13:00:00,4.12,4.12,5,3.7441666666666666,5
+5,Southwest,medical,2020-04-10 14:00:00,3.91,3.91,5,4.738333333333333,5
+5,Southwest,medical,2020-04-10 15:00:00,3.89,3.89,5,4.446666666666666,5
+5,Southwest,medical,2020-04-10 16:00:00,3.82,3.82,5,4.198333333333333,1.77
+5,Southwest,medical,2020-04-10 17:00:00,3.98,3.98,5,4.74,5
+5,Southwest,medical,2020-04-10 18:00:00,4.12,4.12,5,3.806923076923077,5
+5,Southwest,medical,2020-04-10 19:00:00,4.42,4.42,5,4.0430769230769235,1.96
+5,Southwest,medical,2020-04-10 20:00:00,5.06,5.06,5,3.8176923076923077,5
+5,Southwest,medical,2020-04-10 21:00:00,5.28,5.28,5,4.280833333333334,1.97
+5,Southwest,medical,2020-04-10 22:00:00,5.35,5.35,5,4.103076923076923,5
+5,Southwest,medical,2020-04-10 23:00:00,5.42,5.42,5,3.7157142857142857,2.21
+5,Southwest,medical,2020-04-11 00:00:00,0,0,5,5,5
+6,Downtown,medical,2020-04-06 00:00:00,5.43,5.43,5,2.8146666666666667,5
+6,Downtown,medical,2020-04-06 01:00:00,5.45,5.45,5,2.97,1.71
+6,Downtown,medical,2020-04-06 02:00:00,5.35,5.35,5,2.4899999999999998,5
+6,Downtown,medical,2020-04-06 03:00:00,5.44,5.44,5,1.99875,1.62
+6,Downtown,medical,2020-04-06 04:00:00,5.84,5.84,5,2.594705882352941,1.57
+6,Downtown,medical,2020-04-06 05:00:00,5.72,5.72,5,2.368888888888889,5
+6,Downtown,medical,2020-04-06 06:00:00,5.51,5.51,5,2.5952941176470588,5
+6,Downtown,medical,2020-04-06 07:00:00,5.41,5.41,5,1.7576470588235293,1.57
+6,Downtown,medical,2020-04-06 08:00:00,5.3,5.3,5,3.012857142857143,5
+6,Downtown,medical,2020-04-06 09:00:00,5.25,5.25,5,2.769285714285714,5
+6,Downtown,medical,2020-04-06 10:00:00,5.16,5.16,5,2.56875,5
+6,Downtown,medical,2020-04-06 11:00:00,5.07,5.07,5,3.00625,1.58
+6,Downtown,medical,2020-04-06 12:00:00,5.17,5.17,5,2.3836842105263156,5
+6,Downtown,medical,2020-04-06 13:00:00,4.83,4.83,5,2.8225,1.49
+6,Downtown,medical,2020-04-06 14:00:00,4.23,4.23,5,1.757,1.49
+6,Downtown,medical,2020-04-06 15:00:00,2.62,2.62,5,1.8626923076923076,5
+6,Downtown,medical,2020-04-06 16:00:00,2.05,2.05,1.9,1.5512844036697249,1.54
+6,Downtown,medical,2020-04-06 17:00:00,1.78,1.78,1.78,1.512,1.78
+6,Downtown,medical,2020-04-06 18:00:00,2.53,2.53,5,1.8353125000000001,1.7
+6,Downtown,medical,2020-04-06 19:00:00,3.59,3.59,5,1.881304347826087,1.55
+6,Downtown,medical,2020-04-06 20:00:00,3.99,3.99,5,3.1646666666666667,1.62
+6,Downtown,medical,2020-04-06 21:00:00,4.87,4.87,5,2.5670588235294116,5
+6,Downtown,medical,2020-04-06 22:00:00,5.75,5.75,5,2.03125,1.54
+6,Downtown,medical,2020-04-06 23:00:00,5.69,5.69,5,3.257142857142857,5
+6,Downtown,medical,2020-04-07 00:00:00,5.64,5.64,5,3.2721428571428572,1.58
+6,Downtown,medical,2020-04-07 01:00:00,5.6,5.6,5,3.25,1.52
+6,Downtown,medical,2020-04-07 02:00:00,5.53,5.53,5,2.414,1.41
+6,Downtown,medical,2020-04-07 03:00:00,5.68,5.68,5,2.680625,1.71
+6,Downtown,medical,2020-04-07 04:00:00,5.39,5.39,5,2.213888888888889,5
+6,Downtown,medical,2020-04-07 05:00:00,5.18,5.18,5,3.270714285714286,5
+6,Downtown,medical,2020-04-07 06:00:00,5.17,5.17,5,3.5035714285714286,1.39
+6,Downtown,medical,2020-04-07 07:00:00,5.36,5.36,5,3.0886666666666667,1.5
+6,Downtown,medical,2020-04-07 08:00:00,5.33,5.33,5,2.64,1.42
+6,Downtown,medical,2020-04-07 09:00:00,5.39,5.39,5,2.33,5
+6,Downtown,medical,2020-04-07 10:00:00,5.26,5.26,5,2.6846666666666668,1.47
+6,Downtown,medical,2020-04-07 11:00:00,5.29,5.29,5,2.7488888888888887,5
+6,Downtown,medical,2020-04-07 12:00:00,5.43,5.43,5,2.813529411764706,5
+6,Downtown,medical,2020-04-07 13:00:00,5.19,5.19,5,2.325263157894737,1.55
+6,Downtown,medical,2020-04-07 14:00:00,5.24,5.24,5,2.9123076923076923,5
+6,Downtown,medical,2020-04-07 15:00:00,5.29,5.29,5,2.7914285714285714,1.7
+6,Downtown,medical,2020-04-07 16:00:00,5.32,5.32,5,3.1076923076923078,1.65
+6,Downtown,medical,2020-04-07 17:00:00,5.37,5.37,5,2.7811764705882354,1.45
+6,Downtown,medical,2020-04-07 18:00:00,5.47,5.47,5,2.783333333333333,5
+6,Downtown,medical,2020-04-07 19:00:00,5.58,5.58,5,3.2192307692307693,1.68
+6,Downtown,medical,2020-04-07 20:00:00,5.66,5.66,5,2.6594444444444445,1.52
+6,Downtown,medical,2020-04-07 21:00:00,5.78,5.78,5,3.3861538461538463,5
+6,Downtown,medical,2020-04-07 22:00:00,5.98,5.98,5,3.265833333333333,5
+6,Downtown,medical,2020-04-07 23:00:00,6.15,6.15,5,2.59,5
+6,Downtown,medical,2020-04-08 00:00:00,6.28,6.28,5,3.212941176470588,5
+6,Downtown,medical,2020-04-08 01:00:00,6.06,6.06,5,3.496153846153846,1.62
+6,Downtown,medical,2020-04-08 02:00:00,5.63,5.63,5,2.6005882352941176,1.82
+6,Downtown,medical,2020-04-08 03:00:00,5.64,5.64,5,1.995625,1.56
+6,Downtown,medical,2020-04-08 04:00:00,5.62,5.62,5,2.468888888888889,1.52
+6,Downtown,medical,2020-04-08 05:00:00,5.78,5.78,5,2.8826666666666667,1.49
+6,Downtown,medical,2020-04-08 06:00:00,5.74,5.74,5,3.146153846153846,5
+6,Downtown,medical,2020-04-08 07:00:00,5.12,5.12,5,3.105714285714286,1.49
+6,Downtown,medical,2020-04-08 08:00:00,4.37,4.37,5,1.6432183908045976,5
+6,Downtown,medical,2020-04-08 09:00:00,2.74,2.74,1.83,1.566006006006006,1.64
+6,Downtown,medical,2020-04-08 10:00:00,2.68,2.68,2,1.5855882352941177,1.8
+6,Downtown,medical,2020-04-08 11:00:00,2.7,2.7,1.83,1.5704069767441862,1.8
+6,Downtown,medical,2020-04-08 12:00:00,2.63,2.63,1.79,1.5896969696969696,1.61
+6,Downtown,medical,2020-04-08 13:00:00,3.06,3.06,1.75,1.5632075471698113,1.51
+6,Downtown,medical,2020-04-08 14:00:00,3.44,3.44,5,1.6437931034482758,1.52
+6,Downtown,medical,2020-04-08 15:00:00,3.77,3.77,5,2.029655172413793,1.5
+6,Downtown,medical,2020-04-08 16:00:00,4.13,4.13,5,1.9047619047619049,1.34
+6,Downtown,medical,2020-04-08 17:00:00,5.13,5.13,5,2.1673684210526316,1.5
+6,Downtown,medical,2020-04-08 18:00:00,5.61,5.61,5,2.0826315789473684,5
+6,Downtown,medical,2020-04-08 19:00:00,5.61,5.61,5,2.1747619047619047,5
+6,Downtown,medical,2020-04-08 20:00:00,5.37,5.37,5,3.156470588235294,5
+6,Downtown,medical,2020-04-08 21:00:00,5.35,5.35,5,2.2261904761904763,1.57
+6,Downtown,medical,2020-04-08 22:00:00,5.69,5.69,5,2.905,1.68
+6,Downtown,medical,2020-04-08 23:00:00,6.05,6.05,5,1.849,1.4
+6,Downtown,medical,2020-04-09 00:00:00,5.92,5.92,5,2.3675,5
+6,Downtown,medical,2020-04-09 01:00:00,5.68,5.68,5,2.590625,5
+6,Downtown,medical,2020-04-09 02:00:00,6.01,6.01,5,1.9633333333333334,1.5
+6,Downtown,medical,2020-04-09 03:00:00,6.4,6.4,5,2.1666666666666665,1.31
+6,Downtown,medical,2020-04-09 04:00:00,6.37,6.37,5,4.179166666666666,5
+6,Downtown,medical,2020-04-09 05:00:00,6.41,6.41,5,2.558666666666667,1.65
+6,Downtown,medical,2020-04-09 06:00:00,5.86,5.86,5,2.181875,1.54
+6,Downtown,medical,2020-04-09 07:00:00,5.63,5.63,5,2.7053333333333334,1.46
+6,Downtown,medical,2020-04-09 08:00:00,5.49,5.49,5,2.66875,1.58
+6,Downtown,medical,2020-04-09 09:00:00,5.26,5.26,5,2.5935714285714284,1.59
+6,Downtown,medical,2020-04-09 10:00:00,4.97,4.97,5,3.5785714285714287,5
+6,Downtown,medical,2020-04-09 11:00:00,5,5,5,3.0142857142857142,1.59
+6,Downtown,medical,2020-04-09 12:00:00,5.03,5.03,5,3.5791666666666666,1.52
+6,Downtown,medical,2020-04-09 13:00:00,5.07,5.07,5,2.5513333333333335,1.56
+6,Downtown,medical,2020-04-09 14:00:00,5.01,5.01,5,2.5116666666666667,5
+6,Downtown,medical,2020-04-09 15:00:00,4.27,4.27,1.93,1.5840967741935483,1.46
+6,Downtown,medical,2020-04-09 16:00:00,2.9,2.9,1.83,1.6053807106598985,1.53
+6,Downtown,medical,2020-04-09 17:00:00,2.74,2.74,1.76,1.5566019417475727,1.55
+6,Downtown,medical,2020-04-09 18:00:00,3.47,3.47,1.8,1.6078000000000001,1.5
+6,Downtown,medical,2020-04-09 19:00:00,4.12,4.12,5,2.1492,1.68
+6,Downtown,medical,2020-04-09 20:00:00,4.97,4.97,5,2.012380952380952,1.45
+6,Downtown,medical,2020-04-09 21:00:00,5.56,5.56,5,2.4292857142857143,1.46
+6,Downtown,medical,2020-04-09 22:00:00,5.81,5.81,5,3.0391666666666666,1.76
+6,Downtown,medical,2020-04-09 23:00:00,5.42,5.42,5,2.4688235294117646,1.6
+6,Downtown,medical,2020-04-10 00:00:00,5.83,5.83,5,2.437,1.62
+6,Downtown,medical,2020-04-10 01:00:00,5.7,5.7,5,3.5775,1.61
+6,Downtown,medical,2020-04-10 02:00:00,6.06,6.06,5,2.8735714285714287,5
+6,Downtown,medical,2020-04-10 03:00:00,5.83,5.83,5,1.8852173913043477,5
+6,Downtown,medical,2020-04-10 04:00:00,5.04,5.04,5,3.6233333333333335,5
+6,Downtown,medical,2020-04-10 05:00:00,5.04,5.04,5,2.5685714285714285,5
+6,Downtown,medical,2020-04-10 06:00:00,5.64,5.64,5,1.8566666666666667,1.54
+6,Downtown,medical,2020-04-10 07:00:00,5.79,5.79,5,2.712,1.62
+6,Downtown,medical,2020-04-10 08:00:00,5.79,5.79,5,2.21875,5
+6,Downtown,medical,2020-04-10 09:00:00,5.87,5.87,5,3.307857142857143,5
+6,Downtown,medical,2020-04-10 10:00:00,6,6,5,2.30625,5
+6,Downtown,medical,2020-04-10 11:00:00,5.93,5.93,5,2.9366666666666665,5
+6,Downtown,medical,2020-04-10 12:00:00,5.69,5.69,5,3.187333333333333,1.66
+6,Downtown,medical,2020-04-10 13:00:00,5.65,5.65,5,2.6375,1.58
+6,Downtown,medical,2020-04-10 14:00:00,5.5,5.5,5,2.513125,1.74
+6,Downtown,medical,2020-04-10 15:00:00,5.81,5.81,5,2.312777777777778,1.55
+6,Downtown,medical,2020-04-10 16:00:00,5.98,5.98,5,2.2977777777777777,1.56
+6,Downtown,medical,2020-04-10 17:00:00,5.95,5.95,5,3.6746153846153846,5
+6,Downtown,medical,2020-04-10 18:00:00,5.9,5.9,5,1.9653333333333334,1.46
+6,Downtown,medical,2020-04-10 19:00:00,5.23,5.23,5,2.487142857142857,1.52
+6,Downtown,medical,2020-04-10 20:00:00,5.05,5.05,5,2.518666666666667,1.57
+6,Downtown,medical,2020-04-10 21:00:00,5.01,5.01,5,2.31,1.47
+6,Downtown,medical,2020-04-10 22:00:00,5.17,5.17,5,2.70625,5
+6,Downtown,medical,2020-04-10 23:00:00,5.33,5.33,5,3.1213333333333333,5
+6,Downtown,medical,2020-04-11 00:00:00,5.08,5.08,2.11,2.11,2.11
+7,Wilson Forest,medical,2020-04-06 00:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-06 01:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-06 02:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-06 03:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-06 04:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-06 05:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-06 06:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-06 07:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-06 08:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-06 09:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-06 10:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-06 11:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-06 12:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-06 13:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-06 14:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-06 15:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-06 16:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-06 17:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-06 18:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-06 19:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-06 20:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-06 21:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-06 22:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-06 23:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-07 00:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-07 01:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-07 02:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-07 03:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-07 04:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-07 05:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-07 06:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-07 07:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-07 08:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-07 09:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-07 10:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-07 11:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-07 12:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-07 13:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-07 14:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-07 15:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-07 16:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-07 17:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-07 18:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-07 19:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-07 20:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-07 21:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-07 22:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-07 23:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-08 00:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-08 01:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-08 02:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-08 03:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-08 04:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-08 05:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-08 06:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-08 07:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-08 08:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-08 09:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-08 10:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-08 11:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-08 12:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-08 13:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-08 14:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-08 15:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-08 16:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-08 17:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-08 18:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-08 19:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-08 20:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-08 21:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-08 22:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-08 23:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-09 00:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-09 01:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-09 02:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-09 03:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-09 04:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-09 05:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-09 06:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-09 07:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-09 08:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-09 09:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-09 10:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-09 11:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-09 12:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-09 13:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-09 14:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-09 15:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-09 16:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-09 17:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-09 18:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-09 19:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-09 20:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-09 21:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-09 22:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-09 23:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-10 00:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-10 01:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-10 02:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-10 03:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-10 04:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-10 05:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-10 06:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-10 07:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-10 08:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-10 09:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-10 10:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-10 11:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-10 12:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-10 13:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-10 14:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-10 15:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-10 16:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-10 17:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-10 18:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-10 19:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-10 20:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-10 21:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-10 22:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-10 23:00:00,0,0,5,5,5
+7,Wilson Forest,medical,2020-04-11 00:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-06 00:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-06 01:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-06 02:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-06 03:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-06 04:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-06 05:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-06 06:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-06 07:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-06 08:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-06 09:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-06 10:00:00,5.19,5.19,5,4.699166666666667,5
+8,Scenic Vista,medical,2020-04-06 11:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-06 12:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-06 13:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-06 14:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-06 15:00:00,5.22,5.22,5,4.701666666666666,5
+8,Scenic Vista,medical,2020-04-06 16:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-06 17:00:00,5.24,5.24,5,4.403333333333333,5
+8,Scenic Vista,medical,2020-04-06 18:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-06 19:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-06 20:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-06 21:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-06 22:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-06 23:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-07 00:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-07 01:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-07 02:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-07 03:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-07 04:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-07 05:00:00,5.26,5.26,5,4.701666666666666,5
+8,Scenic Vista,medical,2020-04-07 06:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-07 07:00:00,5.23,5.23,5,4.705,5
+8,Scenic Vista,medical,2020-04-07 08:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-07 09:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-07 10:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-07 11:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-07 12:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-07 13:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-07 14:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-07 15:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-07 16:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-07 17:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-07 18:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-07 19:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-07 20:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-07 21:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-07 22:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-07 23:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-08 00:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-08 01:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-08 02:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-08 03:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-08 04:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-08 05:00:00,5.26,5.26,5,4.704166666666667,5
+8,Scenic Vista,medical,2020-04-08 06:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-08 07:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-08 08:00:00,5.24,5.24,5,3.315294117647059,5
+8,Scenic Vista,medical,2020-04-08 09:00:00,5.4,5.4,1.43,1.336551724137931,1.29
+8,Scenic Vista,medical,2020-04-08 10:00:00,5.3,5.3,5,1.5156756756756757,1.34
+8,Scenic Vista,medical,2020-04-08 11:00:00,5.34,5.34,5,1.3187878787878788,1.16
+8,Scenic Vista,medical,2020-04-08 12:00:00,5.19,5.19,5,2.5284615384615385,1.25
+8,Scenic Vista,medical,2020-04-08 13:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-08 14:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-08 15:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-08 16:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-08 17:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-08 18:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-08 19:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-08 20:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-08 21:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-08 22:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-08 23:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-09 00:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-09 01:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-09 02:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-09 03:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-09 04:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-09 05:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-09 06:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-09 07:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-09 08:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-09 09:00:00,5.21,5.21,5,1.7583823529411764,5
+8,Scenic Vista,medical,2020-04-09 10:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-09 11:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-09 12:00:00,5.08,5.08,5,4.6725,5
+8,Scenic Vista,medical,2020-04-09 13:00:00,5.09,5.09,5,4.67,5
+8,Scenic Vista,medical,2020-04-09 14:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-09 15:00:00,5.11,5.11,5,4.3475,5
+8,Scenic Vista,medical,2020-04-09 16:00:00,5.22,5.22,5,2.3,1.13
+8,Scenic Vista,medical,2020-04-09 17:00:00,5.27,5.27,5,3.0828571428571427,1.11
+8,Scenic Vista,medical,2020-04-09 18:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-09 19:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-09 20:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-09 21:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-09 22:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-09 23:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-10 00:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-10 01:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-10 02:00:00,5.3,5.3,5,2.556875,5
+8,Scenic Vista,medical,2020-04-10 03:00:00,5.14,5.14,5,4.704166666666667,5
+8,Scenic Vista,medical,2020-04-10 04:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-10 05:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-10 06:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-10 07:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-10 08:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-10 09:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-10 10:00:00,5.14,5.14,5,4.704166666666667,5
+8,Scenic Vista,medical,2020-04-10 11:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-10 12:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-10 13:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-10 14:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-10 15:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-10 16:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-10 17:00:00,5.13,5.13,5,4.7075,5
+8,Scenic Vista,medical,2020-04-10 18:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-10 19:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-10 20:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-10 21:00:00,5.14,5.14,5,4.7125,5
+8,Scenic Vista,medical,2020-04-10 22:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-10 23:00:00,0,0,5,5,5
+8,Scenic Vista,medical,2020-04-11 00:00:00,0,0,5,5,5
+9,Broadview,medical,2020-04-06 00:00:00,4.68,4.68,5,4.0675,5
+9,Broadview,medical,2020-04-06 01:00:00,4.82,4.82,5,2.023125,1.15
+9,Broadview,medical,2020-04-06 02:00:00,4.94,4.94,5,2.283333333333333,5
+9,Broadview,medical,2020-04-06 03:00:00,5,5,5,3.0892307692307694,5
+9,Broadview,medical,2020-04-06 04:00:00,4.95,4.95,5,2.624285714285714,5
+9,Broadview,medical,2020-04-06 05:00:00,4.71,4.71,5,2.8033333333333332,5
+9,Broadview,medical,2020-04-06 06:00:00,4.61,4.61,5,2.51,5
+9,Broadview,medical,2020-04-06 07:00:00,5.09,5.09,5,1.64,0.83
+9,Broadview,medical,2020-04-06 08:00:00,5.39,5.39,5,2.036,5
+9,Broadview,medical,2020-04-06 09:00:00,5.62,5.62,5,1.950625,5
+9,Broadview,medical,2020-04-06 10:00:00,5.44,5.44,5,2.3,0.94
+9,Broadview,medical,2020-04-06 11:00:00,5.25,5.25,5,3.163846153846154,5
+9,Broadview,medical,2020-04-06 12:00:00,5.11,5.11,5,3.149230769230769,5
+9,Broadview,medical,2020-04-06 13:00:00,4.56,4.56,5,3.132,5
+9,Broadview,medical,2020-04-06 14:00:00,4.02,4.02,5,1.2651282051282051,0.95
+9,Broadview,medical,2020-04-06 15:00:00,0.98,0.98,5,1.1241176470588234,1.02
+9,Broadview,medical,2020-04-06 16:00:00,1.5,1.5,1.05,0.9000531914893617,0.88
+9,Broadview,medical,2020-04-06 17:00:00,1.44,1.44,1.09,0.91,0.99
+9,Broadview,medical,2020-04-06 18:00:00,2.87,2.87,0.96,0.86875,0.96
+9,Broadview,medical,2020-04-06 19:00:00,3.74,3.74,5,1.3045,0.84
+9,Broadview,medical,2020-04-06 20:00:00,4.45,4.45,5,2.5923529411764705,0.88
+9,Broadview,medical,2020-04-06 21:00:00,5.52,5.52,5,1.720625,0.84
+9,Broadview,medical,2020-04-06 22:00:00,5.9,5.9,5,2.3708333333333336,1.07
+9,Broadview,medical,2020-04-06 23:00:00,6.13,6.13,5,1.7936842105263158,5
+9,Broadview,medical,2020-04-07 00:00:00,5.74,5.74,5,1.5265,0.98
+9,Broadview,medical,2020-04-07 01:00:00,5.6,5.6,5,3.7453846153846153,5
+9,Broadview,medical,2020-04-07 02:00:00,5.73,5.73,5,3.106923076923077,0.89
+9,Broadview,medical,2020-04-07 03:00:00,5.39,5.39,5,1.82,5
+9,Broadview,medical,2020-04-07 04:00:00,5.16,5.16,5,1.7406666666666666,5
+9,Broadview,medical,2020-04-07 05:00:00,4.9,4.9,5,2.284666666666667,0.95
+9,Broadview,medical,2020-04-07 06:00:00,4.86,4.86,5,2.6864285714285714,5
+9,Broadview,medical,2020-04-07 07:00:00,4.83,4.83,5,2.8293333333333335,0.89
+9,Broadview,medical,2020-04-07 08:00:00,4.83,4.83,5,2.8266666666666667,5
+9,Broadview,medical,2020-04-07 09:00:00,4.91,4.91,5,3.2528571428571427,5
+9,Broadview,medical,2020-04-07 10:00:00,4.9,4.9,5,2.174375,5
+9,Broadview,medical,2020-04-07 11:00:00,4.55,4.55,5,2.2733333333333334,0.84
+9,Broadview,medical,2020-04-07 12:00:00,4.36,4.36,5,2.9775,5
+9,Broadview,medical,2020-04-07 13:00:00,4.88,4.88,5,1.919375,0.91
+9,Broadview,medical,2020-04-07 14:00:00,5.54,5.54,5,1.92625,0.89
+9,Broadview,medical,2020-04-07 15:00:00,6.03,6.03,5,2.7866666666666666,0.89
+9,Broadview,medical,2020-04-07 16:00:00,5.9,5.9,5,1.5244444444444445,5
+9,Broadview,medical,2020-04-07 17:00:00,5.72,5.72,5,3.0008333333333335,5
+9,Broadview,medical,2020-04-07 18:00:00,5.66,5.66,5,1.8442857142857143,5
+9,Broadview,medical,2020-04-07 19:00:00,5.59,5.59,5,2.032,0.94
+9,Broadview,medical,2020-04-07 20:00:00,5.4,5.4,5,2.730625,1.07
+9,Broadview,medical,2020-04-07 21:00:00,5.57,5.57,5,2.1969230769230768,0.95
+9,Broadview,medical,2020-04-07 22:00:00,5.57,5.57,5,3.6375,5
+9,Broadview,medical,2020-04-07 23:00:00,5.55,5.55,5,2.510666666666667,0.84
+9,Broadview,medical,2020-04-08 00:00:00,5.78,5.78,5,2.0957142857142856,5
+9,Broadview,medical,2020-04-08 01:00:00,5.98,5.98,5,2.965,0.94
+9,Broadview,medical,2020-04-08 02:00:00,6.21,6.21,5,2.8023076923076924,5
+9,Broadview,medical,2020-04-08 03:00:00,6.3,6.3,5,2.7853846153846153,0.91
+9,Broadview,medical,2020-04-08 04:00:00,6.05,6.05,5,2.557,0.9
+9,Broadview,medical,2020-04-08 05:00:00,5.7,5.7,5,2.2925,5
+9,Broadview,medical,2020-04-08 06:00:00,5.66,5.66,5,3.3275,5
+9,Broadview,medical,2020-04-08 07:00:00,5.58,5.58,5,1.7978947368421052,1.01
+9,Broadview,medical,2020-04-08 08:00:00,5.49,5.49,5,0.9593034825870647,0.89
+9,Broadview,medical,2020-04-08 09:00:00,5.44,5.44,1.18,0.9233840644583706,0.88
+9,Broadview,medical,2020-04-08 10:00:00,5.34,5.34,1.1,0.908681592039801,0.98
+9,Broadview,medical,2020-04-08 11:00:00,5.37,5.37,1.09,0.9191666666666667,0.92
+9,Broadview,medical,2020-04-08 12:00:00,7.12,7.12,5,1.2928455284552847,1.07
+9,Broadview,medical,2020-04-08 13:00:00,0,0,5,5,5
+9,Broadview,medical,2020-04-08 14:00:00,0,0,5,5,5
+9,Broadview,medical,2020-04-08 15:00:00,0,0,5,5,5
+9,Broadview,medical,2020-04-08 16:00:00,0,0,5,5,5
+9,Broadview,medical,2020-04-08 17:00:00,0,0,5,5,5
+9,Broadview,medical,2020-04-08 18:00:00,0,0,5,5,5
+9,Broadview,medical,2020-04-08 19:00:00,0,0,5,5,5
+9,Broadview,medical,2020-04-08 20:00:00,0,0,5,5,5
+9,Broadview,medical,2020-04-08 21:00:00,0,0,5,5,5
+9,Broadview,medical,2020-04-08 22:00:00,0,0,5,5,5
+9,Broadview,medical,2020-04-08 23:00:00,7.34,7.34,5,0.9421207349081365,5
+9,Broadview,medical,2020-04-09 00:00:00,5.96,5.96,5,2.7933333333333334,0.89
+9,Broadview,medical,2020-04-09 01:00:00,5.51,5.51,5,2.7753846153846156,5
+9,Broadview,medical,2020-04-09 02:00:00,5.5,5.5,5,3.068,0.84
+9,Broadview,medical,2020-04-09 03:00:00,5.53,5.53,5,3.419230769230769,0.87
+9,Broadview,medical,2020-04-09 04:00:00,5.8,5.8,5,1.425,5
+9,Broadview,medical,2020-04-09 05:00:00,5.68,5.68,5,2.471875,5
+9,Broadview,medical,2020-04-09 06:00:00,5.36,5.36,5,3.53,0.93
+9,Broadview,medical,2020-04-09 07:00:00,5.28,5.28,5,2.2653333333333334,5
+9,Broadview,medical,2020-04-09 08:00:00,4.88,4.88,5,3.1138461538461537,0.91
+9,Broadview,medical,2020-04-09 09:00:00,4.86,4.86,5,3.0886666666666667,5
+9,Broadview,medical,2020-04-09 10:00:00,4.94,4.94,5,2.8173333333333335,0.89
+9,Broadview,medical,2020-04-09 11:00:00,5,5,5,1.7006666666666668,0.93
+9,Broadview,medical,2020-04-09 12:00:00,5.01,5.01,5,1.72,5
+9,Broadview,medical,2020-04-09 13:00:00,4.83,4.83,5,3.1346153846153846,5
+9,Broadview,medical,2020-04-09 14:00:00,4.67,4.67,5,3.3241666666666667,0.95
+9,Broadview,medical,2020-04-09 15:00:00,4.57,4.57,1.05,0.9248888888888889,0.94
+9,Broadview,medical,2020-04-09 16:00:00,5.21,5.21,1.11,0.9149401436552275,0.86
+9,Broadview,medical,2020-04-09 17:00:00,5.16,5.16,1.1,0.931996644295302,0.97
+9,Broadview,medical,2020-04-09 18:00:00,5.06,5.06,1.05,0.91546875,0.97
+9,Broadview,medical,2020-04-09 19:00:00,5.39,5.39,1.04,0.907719298245614,0.94
+9,Broadview,medical,2020-04-09 20:00:00,5.36,5.36,1.2,0.9589285714285715,0.93
+9,Broadview,medical,2020-04-09 21:00:00,4.92,4.92,5,1.0343243243243243,1
+9,Broadview,medical,2020-04-09 22:00:00,4.82,4.82,5,1.8876470588235295,5
+9,Broadview,medical,2020-04-09 23:00:00,4.84,4.84,5,1.4088888888888889,1.01
+9,Broadview,medical,2020-04-10 00:00:00,4.83,4.83,5,1.756,0.92
+9,Broadview,medical,2020-04-10 01:00:00,4.99,4.99,5,2.185625,0.89
+9,Broadview,medical,2020-04-10 02:00:00,4.96,4.96,5,2.9816666666666665,0.93
+9,Broadview,medical,2020-04-10 03:00:00,5.04,5.04,5,2.484375,0.97
+9,Broadview,medical,2020-04-10 04:00:00,5.27,5.27,5,2.72875,1
+9,Broadview,medical,2020-04-10 05:00:00,5.25,5.25,5,4.321666666666666,5
+9,Broadview,medical,2020-04-10 06:00:00,5.43,5.43,5,2.054666666666667,5
+9,Broadview,medical,2020-04-10 07:00:00,5.59,5.59,5,1.931875,0.96
+9,Broadview,medical,2020-04-10 08:00:00,5.79,5.79,5,2.714375,5
+9,Broadview,medical,2020-04-10 09:00:00,5.87,5.87,5,3.1584615384615384,5
+9,Broadview,medical,2020-04-10 10:00:00,5.85,5.85,5,3.3733333333333335,5
+9,Broadview,medical,2020-04-10 11:00:00,5.66,5.66,5,2.172142857142857,0.99
+9,Broadview,medical,2020-04-10 12:00:00,5.77,5.77,5,3.163076923076923,5
+9,Broadview,medical,2020-04-10 13:00:00,6.05,6.05,5,2.5175,5
+9,Broadview,medical,2020-04-10 14:00:00,6.06,6.06,5,2.2215384615384615,1.06
+9,Broadview,medical,2020-04-10 15:00:00,5.97,5.97,5,2.6635714285714287,0.95
+9,Broadview,medical,2020-04-10 16:00:00,5.83,5.83,5,2.824666666666667,5
+9,Broadview,medical,2020-04-10 17:00:00,5.67,5.67,5,1.4134782608695653,0.92
+9,Broadview,medical,2020-04-10 18:00:00,5.5,5.5,5,1.643529411764706,0.91
+9,Broadview,medical,2020-04-10 19:00:00,5.17,5.17,5,2.854,1.05
+9,Broadview,medical,2020-04-10 20:00:00,5.03,5.03,5,1.715,0.91
+9,Broadview,medical,2020-04-10 21:00:00,5.2,5.2,5,2.9571428571428573,5
+9,Broadview,medical,2020-04-10 22:00:00,5.18,5.18,5,1.8723529411764706,0.89
+9,Broadview,medical,2020-04-10 23:00:00,4.99,4.99,5,1.904,1
+9,Broadview,medical,2020-04-11 00:00:00,0,0,5,5,5

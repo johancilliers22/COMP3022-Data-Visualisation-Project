@@ -1,0 +1,379 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "width": 800,
+  "height": 2100,
+  "padding": {"top": 15, "bottom": 15, "left": 10, "right": 10},
+  "autosize": "fit",
+
+  "config": {
+    "axisBand": {
+      "bandPosition": 1,
+      "tickExtra": true,
+      "tickOffset": 0
+    },
+    "axis": {
+      "domain": true,
+      "grid": false,
+      "labelColor": "#333333",
+      "tickColor": "#333333",
+      "titleColor": "#333333"
+    },
+    "title": {
+      "color": "#333333"
+    },
+    "legend": {
+      "labelColor": "#333333",
+      "titleColor": "#333333"
+    }
+  },
+
+  "signals": [
+    { "name": "MIN_DATE", "update": "time('Apr 6 2020')" },
+    { "name": "MAX_DATE", "update": "time('Apr 11 2020')" },
+    { "name": "PRE_QUAKE_TIME", "update": "time('Apr 6 2020 14:40')" },
+    { "name": "FIRST_QUAKE_TIME", "update": "time('Apr 8 2020 08:35')" },
+    { "name": "POWER_OUTAGES_TIME", "update": "time('Apr 8 2020 18:00')" },
+    { "name": "SECOND_QUAKE_TIME", "update": "time('Apr 9 2020 15:00')" },
+    { "name": "RECOVERY_STARTS_TIME", "update": "time('Apr 10 2020 06:00')" },
+    { "name": "ONE_HOUR", "update": "60 * 60 * 1000" },
+    { "name": "FIVE_MIN", "update": "5 * 60 * 1000" },
+    {
+      "name": "indexTime",
+      "update": "MAX_DATE - ONE_HOUR",
+      "on": [
+        {
+          "events": "@timeInTimeline:mousemove", 
+          "update": "round(invert('xTime', clamp(x(), 0, width)) / FIVE_MIN) * FIVE_MIN"
+        }
+      ]
+    },
+    { "name": "rangeStep", "value": 100 },
+    { "name": "groupHeight", "update": "rangeStep * 19" }, 
+    {
+      "name": "Colour",
+      "value": "VSUP"
+    },
+    {
+      "name": "appColorScheme",
+      "value": "VSUP"
+    },
+    {
+      "name": "lookupCat",
+      "value": {
+        "shake_intensity": "Shake Intensity",
+        "medical": "Medical",
+        "power": "Power",
+        "buildings": "Buildings",
+        "sewer_and_water": "Sewer & Water",
+        "roads_and_bridges": "Roads & Bridges"
+      }
+    },
+    {
+      "name": "lookupLocName",
+      "value": {
+        "1": "Palace Hills",
+        "2": "Northwest",
+        "3": "Old Town",
+        "4": "Safe Town",
+        "5": "Southwest",
+        "6": "Downtown",
+        "7": "Wilson Forest",
+        "8": "Scenic Vista",
+        "9": "Broadview",
+        "10": "Chapparal",
+        "11": "Terrapin Springs",
+        "12": "Pepper Mill",
+        "13": "Cheddarford",
+        "14": "Easton",
+        "15": "Weston",
+        "16": "Southton",
+        "17": "Oak Willow",
+        "18": "East Parton",
+        "19": "West Parton"
+      }
+    }
+  ],
+
+  "data": [
+    {
+      "name": "categories",
+      "values": [
+        {"category": "shake_intensity"},
+        {"category": "medical"},
+        {"category": "power"},
+        {"category": "buildings"},
+        {"category": "sewer_and_water"},
+        {"category": "roads_and_bridges"}
+      ]
+    },
+    {
+      "name": "locNames",
+      "values": [
+        { "loc": 1, "name": "Palace Hills" },
+        { "loc": 2, "name": "Northwest" },
+        { "loc": 3, "name": "Old Town" },
+        { "loc": 4, "name": "Safe Town" },
+        { "loc": 5, "name": "Southwest" },
+        { "loc": 6, "name": "Downtown" },
+        { "loc": 7, "name": "Wilson Forest" },
+        { "loc": 8, "name": "Scenic Vista" },
+        { "loc": 9, "name": "Broadview" },
+        { "loc": 10, "name": "Chapparal" },
+        { "loc": 11, "name": "Terrapin Springs" },
+        { "loc": 12, "name": "Pepper Mill" },
+        { "loc": 13, "name": "Cheddarford" },
+        { "loc": 14, "name": "Easton" },
+        { "loc": 15, "name": "Weston" },
+        { "loc": 16, "name": "Southton" },
+        { "loc": 17, "name": "Oak Willow" },
+        { "loc": 18, "name": "East Parton" },
+        { "loc": 19, "name": "West Parton" }
+      ]
+    },
+    {
+      "name": "timepoints",
+      "transform": [
+        {
+          "type": "sequence",
+          "start": { "signal": "MIN_DATE" },
+          "stop": { "signal": "MAX_DATE" },
+          "step": 300000,
+          "as": "time"
+        }
+      ]
+    },
+    {
+      "name": "aggregatedSummary",
+      "url": "data/processed/all_summary_aggregated.csv",
+      "format": {
+        "type": "csv",
+        "parse": {
+          "location": "number", 
+          "category": "string",
+          "dateHour": "date:'%Y-%m-%d %H:%M:%S'",
+          "map": "number",
+          "CIRatMaxMAP": "number"
+        }
+      }
+    }
+  ],
+
+  "scales": [
+    {
+      "name": "xTime",
+      "type": "time",
+      "domain": { "data": "timepoints", "field": "time" },
+      "range": [0, 800],
+      "nice": true
+    },
+    {
+      "name": "colorScale",
+      "type": "threshold",
+      "domain": [0.5, 2, 4, 6, 8],
+      "range": {
+        "signal": "appColorScheme === 'VSUP' ? ['#d6eaf8', '#acd1f2', '#f5b041', '#ec7063', '#cb4335', '#641e16'] : appColorScheme === 'VSUP_' ? ['hsl(193, 100%, 75%)', 'hsl(45, 86%, 79%)', 'hsl(31, 100%, 70%)', 'hsl(21, 100%, 62%)', 'hsl(11, 100%, 53%)', 'hsl(2, 91%, 40%)'] : appColorScheme === 'Normal' ? ['#d4f1f9', '#a9dfbf', '#f9e79f', '#f5b041', '#ec7063', '#cb4335'] : ['#d4e6f1', '#f8c471', '#ec7063', '#922b21', '#5a0f0a', '#3B0B08']"
+      }
+    },
+    {
+      "name": "rowHeatmap",
+      "type": "band",
+      "domain": { "data": "categories", "field": "category" },
+      "range": [10, 90]
+    },
+    {
+      "name": "rowLoc",
+      "type": "band",
+      "domain": { "data": "locNames", "field": "loc", "sort": {"field": "loc", "op": "min"} },
+      "range": { "step": { "signal": "rangeStep" } }
+    },
+    {
+      "name": "xHeatmap",
+      "type": "time",
+      "domain": [{ "signal": "MIN_DATE" }, { "signal": "MAX_DATE" }],
+      "range": [0, 800],
+      "nice": false,
+      "padding": 0
+    }
+  ],
+
+  "marks": [
+    {
+      "type": "group",
+      "name": "timeline",
+      "encode": {
+        "enter": {
+          "height": { "value": 30 },
+          "width": { "value": 800 },
+          "y": { "value": 0 }
+        }
+      },
+      "axes": [
+        {
+          "orient": "bottom",
+          "scale": "xTime",
+          "grid": false,
+          "labelFontSize": 14
+        }
+      ],
+      "marks": [
+        {
+          "type": "rule",
+          "name": "timeInTimeline",
+          "from": { "data": "timepoints" },
+          "encode": {
+            "enter": {
+              "x": { "scale": "xTime", "field": "time" },
+              "y": { "value": 0 },
+              "y2": { "field": { "group": "height" } },
+              "stroke": [
+                {
+                  "test": "inrange(datum.time, [PRE_QUAKE_TIME, PRE_QUAKE_TIME + ONE_HOUR])",
+                  "value": "hsla(60, 70%, 50%, 0.7)"
+                },
+                {
+                  "test": "inrange(datum.time, [FIRST_QUAKE_TIME, FIRST_QUAKE_TIME + ONE_HOUR])",
+                  "value": "hsla(0, 70%, 50%, 0.7)"
+                },
+                {
+                  "test": "inrange(datum.time, [POWER_OUTAGES_TIME, POWER_OUTAGES_TIME + ONE_HOUR])",
+                  "value": "hsla(240, 70%, 50%, 0.7)"
+                },
+                {
+                  "test": "inrange(datum.time, [SECOND_QUAKE_TIME, SECOND_QUAKE_TIME + ONE_HOUR])",
+                  "value": "hsla(300, 70%, 50%, 0.7)"
+                },
+                {
+                  "test": "inrange(datum.time, [RECOVERY_STARTS_TIME, RECOVERY_STARTS_TIME + ONE_HOUR])",
+                  "value": "hsla(120, 70%, 50%, 0.7)"
+                },
+                { "value": "hsla(0, 0%, 80%, 0.2)" }
+              ]
+            }
+          }
+        },
+        {
+          "type": "rule",
+          "encode": {
+            "update": {
+              "x": { "scale": "xTime", "signal": "indexTime" },
+              "y": { "value": 0 },
+              "y2": { "field": { "group": "height" } },
+              "stroke": { "value": "hsl(180, 50%, 30%)" }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "encode": {
+            "enter": {
+              "y": { "value": 0, "offset": -5 },
+              "align": { "value": "center" },
+              "fontSize": { "value": 14 },
+              "fill": { "value": "hsl(180, 50%, 30%)" }
+            },
+            "update": {
+              "x": { "scale": "xTime", "signal": "indexTime" },
+              "text": { "signal": "timeFormat(indexTime, '%d/%m/%Y %H:%M')" }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "name": "heatMapGroup",
+      "encode": {
+        "enter": {
+          "y": { "value": 60 },
+          "height": { "signal": "groupHeight" },
+          "width": { "value": 800 }
+        }
+      },
+      "axes": [
+        {
+          "orient": "right",
+          "scale": "rowLoc",
+          "title": null, 
+          "domain": false,
+          "ticks": false,
+          "grid": true,
+          "gridColor": "#e0e0e0",
+          "gridWidth": 0.5,
+          "labelPadding": 10,
+          "labelFontSize": 14,
+          "encode": {
+            "labels": {
+              "update": {
+                "text": {"signal": "lookupLocName[datum.value]"}
+              }
+            }
+          }
+        }
+      ],
+      "marks": [
+        {
+          "type": "group",
+          "from": {
+            "facet": {
+              "name": "locSummary",
+              "data": "aggregatedSummary",
+              "groupby": "location"
+            }
+          },
+          "encode": {
+            "enter": {
+              "x": { "value": 0 },
+              "y": { "scale": "rowLoc", "field": "location" },
+              "width": { "signal": "width" },
+              "height": { "signal": "rangeStep" }
+            }
+          },
+          "axes": [
+            {
+              "orient": "left",
+              "scale": "rowHeatmap",
+              "domain": false,
+              "ticks": false,
+              "tickSize": 0,
+              "labelPadding": 5,
+              "offset": 5,
+              "labelFontSize": 11,
+              "encode": {
+                "labels": {
+                  "interactive": false,
+                  "update": {
+                    "text": { "signal": "lookupCat[datum.value]" }
+                  }
+                }
+              }
+            }
+          ],
+          "marks": [
+            {
+              "type": "rect",
+              "from": { "data": "locSummary" },
+              "clip": true,
+              "encode": {
+                "enter": {
+                  "y": { "scale": "rowHeatmap", "field": "category" },
+                  "height": { "scale": "rowHeatmap", "band": 1 },
+                  "tooltip": {
+                    "signal": "{'Neighborhood': lookupLocName[toString(datum.location)], 'Category': lookupCat[datum.category], 'Time': timeFormat(datum.dateHour, '%d/%m %H:%M'), 'MAP': format(datum.map, '.1f'), 'CIR at Max MAP': format(datum.CIRatMaxMAP, '.2f')}"
+                  }
+                },
+                "update": {
+                  "x": { "scale": "xHeatmap", "field": "dateHour" },
+                  "width": { "signal": "(scale('xHeatmap', MIN_DATE + ONE_HOUR) - scale('xHeatmap', MIN_DATE)) - 1" },
+                  "fill": { "scale": "colorScale", "field": "map" },
+                  "fillOpacity": { "value": 0.9 },
+                  "stroke": { "value": "#444" },
+                  "strokeWidth": { "value": 0.2 }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+} 

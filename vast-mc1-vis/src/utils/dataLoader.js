@@ -9,19 +9,17 @@ import { groupByNeighborhood, generateLocationInfo, generateTimeSeriesData } fro
 import logger from './logger';
 import Papa from 'papaparse'; // Import PapaParse
 
-// Import static data assets directly
-import geojsonData from '../data/neighborhoods.geojson';
-import neighborhoodMapData from '../data/processed/neighborhood_map.json';
-import frontendDataData from '../data/processed/frontend_data.json';
-import allBstsResultsData from '../data/processed/bsts_results/all_bsts_results.json';
-// Import additional JSON files that were previously fetched
-import visualizationDataData from '../data/processed/visualization_data.json';
-import mapDataData from '../data/processed/map_data.json';
-import categoryComparisonSpecData from '../data/specs/category-comparison-spec.json';
+// REMOVE Direct imports for data files - these will be fetched
+// import geojsonData from '../data/neighborhoods.geojson';
+// import neighborhoodMapData from '../data/processed/neighborhood_map.json';
+// import frontendDataData from '../data/processed/frontend_data.json';
+// import allBstsResultsData from '../data/processed/bsts_results/all_bsts_results.json'; // Corrected path based on R script
+// import visualizationDataData from '../data/processed/visualization_data.json';
+// import mapDataData from '../data/processed/map_data.json';
+// import categoryComparisonSpecData from '../data/specs/category-comparison-spec.json';
+// import rawReportsDataJson from '../data/mc1-reports-data.json';
+// import aggregatedSummaryDataJson from '../data/processed/all_summary_aggregated.json';
 
-// Import NEW JSON data files
-import rawReportsDataJson from '../data/mc1-reports-data.json';
-import aggregatedSummaryDataJson from '../data/processed/all_summary_aggregated.json';
 
 /**
  * Data loader for earthquake visualization
@@ -37,23 +35,58 @@ const dataCache = {
 };
 
 /**
+ * Helper function to fetch JSON data
+ * @param {string} path - Path to the JSON file relative to PUBLIC_URL/data/
+ * @returns {Promise<Object>} JSON data
+ */
+const fetchJsonData = async (path) => {
+  const response = await fetch(`${process.env.PUBLIC_URL}/data/${path}`);
+  if (!response.ok) {
+    throw new Error(`Failed to load ${path}: ${response.status} ${response.statusText}`);
+  }
+  return response.json();
+};
+
+/**
+ * Helper function to fetch CSV data and parse it
+ * @param {string} path - Path to the CSV file relative to PUBLIC_URL/data/
+ * @returns {Promise<Array>} Parsed CSV data
+ */
+const fetchCsvData = async (path) => {
+  const response = await fetch(`${process.env.PUBLIC_URL}/data/${path}`);
+  if (!response.ok) {
+    throw new Error(`Failed to load ${path}: ${response.status} ${response.statusText}`);
+  }
+  const csvText = await response.text();
+  return new Promise((resolve, reject) => {
+    Papa.parse(csvText, {
+      header: true,
+      dynamicTyping: true,
+      skipEmptyLines: true,
+      complete: (results) => resolve(results.data),
+      error: (error) => reject(error),
+    });
+  });
+};
+
+
+/**
  * Load neighborhood GeoJSON data
  * @returns {Promise<Object>} GeoJSON data
  */
 export const loadGeoJSON = async () => {
-  // Check cache first
   if (dataCache.general.geoJSON) {
     logger.debug('Using cached GeoJSON data');
     return dataCache.general.geoJSON;
   }
-  
   try {
-    // Data is imported directly now
-    dataCache.general.geoJSON = geojsonData;
-    logger.debug('GeoJSON data loaded from import');
-    return geojsonData;
+    logger.debug('Fetching GeoJSON data...');
+    const data = await fetchJsonData('neighborhoods.geojson');
+    dataCache.general.geoJSON = data;
+    logger.debug('GeoJSON data loaded and cached');
+    return data;
   } catch (error) {
-    logger.error('Error accessing imported GeoJSON data:', error);
+    logger.error('Error fetching GeoJSON data:', error);
     throw error;
   }
 };
@@ -63,44 +96,26 @@ export const loadGeoJSON = async () => {
  * @returns {Promise<Object>} Map of neighborhood IDs to names
  */
 export const loadNeighborhoodMap = async () => {
-  // Check cache first
   if (dataCache.general.neighborhoodMap) {
     logger.debug('Using cached neighborhood map');
     return dataCache.general.neighborhoodMap;
   }
-  
   try {
-    // Data is imported directly now
-    dataCache.general.neighborhoodMap = neighborhoodMapData;
-    logger.debug('Neighborhood map loaded from import');
-    return neighborhoodMapData;
+    logger.debug('Fetching neighborhood map...');
+    const data = await fetchJsonData('processed/neighborhood_map.json');
+    dataCache.general.neighborhoodMap = data;
+    logger.debug('Neighborhood map loaded and cached');
+    return data;
   } catch (error) {
-    logger.error('Error accessing imported neighborhood map:', error);
-    // Fallback logic might need adjustment if import fails, 
-    // but import failure is unlikely if file exists.
-    logger.warn('Falling back to hardcoded neighborhood map due to import error.');
+    logger.error('Error fetching neighborhood map:', error);
+    // Fallback logic might need adjustment
+    logger.warn('Falling back to hardcoded neighborhood map due to fetch error.');
     const fallbackMap = {
-      1: "Palace Hills",
-      2: "Northwest",
-      3: "Old Town",
-      4: "Safe Town",
-      5: "Southwest",
-      6: "Downtown",
-      7: "Wilson Forest",
-      8: "Scenic Vista",
-      9: "Broadview",
-      10: "Chapparal",
-      11: "Terrapin",
-      12: "Pepper Mill",
-      13: "Cheddarford",
-      14: "Easton",
-      15: "Weston",
-      16: "Southton",
-      17: "Oak Willow",
-      18: "East Parton",
-      19: "West Parton"
+      1: "Palace Hills", 2: "Northwest", 3: "Old Town", 4: "Safe Town", 5: "Southwest",
+      6: "Downtown", 7: "Wilson Forest", 8: "Scenic Vista", 9: "Broadview", 10: "Chapparal",
+      11: "Terrapin", 12: "Pepper Mill", 13: "Cheddarford", 14: "Easton", 15: "Weston",
+      16: "Southton", 17: "Oak Willow", 18: "East Parton", 19: "West Parton"
     };
-    
     dataCache.general.neighborhoodMap = fallbackMap;
     return fallbackMap;
   }
@@ -111,27 +126,15 @@ export const loadNeighborhoodMap = async () => {
  * @returns {Promise<Object>} Processed visualization data
  */
 export const loadVisualizationData = async () => {
-  // Check cache first
   if (dataCache.general.visualizationData) {
     logger.debug('Using cached visualization data');
     return dataCache.general.visualizationData;
   }
-  
   try {
-    logger.debug('Loading visualization data...');
-    // const response = await fetch(`${process.env.PUBLIC_URL}/data/processed/visualization_data.json`);
-    
-    // if (!response.ok) {
-    //   throw new Error(`Failed to load visualization data: ${response.status} ${response.statusText}`);
-    // }
-    
-    // const data = await response.json();
-    const data = visualizationDataData; // Use imported data
-    
-    // Store in cache
+    logger.debug('Fetching visualization data...');
+    const data = await fetchJsonData('processed/visualization_data.json');
     dataCache.general.visualizationData = data;
     logger.debug('Visualization data loaded successfully');
-    
     return data;
   } catch (error) {
     logger.error('Error loading visualization data:', error);
@@ -144,19 +147,18 @@ export const loadVisualizationData = async () => {
  * @returns {Promise<Object>} Combined frontend data
  */
 export const loadFrontendData = async () => {
-  // Check cache first
   if (dataCache.general.frontendData) {
     logger.debug('Using cached frontend data');
     return dataCache.general.frontendData;
   }
-  
   try {
-    // Data is imported directly now
-    dataCache.general.frontendData = frontendDataData;
-    logger.debug('Frontend data loaded from import');
-    return frontendDataData;
+    logger.debug('Fetching frontend data...');
+    const data = await fetchJsonData('processed/frontend_data.json');
+    dataCache.general.frontendData = data;
+    logger.debug('Frontend data loaded successfully');
+    return data;
   } catch (error) {
-    logger.error('Error accessing imported frontend data:', error);
+    logger.error('Error loading frontend data:', error);
     throw error;
   }
 };
@@ -167,65 +169,41 @@ export const loadFrontendData = async () => {
  * @returns {Promise<Object>} Map data for the closest timestamp
  */
 export const loadMapData = async (timestamp) => {
-  // Convert timestamp to Date if it's not already
   const date = timestamp instanceof Date ? timestamp : new Date(timestamp);
-  
-  // Round to nearest hour to match R-generated data timestamps
   const roundedTime = new Date(date);
   roundedTime.setMinutes(0, 0, 0);
-  
-  // Cache key based on hour timestamp
   const cacheKey = roundedTime.getTime();
-  
-  // Check cache first
+
   if (dataCache.general.mapData && dataCache.general.mapData[cacheKey]) {
     logger.debug(`Using cached map data for ${roundedTime.toISOString()}`);
     return dataCache.general.mapData[cacheKey];
   }
-  
+
   try {
-    // First, load the entire map data if not already loaded
     if (!dataCache.general.allMapData) {
-      logger.debug('Loading map data from import...');
-      // const response = await fetch(`${process.env.PUBLIC_URL}/data/processed/map_data.json`);
-      
-      // if (!response.ok) {
-      //   throw new Error(`Failed to load map data: ${response.status} ${response.statusText}`);
-      // }
-      
-      // dataCache.general.allMapData = await response.json();
-      dataCache.general.allMapData = mapDataData; // Use imported data
-      logger.debug('Map data loaded successfully from import');
-      
-      // Initialize mapData cache object if needed
+      logger.debug('Fetching all map data...');
+      const allData = await fetchJsonData('processed/map_data.json');
+      dataCache.general.allMapData = allData;
+      logger.debug('All map data loaded successfully');
       if (!dataCache.general.mapData) {
         dataCache.general.mapData = {};
       }
     }
-    
-    // Find the closest time in the data
+
     const allTimes = dataCache.general.allMapData.map(item => new Date(item.time).getTime());
-    
-    // If there's no data, return empty result
     if (allTimes.length === 0) {
       logger.warn('No map data available');
       return { time: roundedTime.toISOString(), cat_data: [] };
     }
-    
-    // Find closest time
+
     const targetTime = roundedTime.getTime();
     const closestTime = allTimes.reduce((prev, curr) => 
       Math.abs(curr - targetTime) < Math.abs(prev - targetTime) ? curr : prev
     );
-    
-    // Get the data for the closest time
     const closestData = dataCache.general.allMapData.find(
       item => new Date(item.time).getTime() === closestTime
     );
-    
-    // Store in time-specific cache
     dataCache.general.mapData[cacheKey] = closestData;
-    
     return closestData;
   } catch (error) {
     logger.error('Error loading map data:', error);
@@ -239,31 +217,24 @@ export const loadMapData = async (timestamp) => {
  * @returns {Promise<Object>} BSTS data for the category
  */
 export const loadBSTSData = async (category) => {
-  // Normalize category name
-  const normalizedCategory = category.toLowerCase().replace(/\s+/g, '_');
-  
-  // Check cache first
+  const normalizedCategory = category.toLowerCase().replace(/\\s+/g, '_');
   if (dataCache.bsts[normalizedCategory]) {
     logger.debug(`Using cached BSTS data for ${normalizedCategory}`);
     return dataCache.bsts[normalizedCategory];
   }
-  
   try {
-    logger.debug(`Attempting to load BSTS data for ${normalizedCategory} from combined data...`);
-    // Primarily rely on loadAllBSTSData which uses an import.
-    // The individual fetch for `${normalizedCategory}_summary.json` is removed
-    // as dynamic imports from a variable path are complex and these files
-    // would need to be in the public folder or handled by specific server routing if fetched.
-    const allData = await loadAllBSTSData(normalizedCategory); // Pass category to filter
+    logger.debug(`Attempting to load BSTS data for ${normalizedCategory} by fetching ${normalizedCategory}_summary.json...`);
+    // The R script process.R saves files like 'shake_intensity_summary.json' in OUTPUT_DIR which is 'public/data/processed/'
+    // So, the path will be 'processed/<category_name>_summary.json'
+    // However, the `all_bsts_results.json` contains all categories.
+    // It's more efficient to load `all_bsts_results.json` once and filter.
+    // The original logic tried to fetch individual files, then fell back to `loadAllBSTSData`.
+    // We'll stick to `loadAllBSTSData` for now as it's simpler and uses a single main BSTS results file.
+    const allDataForCategory = await loadAllBSTSData(normalizedCategory); // This will filter from the main BSTS file
 
-    // loadAllBSTSData returns data structured by location, then category.
-    // We need to ensure the structure matches what the original loadBSTSData might have expected,
-    // or that callers are adapted. Assuming callers adapt or the structure from loadAllBSTSData is sufficient.
-    
-    dataCache.bsts[normalizedCategory] = allData; // Cache the filtered data under the specific category key
+    dataCache.bsts[normalizedCategory] = allDataForCategory;
     logger.debug(`BSTS data for ${normalizedCategory} processed successfully from combined data`);
-    
-    return allData;
+    return allDataForCategory;
   } catch (error) {
     logger.error(`Error loading BSTS data for ${normalizedCategory}:`, error);
     throw error;
@@ -273,83 +244,58 @@ export const loadBSTSData = async (category) => {
 /**
  * Load all BSTS data from the combined file and filter by category
  * @param {string} category - Optional category to filter by
+ * @param {Date|number} timestamp - Optional timestamp to filter by
  * @returns {Promise<Object>} All BSTS data or filtered by category
  */
 export const loadAllBSTSData = async (category = null, timestamp = null) => {
-  // Cache key contains category and timestamp if provided
   const cacheKey = `all_${category || 'all'}_${timestamp || 'all'}`;
-  
-  // Check cache first
   if (dataCache.bsts[cacheKey]) {
     logger.debug(`Using cached all BSTS data with key ${cacheKey}`);
     return dataCache.bsts[cacheKey];
   }
-  
   try {
-    // Load all BSTS data if not already loaded
-    if (!dataCache.bsts.allBSTSData) {
-      logger.debug('Loading all BSTS data from import...');
-      // Data is imported directly now
-      dataCache.bsts.allBSTSData = allBstsResultsData;
-      logger.debug('All BSTS data loaded successfully from import');
+    if (!dataCache.bsts.allBSTSDataMaster) { // Changed cache key to avoid conflict if 'allBSTSData' was used differently
+      logger.debug('Fetching all BSTS results data...');
+      // R script analysis.R saves all_bsts_results.json in public/data/processed/bsts_results/
+      const data = await fetchJsonData('processed/bsts_results/all_bsts_results.json');
+      dataCache.bsts.allBSTSDataMaster = data;
+      logger.debug('All BSTS results data loaded successfully');
     }
-    
-    // If no category or timestamp specified, return all data
-    if (!category && !timestamp) {
-      // Convert array to object by location and category for consistency
-      const dataByLocationCategory = {};
-      dataCache.bsts.allBSTSData.forEach(item => {
-        if (!dataByLocationCategory[item.location]) {
-          dataByLocationCategory[item.location] = {};
-        }
-        dataByLocationCategory[item.location][item.category] = item;
-      });
-      dataCache.bsts[cacheKey] = dataByLocationCategory;
-      return dataByLocationCategory;
-    }
-    
-    // --- Start Revised Filtering Logic ---
-    let timeFilteredData = dataCache.bsts.allBSTSData;
-    
+
+    let processedData = dataCache.bsts.allBSTSDataMaster;
+
     if (timestamp) {
       const date = timestamp instanceof Date ? timestamp : new Date(timestamp);
-      const latestDataByLocationCategory = {}; // Key: location_category, Value: latest record
-
-      timeFilteredData.forEach(item => {
+      const latestDataByLocationCategory = {};
+      processedData.forEach(item => {
         const itemTime = new Date(item.time);
         if (itemTime <= date) {
-          const key = `${item.location}_${item.category}`;
-          if (!latestDataByLocationCategory[key] || new Date(latestDataByLocationCategory[key].time) < itemTime) {
-            latestDataByLocationCategory[key] = item;
+          const itemKey = `${item.location}_${item.category}`;
+          if (!latestDataByLocationCategory[itemKey] || new Date(latestDataByLocationCategory[itemKey].time) < itemTime) {
+            latestDataByLocationCategory[itemKey] = item;
           }
         }
       });
-      // Use the filtered latest records
-      timeFilteredData = Object.values(latestDataByLocationCategory);
+      processedData = Object.values(latestDataByLocationCategory);
     }
 
-    // Now filter by category if specified (after timestamp filter)
     if (category) {
-      const normalizedCategory = category.toLowerCase().replace(/\s+/g, '_');
-      timeFilteredData = timeFilteredData.filter(item => item.category === normalizedCategory);
+      const normalizedCategory = category.toLowerCase().replace(/\\s+/g, '_');
+      processedData = processedData.filter(item => item.category === normalizedCategory);
     }
 
-    // Structure the result: { locationId: { categoryName: record, ... }, ... }
     const finalResult = {};
-    timeFilteredData.forEach(item => {
+    processedData.forEach(item => {
       const locationId = item.location;
-      const categoryName = item.category;
+      const catName = item.category;
       if (!finalResult[locationId]) {
         finalResult[locationId] = {};
       }
-      finalResult[locationId][categoryName] = item;
+      finalResult[locationId][catName] = item;
     });
-    // --- End Revised Filtering Logic ---
-
-    // Store filtered data in cache
+    
     dataCache.bsts[cacheKey] = finalResult;
     logger.debug(`Filtered BSTS data for key ${cacheKey}:`, finalResult);
-    
     return finalResult;
   } catch (error) {
     logger.error('Error loading all BSTS data:', error);
@@ -362,49 +308,45 @@ export const loadAllBSTSData = async (category = null, timestamp = null) => {
  * @returns {Promise<Array>} Raw reports data
  */
 export const loadRawReportsData = async () => {
-  // Check cache first
   if (dataCache.general.rawReports) {
     logger.debug('Using cached raw reports data');
     return dataCache.general.rawReports;
   }
-  
   try {
-    logger.debug('Processing imported raw reports JSON data...');
+    logger.debug('Fetching raw reports data (mc1-reports-data.json)...');
+    // R script data_preparation.R saves 'mc1-reports-data.json' in 'public/data/'
+    const jsonData = await fetchJsonData('mc1-reports-data.json');
     
-    // Data is now directly from imported JSON
-    const reports = rawReportsDataJson.map(row => {
+    const reports = jsonData.map(row => {
         const newRow = { ...row };
-        // The R script saves time as time_string: format(time, "%Y-%m-%d %H:%M:%S")
-        // It also ensures location is character.
-        // Rating should be a number.
-        if (newRow.time_string) {
+        if (newRow.time_string) { // R script saves time as time_string
             newRow.time = new Date(newRow.time_string);
             if (isNaN(newRow.time.getTime())) {
                 logger.warn("Invalid date encountered in raw reports JSON:", newRow.time_string);
                 newRow.time = null; 
             }
-        } else {
-            newRow.time = null; // If time_string is missing
+        } else if (newRow.time && !(newRow.time instanceof Date)) { // Fallback if time_string isn't present but time is
+            newRow.time = new Date(newRow.time);
+             if (isNaN(newRow.time.getTime())) newRow.time = null;
+        } else if (!newRow.time) {
+             newRow.time = null;
         }
-        // Ensure location is string (R script should handle this, but double check)
+
         if (newRow.location !== undefined && newRow.location !== null) {
             newRow.location = String(newRow.location);
         }
-        // Ensure rating is a number (R script should handle this)
         if (typeof newRow.rating !== 'number') {
             newRow.rating = parseFloat(newRow.rating);
-            if (isNaN(newRow.rating)) newRow.rating = null; // Or some default
+            if (isNaN(newRow.rating)) newRow.rating = null;
         }
         return newRow;
-    }).filter(row => row.time !== null); // Filter out rows where date parsing failed or time_string was missing
+    }).filter(row => row.time !== null); // Filter out rows where date parsing failed
 
-    // Store in cache
     dataCache.general.rawReports = reports;
-    logger.debug(`Raw reports data processed successfully (${reports.length} reports)`);
-    
+    logger.debug(`Raw reports data loaded successfully (${reports.length} reports)`);
     return reports;
   } catch (error) {
-    logger.error('Error processing raw reports JSON data:', error);
+    logger.error('Error loading raw reports JSON data:', error);
     throw error;
   }
 };
@@ -414,33 +356,38 @@ export const loadRawReportsData = async () => {
  * @returns {Promise<Array>} Aggregated summary data
  */
 export const loadAggregatedSummaryData = async () => {
-  // Check cache first
   if (dataCache.general.bstsTimeAggregated) {
     logger.debug('Using cached aggregated summary data (bstsTimeAggregated)');
     return dataCache.general.bstsTimeAggregated;
   }
-
   try {
-    logger.debug('Processing imported aggregated summary JSON (all_summary_aggregated.json)...');
+    logger.debug('Fetching aggregated summary JSON (all_summary_aggregated.json)...');
+    // R script process.R saves 'all_summary_aggregated.json' in 'public/data/processed/'
+    const jsonData = await fetchJsonData('processed/all_summary_aggregated.json');
     
-    // Data is now directly from imported JSON
-    const data = aggregatedSummaryDataJson.map(row => {
+    // Assuming R script outputs numbers correctly. If not, add parsing.
+    // location should be string, dateHour is string.
+    const data = jsonData.map(row => {
         const newRow = { ...row };
-        // Ensure location is string (R script should handle this, but double check)
         if (newRow.location !== undefined && newRow.location !== null) {
             newRow.location = String(newRow.location);
         }
-        // Other numeric fields (map, avgMAP, etc.) should be numbers from R output.
-        // dateHour is a string like "%Y-%m-%d %H:00:00"
+        // Ensure numeric fields are numbers
+        ['map', 'avgMAP', 'maxCIR', 'avgCIR', 'CIRatMaxMAP'].forEach(field => {
+            if (typeof newRow[field] !== 'number') {
+                newRow[field] = parseFloat(newRow[field]);
+                if(isNaN(newRow[field])) newRow[field] = 0; // Default to 0 if parsing fails
+            }
+        });
         return newRow;
     });
 
     dataCache.general.bstsTimeAggregated = data;
-    logger.debug(`Aggregated summary data (bstsTimeAggregated) processed successfully (${data.length} records)`);
+    logger.debug(`Aggregated summary data (bstsTimeAggregated) loaded successfully (${data.length} records)`);
     return data;
   } catch (error) {
-    logger.error('Error processing aggregated summary JSON data:', error);
-    dataCache.general.bstsTimeAggregated = []; // Cache empty array on error to prevent re-fetches
+    logger.error('Error loading aggregated summary JSON data:', error);
+    dataCache.general.bstsTimeAggregated = [];
     throw error;
   }
 };
@@ -451,15 +398,14 @@ export const loadAggregatedSummaryData = async () => {
  */
 export const loadAllData = async () => {
   logger.debug('Loading all data for application...');
-  
   try {
-    // Load data in parallel for better performance
     const [
       geoJSON,
       neighborhoodMap,
       frontendData,
       rawReports,
-      bstsTimeAggregated
+      bstsTimeAggregated 
+      // visualizationData and mapData are loaded on demand by components or derived
     ] = await Promise.all([
       loadGeoJSON(),
       loadNeighborhoodMap(),
@@ -468,20 +414,16 @@ export const loadAllData = async () => {
       loadAggregatedSummaryData()
     ]);
     
-    // Process raw reports to create lookup by neighborhood
     const neighborhoodGroups = {};
     rawReports.forEach(report => {
       const location = report.location;
       if (!location) return;
-      
       if (!neighborhoodGroups[location]) {
         neighborhoodGroups[location] = [];
       }
-      
       neighborhoodGroups[location].push(report);
     });
     
-    // Combine all data into a single structure
     const combinedData = {
       geoJSON,
       neighborhoodMap,
@@ -489,14 +431,13 @@ export const loadAllData = async () => {
       reports: rawReports,
       neighborhoodGroups,
       bstsTimeAggregated,
-      // Extract locations from neighborhoodMap
       locations: Object.keys(neighborhoodMap).map(id => ({
         id,
         name: neighborhoodMap[id]
       }))
     };
     
-    logger.debug('All data loaded successfully');
+    logger.debug('All essential data loaded successfully');
     return combinedData;
   } catch (error) {
     logger.error('Error loading all data:', error);
@@ -507,19 +448,20 @@ export const loadAllData = async () => {
 export const loadProcessedData = loadAllData;
 
 export const loadCategoryComparisonSpec = async () => {
+  if (dataCache.general.categoryComparisonSpec) {
+    logger.debug('Using cached category comparison spec');
+    return dataCache.general.categoryComparisonSpec;
+  }
   try {
-    // Use imported data
-    // const response = await fetch(`/src/data/specs/category-comparison-spec.json`); // Adjusted path prefix - needs verification
-    // if (!response.ok) {
-    //   throw new Error(`HTTP error! status: ${response.status}`);
-    // }
-    // const spec = await response.json();
-    const spec = categoryComparisonSpecData;
-    logger.debug('Category comparison spec loaded successfully from import');
+    logger.debug('Fetching category comparison spec...');
+    // R scripts do not explicitly mention creating this spec. Assuming it's manually placed in public/data/specs/
+    const spec = await fetchJsonData('specs/category-comparison-spec.json');
+    dataCache.general.categoryComparisonSpec = spec;
+    logger.debug('Category comparison spec loaded successfully');
     return spec;
   } catch (error) {
     logger.error('Error loading category comparison spec:', error);
-    throw error; // Re-throw to allow caller to handle
+    throw error;
   }
 };
 
