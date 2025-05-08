@@ -81,30 +81,34 @@ This section details the methodologies employed for data processing, the algorit
 ### 2.2 Data Acquisition and Preprocessing
 *   **Data Sources:**
     *   The project utilizes the datasets provided by VAST Challenge 2019 MC1:
-        *   `mc1-reports-data.csv`: Contains citizen-generated damage reports with fields: `time`, `location` (neighborhood ID), `category` (e.g., Shake Intensity, Buildings, Medical, Power, Roads & Bridges, Sewer & Water), and `value` (damage rating 0-10).
-        *   `neighborhoods.geojson` (or `neighborhoods_geojson.json`): Geographical boundary data for St. Himark's 19 neighborhoods, essential for map-based visualizations.
-        *   Shake Maps (April 6 and April 8): Provided as baseline seismic intensity data.
-    *   Detailed descriptions of these datasets are available in `docs/data-description.md`.
-*   **R Preprocessing Pipeline:** A critical offline R pipeline (scripts in `preprocessing/R/`) is implemented to transform raw data into analysis-ready formats suitable for efficient frontend consumption. This pipeline consists of several stages:
-    *   **Package Installation (`install_packages.R`):** Ensures all necessary R packages (e.g., `tidyverse`, `bsts`, `jsonlite`, `zoo`, `lubridate`, `future`) are available.
-    *   **Initial Data Preparation (`data_preparation.R`):** Performs initial cleaning of `mc1-reports-data.csv` (e.g., parsing timestamps, ensuring consistent neighborhood/category naming) and converts the data into a long format (`mc1-reports-data-long.csv`) suitable for time series analysis.
-    *   **BSTS Modeling (`analysis.R`):**
-        *   This is the core analytical step. It applies Bayesian Structural Time Series (BSTS) modeling to generate robust time series estimates of damage and associated uncertainty for each neighborhood-category pair.
-        *   A rule is implemented to model only location-category pairs with a sufficient number of reports (e.g., >= 5 reports) to ensure model stability; sparse pairs are handled later.
-        *   The script outputs detailed results from each BSTS model and a combined CSV (`all_bsts_results.csv`) containing MAP estimates and credible intervals (e.g., 95% CI).
-        *   Parallel processing (via the `future` package) is utilized to improve the efficiency of running numerous BSTS models.
-    *   **Post-Processing and Aggregation (`process.R`):**
-        *   Consumes `all_bsts_results.csv`.
-        *   Generates a complete time series at regular intervals (e.g., every 5 minutes) for all 19 neighborhoods x 6 damage categories. This ensures a consistent temporal backbone for visualizations.
-        *   For time steps between actual BSTS model updates (which occur when new data significantly changes the model), Last Observation Carried Forward (LOCF) is applied using the `zoo` package. This propagates the last known modeled state until a new update occurs.
-        *   Crucially, for location-category pairs that were too sparse for BSTS modeling (i.e., not present in `all_bsts_results.csv`), placeholder data is generated (e.g., damage value of 0, default high uncertainty/low certainty). This explicit handling of data sparsity is vital for accurate representation.
-        *   Creates aggregated summary files like `all_summary_aggregated.csv` (potentially daily/hourly summaries) and `category_summary_aggregated.json` (summaries per category over time).
-        *   Generates frontend-optimized data structures, such as `map_data.json` (containing hourly slices of MAP and uncertainty for each neighborhood-category, suitable for the interactive map) and `frontend_data.json` or `all_summary_processed.csv` (a comprehensive dataset for detailed charts like the heatmap).
-*   **Benefits of Offline Preprocessing:** This extensive offline pipeline provides faster load times for the frontend, enables the use of sophisticated statistical models like BSTS, ensures robust uncertainty quantification, and significantly reduces client-side processing demands.
+        *   **`mc1-reports-data.csv`**: Located in `public/data/raw/` (or source directory), this CSV file contains the raw citizen-generated damage reports. Key fields include `time` (Timestamp), `location` (Neighborhood ID 1-19), `shake_intensity`, `sewer_and_water`, `power`, `roads_and_bridges`, `medical`, `buildings` (all damage ratings 0-10, where 0=None, 5=Moderate, 10=Severe).
+        *   **`StHimarkNeighborishRegions.geojson`** (or similar, e.g., `neighborhoods_geojson.json` in `public/data/`): Provides the geographical boundaries for St. Himark's 19 neighborhoods, essential for map rendering.
+        *   **Shake Maps:** `shakemap-1.png` and `shakemap-2.png` (in `public/data/images/`) provide contextual seismic intensity information for April 6 and April 8, used for baseline comparison but not dynamically layered.
+    *   Detailed descriptions of raw data structure and fields are available in `docs/data-description.md`.
+*   **R Preprocessing Pipeline:** A critical offline R pipeline (scripts in `preprocessing/R/`) transforms raw data into analysis-ready formats suitable for efficient frontend consumption. This pipeline enhances performance and enables robust uncertainty quantification.
+    *   **Rationale for Offline Preprocessing:** Performing complex statistical analysis like BSTS modeling on the fly in the browser would lead to unacceptable loading times and potentially freeze the UI. Preprocessing offers: faster load times, enables advanced analytics (BSTS), robust uncertainty quantification, and reduced client-side processing load.
+    *   **Pipeline Stages (executed via `preprocessing/run_preprocessing.bat` or `.sh`, or manually):**
+        1.  **Package Installation (`install_packages.R`):** Ensures R environment has necessary packages (`tidyverse`, `bsts`, `jsonlite`, `zoo`, `lubridate`, `future`, etc.).
+        2.  **Initial Data Preparation (`data_preparation.R`):** Reads `mc1-reports-data.csv`, performs initial cleaning (timestamp parsing, type conversion), and transforms data into a long format (`public/data/processed/mc1-reports-data-long.csv`), suitable for time series modeling.
+        3.  **BSTS Modeling (`analysis.R`):** The core analytical step. Applies Bayesian Structural Time Series modeling to each location-category pair using the `bsts` package. A key implementation detail is the **>= 5 reports rule**: BSTS models are only generated for location-category pairs with at least 5 raw reports to ensure model stability. Outputs include individual model summaries and the aggregated `public/data/processed/bsts_results/all_bsts_results.csv`, containing time series of MAP estimates, means, and 95% credible intervals (CI) for all successfully modeled pairs. Parallel processing (`future` package) is used to expedite this computationally intensive step.
+        4.  **Post-Processing & Formatting (`process.R`):** Consumes `all_bsts_results.csv`. Generates a complete, regular time series (e.g., 5-minute intervals) for **all** 19 locations x 6 categories in `public/data/processed/all_summary_processed.csv`. It applies Last Observation Carried Forward (LOCF) using `zoo` for intervals between BSTS updates for modeled pairs. For pairs skipped by `analysis.R` due to insufficient data, it generates **placeholder data** (e.g., damage value 0, default uncertainty level "medium", CIR 5), explicitly handling sparsity. Finally, it creates aggregated and formatted files optimized for frontend use:
+            *   `public/data/processed/all_summary_processed.csv`: Comprehensive 5-minute interval data (MAP, mean, CI, CIR, certainty_level) for all location-category pairs.
+            *   `public/data/processed/all_summary_aggregated.csv`: Hourly aggregated statistics.
+            *   `public/data/processed/map_data.json`: Hourly slices (latest/max state within hour) structured for efficient map rendering (`time -> category -> [location objects]`).
+            *   `public/data/processed/category_summary_aggregated.json`: Overall summary statistics per category for the latest time point.
+            *   Other category-specific summary files might also be generated.
+    *   **Benefits:** Faster load times, robust uncertainty quantification via BSTS, consistent data structure for frontend, explicit handling of data sparsity.
+*   **Key Processed Data Files & Usage (in `public/data/processed/`):**
+    *   **`all_summary_processed.csv` (~106MB):** The most detailed time-series output (5-min intervals, all loc-cat pairs, MAP, mean, CI, CIR, certainty_level). Primary source for the main heatmap (`VegaChart.jsx`).
+    *   **`map_data.json` (~9.6MB):** Hourly slices optimized for the `EarthquakeMap.jsx`. Contains latest/max hourly MAP (`value`), uncertainty (`CIRatMaxMAP`), CIs, etc., per location/category.
+    *   **`category_summary_aggregated.json` (~1.4KB):** Aggregated stats per category (average MAP, CIR, CIs) for the latest time point. Used by the category comparison bar chart (`VegaChart.jsx`).
+    *   **`all_summary_aggregated.csv` (~955KB):** Hourly aggregated statistics, potentially used for overview charts or faster views.
+    *   **`neighborhood_map.json` (~1KB):** Simple mapping of neighborhood ID to name.
+    *   *(Note: `frontend_data.json` and `visualization_data.json`, if present, might be older or less structured aggregates; confirm relevance against current code.)*
 *   **Handling Sparsity and Uncertainty Quantification:**
-    *   The BSTS models inherently provide MAP estimates and credible intervals (CIs), which are direct measures of value and uncertainty.
-    *   The preprocessing pipeline and subsequent frontend utilities (`src/utils/uncertaintyCalc.js`) convert these metrics into consistent `certainty` scores (e.g., 0-1 range) for visual encoding (like opacity on the map). Functions like `calculateCertaintyFromCIR` or `calculateCertaintyFromCIWidth` might be used.
-    *   Instances with insufficient data for BSTS modeling are explicitly represented with a low damage value (e.g., 0) and low certainty, ensuring they are not misinterpreted as having no reports or no damage if data is simply missing.
+    *   The R pipeline explicitly handles sparsity by generating placeholder data (0 damage, default uncertainty) for location-category pairs with < 5 reports.
+    *   BSTS provides MAP estimates and CIs. These are stored in processed files (e.g., `all_summary_processed.csv`, `map_data.json`). The MAP represents the most likely value, while the CI (e.g., 95% interval) provides a range for the estimate, with the CI Range (CIR) indicating the width and thus the uncertainty.
+    *   The frontend utility `src/utils/uncertaintyCalc.js` provides functions (`calculateCertaintyFromCIR`, `calculateCertaintyFromCIWidth`, `levelToCertainty`) to convert these various uncertainty metrics (CIR, CI width, predefined levels) into a consistent numeric `certainty` score (0-1), which is then used for visual encoding (e.g., map opacity).
 
 ### 2.3 Visualisation Design Rationale
 *   **Guiding Principles:**
@@ -124,26 +128,18 @@ This section details the methodologies employed for data processing, the algorit
     *   **Map Color Palette Rationale:** `[The choice of color palette for the map aims for perceptual clarity and effectiveness. For damage severity, a sequential scheme (e.g., yellow-orange-red) is used, which is generally good for ordered data. For uncertainty, opacity is the primary visual variable: areas with higher certainty (narrower CIs, more reliable data) are more opaque, while areas with lower certainty are more transparent (value-suppressing). This ensures that users are less likely to draw strong conclusions from uncertain data. If a bivariate scheme is explored, it would combine a sequential color for damage with a lightness/saturation variation for uncertainty. Color-blind friendliness should be considered in palette selection, referring to tools like ColorBrewer.]`
 *   **Rationale for Each Chart/View (and how they address analytical tasks):**
     *   **Interactive Damage Map (`EarthquakeMap.jsx`):** (Addresses Tasks 1 & 2)
-        *   Provides the primary spatial overview of damage severity and uncertainty across St. Himark's 19 neighborhoods.
-        *   Uses choropleth encoding for damage (color intensity) and uncertainty (opacity).
-        *   Tooltips offer detailed metrics (damage value, CI, certainty score, report count).
-        *   Allows users to quickly identify hotspots, compare regions, and understand the spatial distribution of reliable vs. unreliable information.
+        *   Provides the primary spatial overview. Choropleth encoding (color intensity) maps to damage severity, allowing rapid identification of hotspots. Uncertainty is encoded via opacity (value-suppressing). Tooltips offer detailed metrics (MAP, CI, certainty score, report count).
+        *   Essential for comparing neighborhood conditions and assessing report reliability spatially.
     *   **Timeline Controls & Event Markers (`TimeControls.jsx`):** (Addresses Task 3)
-        *   Enables users to navigate through time, updating all linked visualizations dynamically.
-        *   Playback controls allow for animated temporal exploration.
-        *   Event markers (if data supports, e.g., for aftershocks) highlight significant occurrences.
+        *   Enables temporal exploration. Dragging the slider or using playback controls updates all linked views, revealing how damage and uncertainty evolve.
     *   **Damage Category Comparison Chart (Bar Chart, via `VegaChart.jsx`):** (Addresses Tasks 1 & 3)
-        *   Displays average damage levels across all infrastructure categories for the selected time point.
-        *   Helps identify which types of infrastructure are most affected city-wide or within a selected region, and how this profile changes over time.
+        *   Shows average damage across categories at the selected time using `category_summary_aggregated.json`. Helps identify the most impacted infrastructure types.
     *   **Neighborhoods & Categories Damage Heatmap (`VegaChart.jsx`):** (Addresses Tasks 1 & 3)
-        *   Offers a dense, matrix-like overview of damage levels for every neighborhood (rows) across all damage categories (columns) over the entire event duration (or selected time window).
-        *   Facilitates the identification of spatio-temporal patterns, correlations (e.g., if power outages consistently co-occur with communication issues in certain areas), and areas with persistently high damage in specific categories. Areas with insufficient data for BSTS modeling are shown with zero modeled damage to reflect sparsity.
+        *   Uses `all_summary_processed.csv` data. Provides a dense overview of damage (`map` value) for all location-category pairs over time. Facilitates identification of spatio-temporal patterns and correlations. Explicitly visualizes areas/times with insufficient data (shown as 0 modeled damage).
     *   **Damage Forecast Over Time Chart (`ForecastChart.jsx` or similar ECharts line chart):** (Addresses Tasks 2 & 3)
-        *   Displays historical damage trends (MAP estimates) and, if applicable, forecasted damage for selected neighborhoods/categories.
-        *   Crucially includes confidence bands (CIs) to visualize the uncertainty associated with these estimates and forecasts over time.
+        *   Uses time-series data from `all_summary_processed.csv`. Displays historical MAP trends and crucial uncertainty information via shaded credible interval bands (CIs).
     *   **Insights Panel (`InsightsPanel.jsx`):** (Addresses Tasks 1, 2, & 3)
-        *   Provides dynamic, textual summaries and highlights of the current situation based on filtered data and selected time (e.g., most affected area, top damage category, overall data certainty levels).
-        *   Aids in quick interpretation and decision-making by flagging critical information.
+        *   Generates dynamic textual summaries (e.g., highest damage area, most reliable reports) based on current data state, aiding quick interpretation.
 *   **Coordination and Linking:** All views are tightly coupled. Selecting a time on the timeline updates the map, bar charts, and heatmap. Clicking a neighborhood on the map filters the forecast chart and updates the statistics panel. This synchronized interaction model is crucial for integrated multi-faceted analysis, allowing users to seamlessly explore relationships between spatial, temporal, and categorical aspects of the data.
 
 ### 2.4 System Interface Design
@@ -163,86 +159,70 @@ This section details the methodologies employed for data processing, the algorit
 
 ## 3. Tool and Implementation
 
-This section describes the technical architecture of the visualisation application, details of its visual components and their implementation, interactive features, and the technologies, tools, and libraries used.
+This section describes the technical architecture, specific component implementations, interactive features, and the technologies used in the VAST Challenge visualization application.
 
 ### 3.1 System Architecture
-*   **Frontend Framework/Library:** The application is a single-page application (SPA) built using **React** (version `[Specify React version, e.g., 18.2.0]`). React was chosen for its component-based architecture, efficient virtual DOM rendering, strong ecosystem, and suitability for developing complex interactive user interfaces.
-*   **Component-Based Structure:** The UI is modularized into reusable React components, primarily located in `src/components/`. This promotes separation of concerns, maintainability, and testability. Key component categories include:
-    *   `charts/`: Contains components responsible for rendering specific visualizations, e.g., `EarthquakeMap.jsx` (ECharts-based map), `VegaChart.jsx` (a generic wrapper for Vega-Lite charts like the heatmap and category comparison), `ForecastChart.jsx` (ECharts-based line chart for time series).
-    *   `ui/`: Houses general UI elements like `FilterPanel.jsx`, `TimeControls.jsx`, `StatsPanel.jsx`, `InsightsPanel.jsx`, and `InfoModal.jsx`.
-    *   A detailed breakdown of components and their hierarchy can be found in `docs/component-structure.md`.
-*   **State Management:**
-    *   Global application state is managed using **React Context API**. Two primary contexts are used:
-        *   `DataContext` (defined in `src/context/DataContext.js`): Responsible for fetching, storing, and providing all static and pre-processed data (GeoJSON, neighborhood maps, aggregated summaries, and potentially the large `all_summary_processed.csv`). It also manages loading and error states for this initial data load. Components access this via a `useData()` hook.
-        *   `UIContext` (typically defined within `App.jsx` and provided globally): Manages UI-related state such as the currently selected time (`currentTime`), selected damage category (`selectedCategory`), selected neighborhood (`selectedNeighborhood`), active color scheme, and other filter settings. Components access this via a `useUI()` hook.
-    *   This approach centralizes state logic and avoids excessive prop-drilling, ensuring data consistency across disparate components.
+*   **Overall Structure:** The application consists of two main parts: an **Offline R Preprocessing Pipeline** responsible for complex data analysis and formatting, and a **React Frontend Application** for interactive visualization.
+    ```mermaid
+graph TD
+    A[Raw Data: mc1-reports-data.csv, GeoJSON] --> B{R Script: data_preparation.R};
+    B --> C[Intermediate: mc1-reports-data-long.csv];
+    C --> D{R Script: analysis.R (BSTS Modeling, >=5 rule)};
+    D --> E[BSTS Models: all_bsts_results.csv];
+    E --> F{R Script: process.R (LOCF, Placeholders, Aggregation)};
+    F --> G[Processed Data Suite in public/data/processed/];
+    
+    H[React App: Initial Load via DataContext/loadAllData] --> I{Base Data Loaded in Context: GeoJSON, all_summary_processed.csv, category_summary_aggregated.json etc.};
+    G --> H;
+    
+    J[User Interaction: Time/Category Change via UIContext] --> K{Frontend Logic: dataLoader.js (fetches map_data.json slice) or Component logic (filters all_summary_processed.csv)};
+    I --> L[React Components: EarthquakeMap, VegaChart etc.];
+    K --> L;
+    L --> M[User Interface & Visualizations];
+    J --> M;
+    ```
+    *   *Figure: High-Level Data Flow Diagram*
+*   **Frontend Framework/Library:** Built using **React** (version `[Specify React version, e.g., 18.2.0]`), chosen for its component-based architecture, virtual DOM, and ecosystem, facilitating the creation of complex, interactive UIs.
+*   **Component-Based Structure:** The UI is modularized into reusable components located in `src/components/`, categorized into `charts/` (visualizations) and `ui/` (controls, panels). `App.jsx` serves as the root component, defining the overall layout and context providers. This structure enhances maintainability and testability. See `docs/component-structure.md` for a detailed hierarchy.
+*   **State Management (React Context API):**
+    *   **`DataContext` (`src/context/DataContext.js`):** Manages loading, storage, and provision of primary static and pre-processed datasets (GeoJSON, parsed `all_summary_processed.csv`, `category_summary_aggregated.json`). Exposes data, loading/error states via the `useData()` hook.
+    *   **`UIContext` (defined in `src/App.jsx`):** Manages UI interaction state (`currentTime`, `selectedCategory`, `selectedNeighborhood`, `colorScheme`, `activeColorSchemePalette`, `showNeighborhoodLabels`, `sidebarCollapsed`, `showInsightsPanel`, `isLoadingBsts` etc.). Exposes state and update functions via the `useUI()` hook.
+    *   This separation centralizes state logic and ensures consistency across the application.
 *   **Data Handling and Flow:**
-    *   **Initial Load:** Upon application startup, `DataContext` (via `utils/dataLoader.js` and its `loadAllData` function) fetches essential static files (GeoJSON, pre-calculated summaries like `category_summary_aggregated.json`) and the comprehensive time-series data (`all_summary_processed.csv`).
-    *   **Dynamic Data for Map:** The `EarthquakeMap.jsx` component dynamically fetches hourly slices of BSTS model outputs (MAP and uncertainty metrics) from `map_data.json` (via `loadAllBSTSData` in `dataLoader.js`). This fetch is triggered by changes in `currentTime` (snapped to the hour) or `selectedCategory` from `UIContext`. Caching is implemented in `loadAllBSTSData` to avoid redundant fetches.
-    *   **Data for Other Charts:** Components like `VegaChart.jsx` (for heatmap) typically consume data from `all_summary_processed.csv` (provided by `DataContext`), potentially applying filters based on `UIContext` state (e.g., `currentTime`) either within the component or via signals in the Vega-Lite spec.
-    *   Client-side data transformation is minimized due to the extensive R preprocessing. Utilities in `src/utils/` (e.g., `dataProcessor.js`, `uncertaintyCalc.js`) primarily handle formatting for specific libraries or deriving display-friendly metrics (like certainty scores).
-*   **Performance Optimizations:**
-    *   The most significant performance optimization is the **offline R data preprocessing pipeline**, which pre-computes complex statistical models and aggregates data, vastly reducing client-side computation.
-    *   Dynamic loading of map data slices (`map_data.json`) ensures that only necessary data for the current map view is fetched.
-    *   Memoization (`React.memo`, `useMemo`) is applied to components and expensive calculations where appropriate to prevent unnecessary re-renders.
-    *   The build process includes `babel-plugin-transform-remove-console` to strip console logs from production builds. For detailed information, see `docs/performance-optimizations.md`.
-*   **Backend:** The application is designed as a static web application. There is no active backend for dynamic data processing; it serves pre-built static assets (HTML, CSS, JS, and pre-processed data files). This makes it suitable for deployment on any static hosting platform.
+    *   **Offline Preprocessing:** The R pipeline performs heavy lifting (BSTS modeling, aggregation, handling sparsity with LOCF/placeholders) and outputs optimized files to `public/data/processed/`.
+    *   **Frontend Initial Load:** `DataContext` loads essential base data (GeoJSON, `category_summary_aggregated.json`) and potentially parses large files like `all_summary_processed.csv` using `papaparse` via `utils/dataLoader.js`.
+    *   **Frontend Dynamic Load/Filtering:** `EarthquakeMap.jsx` dynamically fetches hourly slices from `map_data.json` via `loadAllBSTSData` (which includes caching). Other components like the heatmap (`VegaChart.jsx`) filter the in-memory `all_summary_processed.csv` data based on UI state.
+    *   **Uncertainty Propagation:** Uncertainty metrics (CIs, CIR, levels) generated by R are stored in processed files and converted to visual encodings (e.g., opacity) using `utils/uncertaintyCalc.js`.
+*   **Performance Optimizations:** (See also `docs/performance-optimizations.md`)
+    *   **Primary Strategy: Offline Preprocessing:** As detailed in Section 2.2, shifting BSTS modeling and complex aggregation to the offline R pipeline is the most critical performance enhancement.
+    *   **Efficient Frontend Data Loading:** Using `papaparse` for large CSVs, fetching optimized slices (`map_data.json`) for dynamic updates, and caching fetched data (`loadAllBSTSData`).
+    *   **Charting Library Optimizations:** Disabling unnecessary animations in ECharts (`EarthquakeMap.jsx`), debouncing resize handlers, using targeted signal updates in Vega-Lite (`VegaChart.jsx`).
+    *   **Build Optimizations:** Standard production build processes (minification, tree-shaking) via Create React App. Explicit removal of console logs using `babel-plugin-transform-remove-console` can further improve production performance.
+    *   **React Best Practices:** Employing memoization (`React.memo`, `useMemo`, `useCallback`) where beneficial to prevent unnecessary re-renders, ensuring correct `useEffect` dependencies.
+*   **Backend:** No active backend; it's a static application serving pre-built files.
 
 ### 3.2 Visual Components and Features
-(This section provides detailed descriptions of each visual component, their implementation, and links to coursework requirements.)
+(Detailed implementation notes based on component-structure.md and technical-architecture.md)
 
-*   **Interactive Damage Map (`EarthquakeMap.jsx`):**
-    *   **Implementation:** Uses the ECharts library. It registers GeoJSON for St. Himark neighborhoods and dynamically styles each neighborhood based on processed BSTS data for the selected category and time.
-    *   **Data Source & Processing:** Fetches hourly data slices from `map_data.json` via `loadAllBSTSData`. The `processNeighborhoodsData` internal function maps this data to GeoJSON features, calculates damage color based on the selected `activeColorSchemePalette` via ECharts `visualMap`, and sets opacity based on `certainty` derived by `uncertaintyCalc.js` utils.
-    *   **Key Features & Task Relevance:** Addresses **Task 1** (spatial prioritization, identifying hard-hit areas) and **Task 2** (visualizing uncertainty via opacity and tooltips). Tooltips display MAP damage value, CI bounds, certainty percentage, and report count. Map export to PNG is supported.
-    *   [![Dashboard Screenshot 1](images/dashboard-overview-initial.png)](images/dashboard-overview-initial.png)
-        *Fig X: Map view showing Shake Intensity for St. Himark neighborhoods (Damage value encoded by color, uncertainty by opacity).*
-    *   [![Power Damage Map Screenshot](images/dashboard-poweroutages-overview-VSUPExtended.png)](images/dashboard-poweroutages-overview-VSUPExtended.png)
-        *Fig Y: Map showing Power damage, illustrating the VSUP-inspired uncertainty encoding through opacity.*
-
-*   **Timeline Controls (`TimeControls.jsx`):**
-    *   **Implementation:** A custom React component using HTML range inputs for the slider and standard buttons for playback, integrated with `UIContext` to update `currentTime`.
-    *   **Key Features & Task Relevance:** Essential for **Task 3** (analyzing changes over time). Drives temporal updates across all linked visualizations.
-
-*   **Damage Category Comparison Chart (`VegaChart.jsx` configured for bar chart):**
-    *   **Implementation:** A generic `VegaChart.jsx` component that embeds Vega-Lite visualizations. For this chart, it loads `public/data/specs/category-comparison-spec.json`.
-    *   **Data Source & Processing:** The Vega-Lite spec likely references `public/data/processed/category_summary_aggregated.json` or the component passes this data (from `DataContext`) to the Vega view. Filters based on `currentTime` from `UIContext` are applied via Vega signals or pre-filtering.
-    *   **Key Features & Task Relevance:** Supports **Task 1** (identifying most affected infrastructure types) and **Task 3** (seeing how this profile changes over time).
-
-*   **Neighborhoods & Categories Damage Heatmap (`VegaChart.jsx` configured for heatmap):**
-    *   **Implementation:** Uses `VegaChart.jsx` loading `public/data/specs/heatmap-all-neighborhoods-spec.json`.
-    *   **Data Source & Processing:** Consumes data derived from `all_summary_processed.csv` (via `DataContext`). The Vega-Lite spec or the component filters/aggregates this data based on the selected time window to display damage values for each neighborhood-category cell. Cells representing insufficient data (handled in R preprocessing as 0 damage/low certainty) are visually distinct.
-    *   **Key Features & Task Relevance:** Addresses **Task 1** and **Task 3** by providing a dense overview of damage across all neighborhoods and categories over time, revealing spatio-temporal patterns.
-    *   [![Heatmap Screenshot](images/heatmap-overview.png)](images/heatmap-overview.png)
-        *Fig Z: Detailed heatmap view showing damage intensity patterns across neighborhoods and categories.*
-
-*   **Damage Forecast Over Time Chart (`ForecastChart.jsx` or similar ECharts component):**
-    *   **Implementation:** Likely an ECharts line chart component.
-    *   **Data Source & Processing:** Uses time-series data from `all_summary_processed.csv` (via `DataContext`), filtered for a selected neighborhood and category (from `UIContext`). Displays historical MAP estimates and shaded credible intervals.
-    *   **Key Features & Task Relevance:** Directly addresses **Task 3** (change in conditions and uncertainty over time) and **Task 2** (visualizing uncertainty trends).
-    *   [![Forecast Chart Screenshot](images/damage-forecast.png)](images/damage-forecast.png)
-        *Fig W: Forecast chart showing damage level (MAP) over time with 95% Credible Intervals (CI) for a selected entity.*
-
-*   **Filter & Control Panel (`FilterPanel.jsx`):**
-    *   **Implementation:** Custom React component with selectors (e.g., `CategorySelector`, `ColorSchemeSelector` from `ui/selectors`) that update `UIContext`.
-    *   **Key Features & Task Relevance:** Allows user-driven exploration, crucial for all tasks.
-
-*   **Statistics Panel (`StatsPanel.jsx`):**
-    *   **Implementation:** Custom React component displaying detailed metrics for a neighborhood selected on the map (via `UIContext`).
-    *   **Key Features & Task Relevance:** Provides details-on-demand for **Task 1** and **Task 2**.
-
-*   **Insights Panel (`InsightsPanel.jsx`):**
-    *   **Implementation:** Custom React component generating textual summaries based on current data in `DataContext` and `UIContext`.
-    *   **Key Features & Task Relevance:** Offers quick takeaways, supporting rapid assessment for all tasks.
-    *   [![Insights Panel Screenshot](images/insights-panel.png)](images/insights-panel.png)
-        *Fig V: Insights Panel providing dynamic textual summaries.*
-
-*   **Information Modal (`InfoModal.jsx`):**
-    *   **Implementation:** React Bootstrap modal component providing help text.
-    *   **Key Features & Task Relevance:** Enhances usability by explaining features and uncertainty interpretation.
+*   **`App.jsx`**: Root component, sets up `DataProvider` and `UIProvider`, defines main layout (`Container`, `Row`, `Col`) rendering `FilterPanel`, `StatsPanel`, `EarthquakeMap`, `InsightsPanel`, `TimeControls`, `VegaChart`s, `ForecastChart`, `InfoButton`.
+*   **Interactive Damage Map (`EarthquakeMap.jsx` in `src/components/charts/`):**
+    *   **Implementation:** Uses ECharts via `echarts/core`. Initializes chart instance with GeoJSON data (from `DataContext`). `useEffect` hook fetches hourly BSTS data slices from `map_data.json` via `loadAllBSTSData` when `currentTime` or `selectedCategory` changes (managed by `UIContext`).
+    *   **Data Processing:** `processNeighborhoodsData` helper function merges fetched BSTS data with GeoJSON features. It calculates `certainty` using `utils/uncertaintyCalc.js` and determines color based on damage `value` using ECharts `visualMap` and `activeColorSchemePalette` from `UIContext`.
+    *   **Rendering:** Sets ECharts `option` to style features: `areaColor` maps to damage, `opacity` maps to calculated `certainty`. Handles clicks to update `selectedNeighborhood` in `UIContext`. Provides PNG export.
+*   **Generic Vega/Vega-Lite Chart (`VegaChart.jsx` in `src/components/charts/`):**
+    *   **Implementation:** Wrapper using `vega-embed`. Takes a `spec` object/URL and `chartType` prop.
+    *   **Data Source & Logic:** For `categoryComparison`, uses `category_summary_aggregated.json` (from `DataContext`). For `fullHeatmap`, uses data derived from `all_summary_processed.csv` (from `DataContext`), potentially filtered by time/category using `useFilteredData` hook or similar. Loads specs from `public/data/specs/`. Passes UI state (`currentTime`, `selectedLocation`) as Vega signals for interactivity. Includes fallback rendering attempts.
+*   **Forecast Chart (`ForecastChart.jsx` in `src/components/charts/`):**
+    *   **Implementation:** ECharts line chart.
+    *   **Data Source & Logic:** Uses filtered time-series data from `all_summary_processed.csv` (via `DataContext` and `UIContext` filters for neighborhood/category). Configures ECharts options to show historical MAP line and shaded CI bands.
+*   **UI Controls (`src/components/ui/`):**
+    *   **`FilterPanel.jsx`**: Hosts selectors (`CategorySelector.jsx`, `ColorSchemeSelector.jsx`), switches (`SwitchSlider.jsx`) updating `UIContext`.
+    *   **`TimeControls.jsx`**: Manages timeline slider and playback buttons, updating `currentTime` in `UIContext`. Uses `requestAnimationFrame` for smooth animation.
+    *   **`StatsPanel.jsx`**: Displays detailed metrics for the `selectedNeighborhood` (from `UIContext`), sourcing data likely by filtering `all_summary_processed.csv`.
+    *   **`InsightsPanel.jsx`**: Generates textual summaries based on current data/UI state.
+    *   **`InfoButton.jsx` / Modal**: Button triggering an informational modal (likely React Bootstrap).
 
 ### 3.3 Interactive Features
-(Summarized from README and implementation guide)
 *   **Selection and Highlighting:** Clicking a neighborhood on the map selects it, highlighting it and updating dependent views (Stats Panel, Forecast Chart). Other interactive elements might use hover highlighting.
 *   **Brushing and Linking:** All primary visual components are linked through the `UIContext` and `DataContext`. Changes in the `TimeControls.jsx` (timeline slider) update all views to reflect the selected `currentTime`. Selections in `FilterPanel.jsx` (e.g., `selectedCategory`) also propagate globally.
 *   **Tooltips:** Provide rich, context-sensitive information on hover for map neighborhoods (damage, CI, certainty, report count) and potentially for elements in other charts.
@@ -251,33 +231,29 @@ This section describes the technical architecture of the visualisation applicati
 *   **Animation (Time Playback):** The timeline controls allow for animated playback, enabling users to observe temporal trends dynamically across the dashboard.
 
 ### 3.4 Technologies, Tools, and Libraries
-*   **Core Frontend:**
-    *   **JavaScript (ES6+)**
-    *   **React** (version `[Specify from your project, e.g., 18.2.0]`)
-    *   **HTML5, CSS3**
-*   **Visualisation Libraries:**
-    *   **ECharts** (version `[e.g., ^5.4.0]`): Chosen for its powerful and flexible map component (GeoJSON rendering, `visualMap` for dynamic styling, tooltips, export) and line chart capabilities (`ForecastChart.jsx`).
-    *   **Vega-Lite** (version `[e.g., ^5.5.0]`, via **Vega-Embed** `[e.g., ^6.20.8]`): Used for the category comparison bar chart and the main data heatmap (`VegaChart.jsx`). Its declarative grammar facilitates concise specification of complex statistical graphics and linking via signals.
-*   **Data Handling/Parsing:**
-    *   **PapaParse** (version `[e.g., ^5.3.2]`): For efficient client-side parsing of large CSV files (e.g., `all_summary_processed.csv`).
-    *   Native Fetch API / Axios: For loading GeoJSON, Vega-Lite JSON specifications, and other JSON data files.
-*   **Styling & UI Components:**
-    *   **React Bootstrap** (version `[e.g., ^2.7.0]`): For layout components (Grid, Stack), modals, buttons, and responsive design utilities.
-    *   Custom CSS (`App.css`, component-specific CSS modules if used) for tailored styling.
 *   **Offline Data Preprocessing:**
-    *   **R** (version `[e.g., 4.0+]`): Core language for the statistical preprocessing pipeline.
-    *   Key R Packages: `bsts`
-    *   `tidyverse` (umbrella package including `dplyr`, `tidyr`, `ggplot2`, `readr`, `lubridate`)
-    *   `jsonlite`
-    *   `zoo`
-    *   `future` and a `future` backend (e.g., `future.apply`)
-    *   `[List any other R packages crucial for your preprocessing scripts, as detailed in preprocessing/README.md or install_packages.R]`
-*   **Development Environment & Version Control:**
-    *   VS Code (or other IDEs)
-    *   Node.js (version `[e.g., v14+ or v18.x as specified in your README]`)
+    *   **Language:** R (version `[e.g., 4.0+]`)
+    *   **Key R Packages:** `bsts` (Bayesian Structural Time Series), `tidyverse` (data manipulation suite including `dplyr`, `readr`, `lubridate`), `jsonlite` (JSON handling), `zoo` (time series utilities, LOCF), `future` ecosystem (parallel processing).
+*   **Core Frontend:**
+    *   **Language:** JavaScript (ES6+)
+    *   **Framework/Library:** React (version `[e.g., 18.2.0]`)
+    *   **State Management:** React Context API (`DataContext`, `UIContext`)
+    *   **Markup/Styling:** HTML5, CSS3
+*   **Visualisation Libraries:**
+    *   **ECharts** (version `[e.g., ^5.4.0]`): Used for the interactive map (`EarthquakeMap.jsx`) and forecast line chart (`ForecastChart.jsx`).
+    *   **Vega-Lite** (version `[e.g., ^5.5.0]`) via **Vega-Embed** (version `[e.g., ^6.20.8]`): Used for the category comparison bar chart and main data heatmap (`VegaChart.jsx`).
+*   **Data Handling/Parsing (Frontend):**
+    *   **PapaParse** (version `[e.g., ^5.3.2]`): For client-side CSV parsing.
+    *   Native Fetch API or Axios: For loading static JSON/GeoJSON/CSV files.
+*   **Styling & UI Components:**
+    *   **React Bootstrap** (version `[e.g., ^2.7.0]`): For layout, modals, buttons.
+    *   Custom CSS (`App.css`, potentially component-specific CSS).
+*   **Development Environment & Build Tools:**
+    *   Node.js (version `[e.g., v14+ or v18.x]`)
     *   npm (or yarn)
-    *   Git, GitHub
-*   **Deployment:** The application is built as a static site, suitable for deployment on platforms like GitHub Pages, Netlify, or Vercel. (Details in Appendix, Section 8.1).
+    *   Create React App (likely used as the build toolchain)
+    *   Git, GitHub (Version Control)
+*   **Deployment:** Static build deployable to any static hosting service.
 
 ---
 
@@ -444,11 +420,12 @@ This section includes supplementary materials that are helpful for understanding
     *   npm (comes with Node.js) or yarn (optional alternative package manager).
     *   R (version `[e.g., 4.0+]` recommended) for executing the data preprocessing pipeline.
     *   A modern web browser (e.g., Chrome, Firefox, Edge - latest versions).
-*   **Data Preprocessing (Crucial First Step):**
+*   **Data Preprocessing (Crucial First Step - R Pipeline):**
     *   The frontend application **depends entirely** on data files generated by an offline R preprocessing pipeline. These scripts must be run before the frontend can display meaningful data.
-    1.  Ensure R and required R packages (see Section 8.2 or `preprocessing/README.md`, e.g., `bsts`, `tidyverse`, `jsonlite`, `zoo`, `lubridate`, `future`) are installed. The `preprocessing/R/install_packages.R` script can help with this.
+    *   **Why R Pipeline?** It uses advanced Bayesian statistics (BSTS) for high-quality uncertainty quantification, handles data sparsity robustly, and performs heavy computations offline for better frontend performance (see `preprocessing/README.md`).
+    1.  Ensure R and required R packages (see Section 8.2 or `preprocessing/README.md`, e.g., `bsts`, `tidyverse`, `jsonlite`, `zoo`, `lubridate`, `future`) are installed. The `preprocessing/R/install_packages.R` script can assist.
     2.  Navigate to the `vast-mc1-vis/preprocessing/` directory in your terminal.
-    3.  Execute the main R preprocessing scripts as detailed in `preprocessing/README.md`. This typically involves running `data_preparation.R`, then `analysis.R` (which performs the BSTS modeling and can be time-consuming), followed by `process.R` (which aggregates and formats data for the frontend).
+    3.  Execute the main R preprocessing scripts **in order**: `data_preparation.R`, then `analysis.R` (BSTS modeling - **can take significant time**), followed by `process.R`. Use the provided batch (`run_preprocessing.bat`) or shell (`run_preprocessing.sh`) scripts for automation, or run manually via R/RStudio (e.g., `source("preprocessing/R/script_name.R")` from the project root).
     4.  Verify that the output files (e.g., `all_summary_processed.csv`, `map_data.json`, `category_summary_aggregated.json`) are successfully generated in the `vast-mc1-vis/public/data/processed/` directory.
 *   **Frontend Application Installation & Setup:**
     1.  Clone the repository: `git clone [Your GitHub Repository URL]` (if not already done).
@@ -470,50 +447,41 @@ This section includes supplementary materials that are helpful for understanding
     *   `react`: `[e.g., ^18.2.0]`
     *   `react-dom`: `[e.g., ^18.2.0]`
     *   `echarts`: `[e.g., ^5.4.0]`
-    *   `echarts-for-react`: `[e.g., ^3.0.2]` (if used as a wrapper)
+    *   `echarts-for-react`: `[e.g., ^3.0.2]` (confirm if used)
     *   `vega-embed`: `[e.g., ^6.20.8]`
-    *   `vega-lite`: `[e.g., ^5.5.0]` (often a peer dependency of vega-embed)
+    *   `vega-lite`: `[e.g., ^5.5.0]`
     *   `react-bootstrap`: `[e.g., ^2.7.0]`
     *   `papaparse`: `[e.g., ^5.3.2]`
-    *   `axios`: `[e.g., ^1.0.0]` (if used for data loading instead of just fetch)
-    *   `[List any other significant frontend libraries: date-fns, lodash, classnames, etc., with their versions]`
-*   **Key R Packages for Preprocessing (versions can be checked via `sessionInfo()` in R after loading):**
+    *   `axios`: `[e.g., ^1.0.0]` (confirm if used)
+    *   `[List others: date-fns, lodash, classnames, etc.]`
+*   **Key R Packages for Preprocessing (check `preprocessing/R/install_packages.R` or `sessionInfo()`):**
     *   `bsts`
-    *   `tidyverse` (umbrella package including `dplyr`, `tidyr`, `ggplot2`, `readr`, `lubridate`)
+    *   `tidyverse`
     *   `jsonlite`
     *   `zoo`
-    *   `future` and a `future` backend (e.g., `future.apply`)
-    *   `[List any other R packages crucial for your preprocessing scripts, as detailed in preprocessing/README.md or install_packages.R]`
+    *   `lubridate`
+    *   `future`, `future.apply`, `doFuture` (or other parallel backend)
+    *   `[List any other critical R packages]`
 *   **Configuration Files:**
-    *   **Frontend:** Primarily, Vega-Lite JSON specifications located in `public/data/specs/` define the structure of some charts. The React application itself might have minor configurations in `App.jsx` or context files but typically does not rely on external `.env` files for core functionality in a static build, unless for build-time variables like `PUBLIC_URL` managed by Create React App.
-    *   **R Preprocessing:** Configuration for the R scripts (e.g., file paths, modeling parameters if not hardcoded) might be at the top of the R scripts themselves or in a separate R configuration script if used.
+    *   **Frontend:** Vega-Lite JSON specifications in `public/data/specs/` (`category-comparison-spec.json`, `heatmap-all-neighborhoods-spec.json`). Build-time configurations potentially via `.env` files managed by Create React App (e.g., `PUBLIC_URL`).
+    *   **R Preprocessing:** Parameters might be set within the R scripts (`analysis.R`, `process.R`) or potentially loaded from a separate config file if implemented.
 
-### 8.3 Detailed File Structure (if not fully covered in README.md)
-*   A summary of the key project directories:
-    *   `vast-mc1-vis/`: Root directory for the React visualization application.
-        *   `build/`: (Generated after `npm run build`) Contains the optimized static assets for deployment.
-        *   `docs/`: Contains detailed project documentation markdown files (like this report, technical architecture, etc.) and images used in documentation.
-            *   `images/`: Screenshots and diagrams for documentation.
-        *   `node_modules/`: (Not for submission) Contains all installed npm packages (dependencies).
-        *   `preprocessing/`: Contains R scripts, helper files, and its own README for the offline data preprocessing pipeline.
-            *   `R/`: Subdirectory for R source files if further organized.
-        *   `public/`: Contains static assets served directly, including `index.html`.
-            *   `data/`:
-                *   `raw/`: (If you keep original raw data here) Original `mc1-reports-data.csv`, etc.
-                *   `processed/`: **Crucial directory** containing the output from the R preprocessing scripts (e.g., `all_summary_processed.csv`, `frontend_data.json`, `map_data.json`). This is what the frontend consumes.
-                *   `specs/`: Vega-Lite JSON specifications for charts.
-                *   `images/`: (If any images are directly served by the app from public, not just docs).
-        *   `src/`: Contains the React application's JavaScript source code.
-            *   `App.jsx`: The main application component, defines overall layout and UI Context.
-            *   `App.css`: Global styles for the application.
-            *   `index.js`: Entry point for the React application.
-            *   `components/`: Reusable UI and chart React components.
-                *   `charts/`: Specific chart components (e.g., `EarthquakeMap.jsx`, `VegaChart.jsx`, `ForecastChart.jsx`).
-                *   `ui/`: General UI elements (e.g., `FilterPanel.jsx`, `TimeControls.jsx`, `StatsPanel.jsx`, `InsightsPanel.jsx`, `InfoModal.jsx`).
-            *   `context/`: React Context API providers (e.g., `DataContext.js`, `UIContext.js` or similar for global state).
-            *   `hooks/`: Custom React hooks (e.g., `useDataLoader.js`, `useFilteredData.js`).
-            *   `utils/`: Utility functions (e.g., `dataLoader.js` for fetching/parsing, `dataProcessor.js`, `uncertaintyCalc.js`).
-*   This structure aims to separate concerns: data preprocessing, public assets, application source code, and documentation.
+### 8.3 Detailed File Structure (Condensed Overview)
+*   `vast-mc1-vis/`: Root directory.
+    *   `build/`: Production build output.
+    *   `docs/`: Project documentation (Markdown files, images).
+    *   `node_modules/`: (Not submitted) npm dependencies.
+    *   `preprocessing/`: R scripts and related files for offline data processing.
+        *   `R/`: Contains `.R` script files.
+    *   `public/`: Static assets.
+        *   `data/`: Contains raw input data, GeoJSON, processed data outputs from R (in `processed/`), and Vega specs (in `specs/`).
+    *   `src/`: React application source code.
+        *   `App.jsx`: Main component, layout, UI context.
+        *   `components/`: Reusable chart (`charts/`) and UI (`ui/`) components.
+        *   `context/`: React context providers (`DataContext.js`).
+        *   `hooks/`: Custom React hooks.
+        *   `utils/`: Utility functions (`dataLoader.js`, `uncertaintyCalc.js`, etc.).
+        *   `index.js`, `App.css`, `index.css`: Entry point and global styles.
 
 ### 8.4 Group Member Contributions
 *   **Note:** "As per module guidelines, individual contributions will be rated separately via the Moodle system. This section is a placeholder to acknowledge that requirement."
