@@ -127,18 +127,26 @@ For a detailed breakdown, see [Component Structure](vast-mc1-vis/docs/component-
 *   npm or yarn
 *   R (version 4.0+ recommended) for running the data preprocessing pipeline.
 
-### Data Preprocessing (Important First Step)
+### Data Preprocessing (Important First Step - MUST RUN FIRST)
 
-Before running the frontend application, you **must** run the R data preprocessing pipeline. This will generate the necessary data files in `public/data/processed/`.
+Before running the frontend application, you **must** run the R data preprocessing pipeline sequentially. This generates the necessary data files in `vast-mc1-vis/public/data/processed/`.
 
-1.  Ensure R is installed.
-2.  Navigate to the `vast-mc1-vis/preprocessing/` directory.
-3.  Follow the instructions in `vast-mc1-vis/preprocessing/README.md` to execute the R scripts (e.g., run `run_preprocessing.bat` on Windows or `run_preprocessing.sh` on macOS/Linux, or execute R scripts manually).
+1.  **Ensure R is installed and configured.**
+2.  **Navigate to the project root directory** (`vast-mc1-vis`'s parent directory) in your R environment (like RStudio or your terminal).
+3.  **Run the R scripts in the following order:**
+    *   **Install Packages (Run Once):** `source("vast-mc1-vis/preprocessing/R/install_packages.R")` 
+    *   **Prepare Data:** `source("vast-mc1-vis/preprocessing/R/data_preparation.R")`
+    *   **Run BSTS Analysis:** `source("vast-mc1-vis/preprocessing/R/analysis.R")` (Note: This step is computationally intensive and can take a significant amount of time).
+    *   **Process Results:** `source("vast-mc1-vis/preprocessing/R/process.R")`
+
+    *Alternatively, navigate to `vast-mc1-vis` root and use the provided batch/shell scripts:* `preprocessing/run_preprocessing.bat` (Windows) or `bash preprocessing/run_preprocessing.sh` (macOS/Linux), which attempt to run these R scripts in sequence.
+
+4.  **Verify Output:** Check that files like `all_summary_processed.csv`, `map_data.json`, etc., are created in `vast-mc1-vis/public/data/processed/`.
 
 ### Frontend Application Installation
 
-1.  Clone the repository (if you haven\'t already).
-2.  Navigate to the `vast-mc1-vis/` directory.
+1.  Clone the repository (if you haven't already).
+2.  Navigate to the `vast-mc1-vis/` directory: `cd vast-mc1-vis`
 3.  Install dependencies:
     ```bash
     npm install
