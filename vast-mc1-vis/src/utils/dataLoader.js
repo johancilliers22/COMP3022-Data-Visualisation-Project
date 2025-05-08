@@ -19,9 +19,9 @@ import visualizationDataData from '../data/processed/visualization_data.json';
 import mapDataData from '../data/processed/map_data.json';
 import categoryComparisonSpecData from '../data/specs/category-comparison-spec.json';
 
-// Import CSV data as raw text (assuming bundler support, e.g., via '?raw' or similar loader)
-import rawReportsCsvText from '../data/mc1-reports-data.csv?raw';
-import aggregatedSummaryCsvText from '../data/processed/all_summary_aggregated.csv?raw';
+// Import NEW JSON data files
+import rawReportsDataJson from '../data/mc1-reports-data.json';
+import aggregatedSummaryDataJson from '../data/processed/all_summary_aggregated.json';
 
 /**
  * Data loader for earthquake visualization
@@ -369,54 +369,48 @@ export const loadRawReportsData = async () => {
   }
   
   try {
-    logger.debug('Parsing imported raw reports CSV data...');
+    logger.debug('Processing imported raw reports JSON data...');
     
-    // Use imported CSV text
-    const csvText = rawReportsCsvText; 
-    
-    // Parse CSV using PapaParse
-    const parseResult = Papa.parse(csvText, {
-      header: true,
-      dynamicTyping: true, // Automatically convert numbers, booleans
-      skipEmptyLines: true,
-      transformHeader: header => header.trim() // Trim header whitespace
-    });
-
-    if (parseResult.errors && parseResult.errors.length > 0) {
-        logger.error("PapaParse errors in raw reports CSV:", parseResult.errors);
-        // Decide how to handle errors, e.g., throw or return empty array
-        throw new Error(`Failed to parse raw reports CSV: ${parseResult.errors[0].message}`);
-    }
-
-    const reports = parseResult.data.map(row => {
-        // Post-process each row if necessary, e.g., Date conversion
-        if (row.time) {
-            row.time = new Date(row.time); // Ensure time is a Date object
-            if (isNaN(row.time.getTime())) { // Check for invalid dates
-                logger.warn("Invalid date encountered in raw reports:", row.time);
-                row.time = null; // Or handle appropriately
+    // Data is now directly from imported JSON
+    const reports = rawReportsDataJson.map(row => {
+        const newRow = { ...row };
+        // The R script saves time as time_string: format(time, "%Y-%m-%d %H:%M:%S")
+        // It also ensures location is character.
+        // Rating should be a number.
+        if (newRow.time_string) {
+            newRow.time = new Date(newRow.time_string);
+            if (isNaN(newRow.time.getTime())) {
+                logger.warn("Invalid date encountered in raw reports JSON:", newRow.time_string);
+                newRow.time = null; 
             }
+        } else {
+            newRow.time = null; // If time_string is missing
         }
-         // Ensure location is string
-        if (row.location !== undefined && row.location !== null) {
-            row.location = String(row.location);
+        // Ensure location is string (R script should handle this, but double check)
+        if (newRow.location !== undefined && newRow.location !== null) {
+            newRow.location = String(newRow.location);
         }
-        return row;
-    }).filter(row => row.time !== null); // Filter out rows where date parsing failed
+        // Ensure rating is a number (R script should handle this)
+        if (typeof newRow.rating !== 'number') {
+            newRow.rating = parseFloat(newRow.rating);
+            if (isNaN(newRow.rating)) newRow.rating = null; // Or some default
+        }
+        return newRow;
+    }).filter(row => row.time !== null); // Filter out rows where date parsing failed or time_string was missing
 
     // Store in cache
     dataCache.general.rawReports = reports;
-    logger.debug(`Raw reports data parsed successfully (${reports.length} reports)`);
+    logger.debug(`Raw reports data processed successfully (${reports.length} reports)`);
     
     return reports;
   } catch (error) {
-    logger.error('Error parsing raw reports CSV data:', error);
+    logger.error('Error processing raw reports JSON data:', error);
     throw error;
   }
 };
 
 /**
- * Load aggregated summary data (bstsTimeAggregated) from all_summary_aggregated.csv
+ * Load aggregated summary data (bstsTimeAggregated) from all_summary_aggregated.json
  * @returns {Promise<Array>} Aggregated summary data
  */
 export const loadAggregatedSummaryData = async () => {
@@ -427,40 +421,25 @@ export const loadAggregatedSummaryData = async () => {
   }
 
   try {
-    logger.debug('Parsing imported aggregated summary CSV (all_summary_aggregated.csv)...');
+    logger.debug('Processing imported aggregated summary JSON (all_summary_aggregated.json)...');
     
-    // Use imported CSV text
-    const csvText = aggregatedSummaryCsvText; 
-
-    // Parse CSV using PapaParse
-    const parseResult = Papa.parse(csvText, {
-        header: true,
-        dynamicTyping: true,
-        skipEmptyLines: true,
-        transformHeader: header => header.trim() // Trim header whitespace
-    });
-
-    if (parseResult.errors && parseResult.errors.length > 0) {
-        logger.error("PapaParse errors in aggregated summary CSV:", parseResult.errors);
-        throw new Error(`Failed to parse aggregated summary CSV: ${parseResult.errors[0].message}`);
-    }
-
-    const data = parseResult.data.map(row => {
-        // Optional: Post-process rows if needed, e.g., date string format check
-        // PapaParse with dynamicTyping should handle number conversions.
-         // Ensure location is string
-        if (row.location !== undefined && row.location !== null) {
-            row.location = String(row.location);
+    // Data is now directly from imported JSON
+    const data = aggregatedSummaryDataJson.map(row => {
+        const newRow = { ...row };
+        // Ensure location is string (R script should handle this, but double check)
+        if (newRow.location !== undefined && newRow.location !== null) {
+            newRow.location = String(newRow.location);
         }
-        return row;
+        // Other numeric fields (map, avgMAP, etc.) should be numbers from R output.
+        // dateHour is a string like "%Y-%m-%d %H:00:00"
+        return newRow;
     });
-
 
     dataCache.general.bstsTimeAggregated = data;
-    logger.debug(`Aggregated summary data (bstsTimeAggregated) parsed successfully (${data.length} records)`);
+    logger.debug(`Aggregated summary data (bstsTimeAggregated) processed successfully (${data.length} records)`);
     return data;
   } catch (error) {
-    logger.error('Error parsing aggregated summary data:', error);
+    logger.error('Error processing aggregated summary JSON data:', error);
     dataCache.general.bstsTimeAggregated = []; // Cache empty array on error to prevent re-fetches
     throw error;
   }
