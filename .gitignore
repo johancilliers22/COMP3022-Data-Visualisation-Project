@@ -111,6 +111,10 @@ VASTChallenge2019/
 VAST-Challenge-2019-MC1-master/
 # Keep frontend_data.json and potentially all_summary_processed.csv tracked (will use LFS)
 
+# Ignore intermediate R BSTS results files moved to src/data
+vast-mc1-vis/src/data/processed/bsts_results/bsts_*.json
+vast-mc1-vis/src/data/processed/bsts_results/all_bsts_results.csv
+
 # Virtual Box
 *.ova
 
