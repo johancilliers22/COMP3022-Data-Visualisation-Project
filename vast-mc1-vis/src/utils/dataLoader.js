@@ -7,13 +7,21 @@
 
 import { groupByNeighborhood, generateLocationInfo, generateTimeSeriesData } from './dataProcessor';
 import logger from './logger';
+import Papa from 'papaparse'; // Import PapaParse
 
 // Import static data assets directly
 import geojsonData from '../data/neighborhoods.geojson';
 import neighborhoodMapData from '../data/processed/neighborhood_map.json';
 import frontendDataData from '../data/processed/frontend_data.json';
-import allBstsResultsData from '../data/processed/bsts_results/summary/all_bsts_results.json'; // Assuming correct path
-// TODO: Add imports for other JSON/CSV files as needed, CSV might require different handling
+import allBstsResultsData from '../data/processed/bsts_results/all_bsts_results.json';
+// Import additional JSON files that were previously fetched
+import visualizationDataData from '../data/processed/visualization_data.json';
+import mapDataData from '../data/processed/map_data.json';
+import categoryComparisonSpecData from '../data/specs/category-comparison-spec.json';
+
+// Import CSV data as raw text (assuming bundler support, e.g., via '?raw' or similar loader)
+import rawReportsCsvText from '../data/mc1-reports-data.csv?raw';
+import aggregatedSummaryCsvText from '../data/processed/all_summary_aggregated.csv?raw';
 
 /**
  * Data loader for earthquake visualization
@@ -111,13 +119,14 @@ export const loadVisualizationData = async () => {
   
   try {
     logger.debug('Loading visualization data...');
-    const response = await fetch(`${process.env.PUBLIC_URL}/data/processed/visualization_data.json`);
+    // const response = await fetch(`${process.env.PUBLIC_URL}/data/processed/visualization_data.json`);
     
-    if (!response.ok) {
-      throw new Error(`Failed to load visualization data: ${response.status} ${response.statusText}`);
-    }
+    // if (!response.ok) {
+    //   throw new Error(`Failed to load visualization data: ${response.status} ${response.statusText}`);
+    // }
     
-    const data = await response.json();
+    // const data = await response.json();
+    const data = visualizationDataData; // Use imported data
     
     // Store in cache
     dataCache.general.visualizationData = data;
@@ -177,15 +186,16 @@ export const loadMapData = async (timestamp) => {
   try {
     // First, load the entire map data if not already loaded
     if (!dataCache.general.allMapData) {
-      logger.debug('Loading map data...');
-      const response = await fetch(`${process.env.PUBLIC_URL}/data/processed/map_data.json`);
+      logger.debug('Loading map data from import...');
+      // const response = await fetch(`${process.env.PUBLIC_URL}/data/processed/map_data.json`);
       
-      if (!response.ok) {
-        throw new Error(`Failed to load map data: ${response.status} ${response.statusText}`);
-      }
+      // if (!response.ok) {
+      //   throw new Error(`Failed to load map data: ${response.status} ${response.statusText}`);
+      // }
       
-      dataCache.general.allMapData = await response.json();
-      logger.debug('Map data loaded successfully');
+      // dataCache.general.allMapData = await response.json();
+      dataCache.general.allMapData = mapDataData; // Use imported data
+      logger.debug('Map data loaded successfully from import');
       
       // Initialize mapData cache object if needed
       if (!dataCache.general.mapData) {
@@ -239,23 +249,21 @@ export const loadBSTSData = async (category) => {
   }
   
   try {
-    logger.debug(`Loading BSTS data for ${normalizedCategory}...`);
-    const response = await fetch(
-      `${process.env.PUBLIC_URL}/data/processed/${normalizedCategory}_summary.json`
-    );
+    logger.debug(`Attempting to load BSTS data for ${normalizedCategory} from combined data...`);
+    // Primarily rely on loadAllBSTSData which uses an import.
+    // The individual fetch for `${normalizedCategory}_summary.json` is removed
+    // as dynamic imports from a variable path are complex and these files
+    // would need to be in the public folder or handled by specific server routing if fetched.
+    const allData = await loadAllBSTSData(normalizedCategory); // Pass category to filter
+
+    // loadAllBSTSData returns data structured by location, then category.
+    // We need to ensure the structure matches what the original loadBSTSData might have expected,
+    // or that callers are adapted. Assuming callers adapt or the structure from loadAllBSTSData is sufficient.
     
-    if (!response.ok) {
-      // If the category-specific file doesn't exist, try to find the data in the combined file
-      return loadAllBSTSData(normalizedCategory);
-    }
+    dataCache.bsts[normalizedCategory] = allData; // Cache the filtered data under the specific category key
+    logger.debug(`BSTS data for ${normalizedCategory} processed successfully from combined data`);
     
-    const data = await response.json();
-    
-    // Store in cache
-    dataCache.bsts[normalizedCategory] = data;
-    logger.debug(`BSTS data for ${normalizedCategory} loaded successfully`);
-    
-    return data;
+    return allData;
   } catch (error) {
     logger.error(`Error loading BSTS data for ${normalizedCategory}:`, error);
     throw error;
@@ -361,55 +369,48 @@ export const loadRawReportsData = async () => {
   }
   
   try {
-    logger.debug('Loading raw reports data...');
-    // *** Fetch needs to be updated for CSV ***
-    const response = await fetch(`/src/data/mc1-reports-data.csv`); // Adjusted path prefix - needs verification
+    logger.debug('Parsing imported raw reports CSV data...');
     
-    if (!response.ok) {
-      throw new Error(`Failed to load raw reports: ${response.status} ${response.statusText}`);
+    // Use imported CSV text
+    const csvText = rawReportsCsvText; 
+    
+    // Parse CSV using PapaParse
+    const parseResult = Papa.parse(csvText, {
+      header: true,
+      dynamicTyping: true, // Automatically convert numbers, booleans
+      skipEmptyLines: true,
+      transformHeader: header => header.trim() // Trim header whitespace
+    });
+
+    if (parseResult.errors && parseResult.errors.length > 0) {
+        logger.error("PapaParse errors in raw reports CSV:", parseResult.errors);
+        // Decide how to handle errors, e.g., throw or return empty array
+        throw new Error(`Failed to parse raw reports CSV: ${parseResult.errors[0].message}`);
     }
-    
-    const csvText = await response.text();
-    
-    // Parse CSV manually since d3-dsv might not be available
-    const lines = csvText.split('\n');
-    const headers = lines[0].split(',');
-    
-    const reports = [];
-    for (let i = 1; i < lines.length; i++) {
-      if (!lines[i].trim()) continue;
-      
-      const values = lines[i].split(',');
-      const report = {};
-      
-      headers.forEach((header, index) => {
-        const value = values[index];
-        
-        // Parse numeric values
-        if (['buildings', 'medical', 'power', 'roads_and_bridges', 
-             'sewer_and_water', 'shake_intensity'].includes(header)) {
-          report[header] = value ? parseFloat(value) : null;
-        } 
-        // Parse date
-        else if (header === 'time') {
-          report[header] = value ? new Date(value) : null;
+
+    const reports = parseResult.data.map(row => {
+        // Post-process each row if necessary, e.g., Date conversion
+        if (row.time) {
+            row.time = new Date(row.time); // Ensure time is a Date object
+            if (isNaN(row.time.getTime())) { // Check for invalid dates
+                logger.warn("Invalid date encountered in raw reports:", row.time);
+                row.time = null; // Or handle appropriately
+            }
         }
-        // Other fields as strings
-        else {
-          report[header] = value;
+         // Ensure location is string
+        if (row.location !== undefined && row.location !== null) {
+            row.location = String(row.location);
         }
-      });
-      
-      reports.push(report);
-    }
-    
+        return row;
+    }).filter(row => row.time !== null); // Filter out rows where date parsing failed
+
     // Store in cache
     dataCache.general.rawReports = reports;
-    logger.debug(`Raw reports data loaded successfully (${reports.length} reports)`);
+    logger.debug(`Raw reports data parsed successfully (${reports.length} reports)`);
     
     return reports;
   } catch (error) {
-    logger.error('Error loading raw reports data:', error);
+    logger.error('Error parsing raw reports CSV data:', error);
     throw error;
   }
 };
@@ -426,43 +427,40 @@ export const loadAggregatedSummaryData = async () => {
   }
 
   try {
-    logger.debug('Loading aggregated summary data (all_summary_aggregated.csv)...');
-    // *** Fetch needs to be updated for CSV ***
-    const response = await fetch(`/src/data/processed/all_summary_aggregated.csv`); // Adjusted path prefix - needs verification
+    logger.debug('Parsing imported aggregated summary CSV (all_summary_aggregated.csv)...');
+    
+    // Use imported CSV text
+    const csvText = aggregatedSummaryCsvText; 
 
-    if (!response.ok) {
-      throw new Error(`Failed to load all_summary_aggregated.csv: ${response.status} ${response.statusText}`);
+    // Parse CSV using PapaParse
+    const parseResult = Papa.parse(csvText, {
+        header: true,
+        dynamicTyping: true,
+        skipEmptyLines: true,
+        transformHeader: header => header.trim() // Trim header whitespace
+    });
+
+    if (parseResult.errors && parseResult.errors.length > 0) {
+        logger.error("PapaParse errors in aggregated summary CSV:", parseResult.errors);
+        throw new Error(`Failed to parse aggregated summary CSV: ${parseResult.errors[0].message}`);
     }
 
-    const csvText = await response.text();
-    const lines = csvText.trim().split('\n');
-    const headers = lines[0].split(',').map(h => h.trim());
-    const data = [];
-
-    for (let i = 1; i < lines.length; i++) {
-      if (!lines[i].trim()) continue;
-      const values = lines[i].split(',');
-      const row = {};
-      headers.forEach((header, index) => {
-        let value = values[index] ? values[index].trim() : '';
-        // Attempt to parse numbers, leave others as strings
-        if (!isNaN(value) && value !== '') {
-          row[header] = parseFloat(value);
-        } else if (header === 'dateHour') {
-          // Ensure dateHour is parsed as a date string, actual Date object conversion happens in component
-          row[header] = value;
-        } else {
-          row[header] = value;
+    const data = parseResult.data.map(row => {
+        // Optional: Post-process rows if needed, e.g., date string format check
+        // PapaParse with dynamicTyping should handle number conversions.
+         // Ensure location is string
+        if (row.location !== undefined && row.location !== null) {
+            row.location = String(row.location);
         }
-      });
-      data.push(row);
-    }
+        return row;
+    });
+
 
     dataCache.general.bstsTimeAggregated = data;
-    logger.debug(`Aggregated summary data (bstsTimeAggregated) loaded successfully (${data.length} records)`);
+    logger.debug(`Aggregated summary data (bstsTimeAggregated) parsed successfully (${data.length} records)`);
     return data;
   } catch (error) {
-    logger.error('Error loading aggregated summary data:', error);
+    logger.error('Error parsing aggregated summary data:', error);
     dataCache.general.bstsTimeAggregated = []; // Cache empty array on error to prevent re-fetches
     throw error;
   }
@@ -531,13 +529,14 @@ export const loadProcessedData = loadAllData;
 
 export const loadCategoryComparisonSpec = async () => {
   try {
-    // *** Path needs update if spec moved ***
-    const response = await fetch(`/src/data/specs/category-comparison-spec.json`); // Adjusted path prefix - needs verification
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    const spec = await response.json();
-    logger.debug('Category comparison spec loaded successfully');
+    // Use imported data
+    // const response = await fetch(`/src/data/specs/category-comparison-spec.json`); // Adjusted path prefix - needs verification
+    // if (!response.ok) {
+    //   throw new Error(`HTTP error! status: ${response.status}`);
+    // }
+    // const spec = await response.json();
+    const spec = categoryComparisonSpecData;
+    logger.debug('Category comparison spec loaded successfully from import');
     return spec;
   } catch (error) {
     logger.error('Error loading category comparison spec:', error);

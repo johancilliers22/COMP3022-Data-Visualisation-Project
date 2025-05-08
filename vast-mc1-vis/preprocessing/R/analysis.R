@@ -50,8 +50,8 @@ if (!set_correct_directory()) {
 }
 
 # Set paths for input and output
-RAW_DATA_PATH <- "public/data/mc1-reports-data.csv"
-OUTPUT_DIR <- "public/data/processed/bsts_results/"
+RAW_DATA_PATH <- "src/data/mc1-reports-data.csv"
+OUTPUT_DIR <- "src/data/processed/bsts_results/"
 
 # Create output directories
 dir.create(OUTPUT_DIR, recursive = TRUE, showWarnings = FALSE)
@@ -487,11 +487,11 @@ if (length(all_results) > 0) {
     tryCatch({
       write_json(
         category_summary_aggregated,
-        file.path(dirname(OUTPUT_DIR), "category_summary_aggregated.json"), # Save in parent of bsts_results
+        "src/data/processed/category_summary_aggregated.json",
         pretty = TRUE,
         auto_unbox = TRUE
       )
-      cat("Aggregated category summary saved to public/data/processed/category_summary_aggregated.json\n")
+      cat("Aggregated category summary saved to src/data/processed/category_summary_aggregated.json\n")
     }, error = function(e) {
       cat("Error saving aggregated category summary JSON:", e$message, "\n")
     })

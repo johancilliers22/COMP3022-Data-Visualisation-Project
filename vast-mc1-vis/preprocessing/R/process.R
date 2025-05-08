@@ -37,11 +37,14 @@ if (!set_correct_directory()) {
 }
 
 # Configuration
-INPUT_FILE <- "public/data/processed/bsts_results/all_bsts_results.csv"
-OUTPUT_DIR <- "public/data/processed/"
-TIMELINE_JSON <- "public/data/processed/timeline_data.json"
+INPUT_FILE <- "src/data/processed/bsts_results/all_bsts_results.csv"
+OUTPUT_DIR <- "src/data/processed/"
+# TIMELINE_JSON path was defined but unused, keeping it commented/removed or update if needed
+# TIMELINE_JSON <- "src/data/processed/timeline_data.json"
 
 # Create output directory if it doesn't exist
+# Note: This script writes several files into OUTPUT_DIR and its subdirectory bsts_results
+# The paths constructed using file.path(OUTPUT_DIR, ...) will now correctly point into src/data/processed/
 dir.create(OUTPUT_DIR, recursive = TRUE, showWarnings = FALSE)
 
 # Define location names (from original process.R)

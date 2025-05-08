@@ -155,18 +155,88 @@ const VegaChart = ({ spec, useSignals = false, chartType, title = null, managesO
       }
             
       // Fix URL paths in the spec to ensure correct data loading
-      if (chartType === 'fullHeatmap' || chartType === 'categoryComparison') {
-        // Ensure correct path prefix for all URLs in the spec
+      if (chartType === 'fullHeatmap' || chartType === 'categoryComparison' || managesOwnData) {
+        // Ensure correct path prefix for all URLs in the spec (data and images)
+        const fixUrl = (url) => {
+          if (!url || typeof url !== 'string' || url.startsWith('http') || url.startsWith('blob:')) {
+            return url; // Ignore absolute URLs, blob URLs, or non-strings
+          }
+          // Ensure path starts with /data/ or /img/ relative to server root
+          if (url.startsWith('data/') || url.startsWith('/data/')) {
+            return '/data/' + url.replace(/^\/?data\//, '');
+          } else if (url.startsWith('img/') || url.startsWith('/img/')) {
+            return '/img/' + url.replace(/^\/?img\//, '');
+          } else {
+            // If it's some other relative path, log a warning but don't change it
+            // as we don't know where it should point.
+            logger.warn(`VegaChart: Encountered potentially problematic relative URL in spec: ${url}`);
+            return url;
+          }
+        };
+
         if (specCopy.data) {
           specCopy.data.forEach(dataItem => {
-            if (dataItem.url && !dataItem.url.startsWith('http')) {
-              // Remove any leading slash and add PUBLIC_URL prefix
-              dataItem.url = `${process.env.PUBLIC_URL}/${dataItem.url.replace(/^\//, '')}`;
-              logger.debug(`Updated data URL: ${dataItem.url}`);
+            if (dataItem.url) {
+              const originalUrl = dataItem.url;
+              dataItem.url = fixUrl(originalUrl);
+              if (dataItem.url !== originalUrl) {
+                logger.debug(`Updated data URL: ${originalUrl} -> ${dataItem.url}`);
+              }
             }
           });
         }
         
+        // Fix image URLs in marks if they exist - recursively check all marks
+        const fixMarkURLs = (marks) => {
+          if (!marks) return;
+          
+          marks.forEach(mark => {
+            // Check encode.enter.url, encode.update.url, etc.
+            const encodeBlocks = ['enter', 'update', 'exit', 'hover', 'select', 'release'];
+            encodeBlocks.forEach(blockName => {
+              if (mark.encode && mark.encode[blockName] && mark.encode[blockName].url) {
+                const urlProp = mark.encode[blockName].url;
+                if (urlProp.value && typeof urlProp.value === 'string') {
+                  const originalUrl = urlProp.value;
+                  urlProp.value = fixUrl(originalUrl);
+                  if (urlProp.value !== originalUrl) {
+                    logger.debug(`Updated mark image URL: ${originalUrl} -> ${urlProp.value}`);
+                  }
+                } else if (typeof urlProp === 'string') { // Handle direct string URL (less common)
+                  const originalUrl = urlProp;
+                   mark.encode[blockName].url = fixUrl(originalUrl);
+                   if(mark.encode[blockName].url !== originalUrl) {
+                      logger.debug(`Updated mark image URL: ${originalUrl} -> ${ mark.encode[blockName].url}`);
+                   }   
+                }
+                // Handle cases where url is an array (e.g., conditional values)
+                else if (Array.isArray(urlProp)) {
+                    urlProp.forEach(item => {
+                        if(item.value && typeof item.value === 'string') {
+                            const originalUrl = item.value;
+                            item.value = fixUrl(originalUrl);
+                            if (item.value !== originalUrl) {
+                                logger.debug(`Updated conditional mark image URL: ${originalUrl} -> ${item.value}`);
+                            }
+                        }
+                    });
+                }
+              }
+            });
+
+            // Look for nested marks
+            if (mark.marks) fixMarkURLs(mark.marks);
+            
+            // Look inside groups
+            if (mark.type === 'group' && mark.marks) fixMarkURLs(mark.marks);
+          });
+        };
+
+        // Apply URL fixes to all marks in the specification
+        if (specCopy.marks) {
+          fixMarkURLs(specCopy.marks);
+        }
+
         // Special handling for category comparison chart to fix undefined labels AND INJECT DYNAMIC DATA
         if (chartType === 'categoryComparison') {
           logger.debug('Setting up category comparison chart with proper labels and dynamic data');
@@ -329,40 +399,6 @@ const VegaChart = ({ spec, useSignals = false, chartType, title = null, managesO
               }
             }
           }
-        }
-        
-        // Fix image URLs in marks if they exist - recursively check all marks
-        const fixMarkURLs = (marks) => {
-          if (!marks) return;
-          
-          marks.forEach(mark => {
-            // Fix image URLs
-            if (mark.type === 'image' && mark.encode && mark.encode.update && mark.encode.update.url) {
-              if (Array.isArray(mark.encode.update.url)) {
-                // Handle array of test/value entries
-                mark.encode.update.url.forEach(item => {
-                  if (item.value && typeof item.value === 'string' && !item.value.startsWith('http')) {
-                    item.value = `${process.env.PUBLIC_URL}/${item.value.replace(/^\//, '')}`;
-                    logger.debug(`Updated image URL: ${item.value}`);
-                  }
-                });
-              } else if (typeof mark.encode.update.url === 'string' && !mark.encode.update.url.startsWith('http')) {
-                mark.encode.update.url = `${process.env.PUBLIC_URL}/${mark.encode.update.url.replace(/^\//, '')}`;
-                logger.debug(`Updated image URL: ${mark.encode.update.url}`);
-              }
-            }
-            
-            // Look for nested marks
-            if (mark.marks) fixMarkURLs(mark.marks);
-            
-            // Look inside groups
-            if (mark.type === 'group' && mark.marks) fixMarkURLs(mark.marks);
-          });
-        };
-        
-        // Apply URL fixes to all marks in the specification
-        if (specCopy.marks) {
-          fixMarkURLs(specCopy.marks);
         }
       }
       

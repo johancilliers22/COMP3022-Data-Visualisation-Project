@@ -15,6 +15,10 @@ import StatsPanel from './components/ui/StatsPanel';
 import InsightsPanel from './components/ui/InsightsPanel';
 import ForecastChart from './components/charts/ForecastChart';
 
+// Import JSON specification files directly
+import categoryComparisonSpecData from './data/specs/category-comparison-spec.json';
+import fullHeatmapSpecData from './data/specs/heatmap-all-neighborhoods-spec.json';
+
 // Create UI context for sharing state between components
 export const UIContext = createContext();
 
@@ -111,17 +115,9 @@ const AppContent = () => {
 
   // Load Vega specs for visualizations
   useEffect(() => {
-    // Load category comparison spec
-    fetch(`${process.env.PUBLIC_URL}/data/specs/category-comparison-spec.json`)
-      .then(response => response.json())
-      .then(spec => setCategoryComparisonSpec(spec))
-      .catch(err => console.error('Error loading category comparison spec:', err));
-
-    // Load full heatmap spec
-    fetch(`${process.env.PUBLIC_URL}/data/specs/heatmap-all-neighborhoods-spec.json`)
-      .then(response => response.json())
-      .then(spec => setFullHeatmapSpec(spec))
-      .catch(err => console.error('Error loading full heatmap spec:', err));
+    // Set specs from imported data
+    setCategoryComparisonSpec(categoryComparisonSpecData);
+    setFullHeatmapSpec(fullHeatmapSpecData);
   }, []);
   
   // Toggle sidebar collapsed state

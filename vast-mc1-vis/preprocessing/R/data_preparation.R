@@ -36,10 +36,15 @@ if (!set_correct_directory()) {
 }
 
 # Configuration
-INPUT_CSV <- "public/data/mc1-reports-data.csv"
-OUTPUT_CSV <- "public/data/processed/prepared_data.csv"
-LONG_FORMAT_CSV <- "public/data/processed/mc1-reports-data-long.csv" # Match original naming
-OUTPUT_DIR <- "public/data/processed/"
+# --- UPDATED PATHS ---
+# Assuming input CSV is also moved to src/data. Adjust if it's elsewhere.
+INPUT_CSV <- "src/data/mc1-reports-data.csv" 
+# Output directory is now within src/data
+OUTPUT_DIR <- "src/data/processed/"
+# Output file paths are relative to the project root, pointing into src/data/processed
+OUTPUT_CSV <- file.path(OUTPUT_DIR, "prepared_data.csv") 
+LONG_FORMAT_CSV <- file.path(OUTPUT_DIR, "mc1-reports-data-long.csv")
+# --- END UPDATED PATHS ---
 
 # Create output directory if it doesn't exist
 dir.create(OUTPUT_DIR, recursive = TRUE, showWarnings = FALSE)
