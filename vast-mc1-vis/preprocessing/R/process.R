@@ -315,6 +315,11 @@ process_category <- function(category_name) {
     
     # Write CSV
     write_csv(aggregated_data, agg_output_file)
+    
+    # Also save all_aggregated as JSON
+    OUTPUT_JSON_AGG_SUMMARY <- file.path(OUTPUT_DIR, "all_summary_aggregated.json") # Define the output path
+    jsonlite::write_json(all_aggregated, OUTPUT_JSON_AGG_SUMMARY, pretty = TRUE, auto_unbox = TRUE)
+    cat("Aggregated summary data also saved to", OUTPUT_JSON_AGG_SUMMARY, "\n")
   }, error = function(e) {
     cat("Warning: Error creating aggregated data for category", category_name, ":", e$message, "\n")
   })

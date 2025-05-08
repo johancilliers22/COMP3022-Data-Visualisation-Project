@@ -108,6 +108,11 @@ dataset_long <- raw_data %>%
 write_csv(dataset_long, LONG_FORMAT_CSV)
 cat("Long format data saved to", LONG_FORMAT_CSV, "\n")
 
+# Save long format data as JSON
+OUTPUT_JSON_RAW_REPORTS <- "src/data/mc1-reports-data.json" # Define the output path
+jsonlite::write_json(dataset_long, OUTPUT_JSON_RAW_REPORTS, pretty = TRUE, auto_unbox = TRUE)
+cat("Long format data also saved to", OUTPUT_JSON_RAW_REPORTS, "\n")
+
 # Create simple aggregation for counting frequencies
 # This preserves data distribution while creating useful summaries
 aggregated_counts <- dataset_long %>%
