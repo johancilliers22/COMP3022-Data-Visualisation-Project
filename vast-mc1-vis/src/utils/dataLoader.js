@@ -431,10 +431,7 @@ export const loadAllData = async () => {
       reports: rawReports,
       neighborhoodGroups,
       bstsTimeAggregated,
-      locations: Object.keys(neighborhoodMap).map(id => ({
-        id,
-        name: neighborhoodMap[id]
-      }))
+      locations: neighborhoodMap
     };
     
     logger.debug('All essential data loaded successfully');
