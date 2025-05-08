@@ -1,0 +1,124 @@
+# COMP3022 Data Visualisation Project .gitignore
+
+# OS specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Compiled files
+*.class
+*.o
+*.so
+*.dll
+*.exe
+*.out
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+venv/
+ENV/
+
+# JavaScript/Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.npm
+.yarn-integrity
+
+# Java
+target/
+.mvn/
+*.jar
+*.war
+*.ear
+
+# C/C++
+*.d
+*.o
+*.ko
+*.obj
+*.elf
+*.ilk
+*.map
+*.exp
+*.gch
+*.pch
+*.lib
+*.a
+*.la
+*.lo
+*.dll
+*.so
+*.so.*
+*.dylib
+*.exe
+*.out
+*.app
+
+# Security specific
+*.pem
+*.key
+*.der
+*.p12
+*.pfx
+*.keystore
+*.jks
+.env
+*.secret
+*.token
+logs/
+*.log
+*.decrypted
+*.plain
+
+# Lab specific temporary files
+temp/
+output/
+results/
+*.tmp
+VASTChallenge2019/
+VAST-Challenge-2019-MC1-master/
+# vast-mc1-vis/public/data/processed/ # Keep this commented to allow other processed files
+vast-mc1-vis/public/data/processed/bsts_results/*.csv
+vast-mc1-vis/public/data/processed/bsts_results/*.json
+vast-mc1-vis/public/data/processed/bsts_results/timeline_data.json
+# Keep frontend_data.json and potentially all_summary_processed.csv tracked (will use LFS)
+
+# Virtual Box
+*.ova
+
+# Allow
+!.gitignore
+!.gitattributes
+!.github/ 
