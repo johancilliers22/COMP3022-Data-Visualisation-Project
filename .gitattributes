@@ -61,19 +61,19 @@
 # If using specific languages that might be misidentified,
 # you can add overrides here, e.g.:
 # *.js linguist-language=JavaScript
-# Git LFS Tracking Rules
-vast-mc1-vis/src/data/processed/frontend_data.json filter=lfs diff=lfs merge=lfs -text
-vast-mc1-vis/src/data/processed/visualization_data.json filter=lfs diff=lfs merge=lfs -text
-vast-mc1-vis/src/data/processed/all_summary_processed.csv filter=lfs diff=lfs merge=lfs -text
-vast-mc1-vis/src/data/processed/bsts_results/all_bsts_results.json filter=lfs diff=lfs merge=lfs -text
-vast-mc1-vis/src/data/processed/bsts_results/all_bsts_results.csv filter=lfs diff=lfs merge=lfs -text
-vast-mc1-vis/src/data/processed/all_summary_aggregated.csv filter=lfs diff=lfs merge=lfs -text
-vast-mc1-vis/src/data/processed/category_summary_aggregated.json filter=lfs diff=lfs merge=lfs -text
-vast-mc1-vis/src/data/processed/map_data.json filter=lfs diff=lfs merge=lfs -text
-vast-mc1-vis/src/data/processed/neighborhood_map.json filter=lfs diff=lfs merge=lfs -text
-vast-mc1-vis/src/data/neighborhoods.geojson filter=lfs diff=lfs merge=lfs -text
-vast-mc1-vis/src/data/neighbourhoods_info.json filter=lfs diff=lfs merge=lfs -text
-vast-mc1-vis/src/data/processed/bsts_results/timeline_data.json filter=lfs diff=lfs merge=lfs -text
-vast-mc1-vis/src/data/mc1-reports-data.json filter=lfs diff=lfs merge=lfs -text
-vast-mc1-vis/src/data/processed/all_summary_aggregated.json filter=lfs diff=lfs merge=lfs -text
-vast-mc1-vis/src/data/processed/prepared_data.csv filter=lfs diff=lfs merge=lfs -text
+# Git LFS Tracking Rules (updated to use public/data instead of src/data)
+vast-mc1-vis/public/data/processed/frontend_data.json filter=lfs diff=lfs merge=lfs -text
+vast-mc1-vis/public/data/processed/visualization_data.json filter=lfs diff=lfs merge=lfs -text
+vast-mc1-vis/public/data/processed/all_summary_processed.csv filter=lfs diff=lfs merge=lfs -text
+vast-mc1-vis/public/data/processed/bsts_results/all_bsts_results.json filter=lfs diff=lfs merge=lfs -text
+vast-mc1-vis/public/data/processed/bsts_results/all_bsts_results.csv filter=lfs diff=lfs merge=lfs -text
+vast-mc1-vis/public/data/processed/all_summary_aggregated.csv filter=lfs diff=lfs merge=lfs -text
+vast-mc1-vis/public/data/processed/category_summary_aggregated.json filter=lfs diff=lfs merge=lfs -text
+vast-mc1-vis/public/data/processed/map_data.json filter=lfs diff=lfs merge=lfs -text
+vast-mc1-vis/public/data/processed/neighborhood_map.json filter=lfs diff=lfs merge=lfs -text
+vast-mc1-vis/public/data/neighborhoods.geojson filter=lfs diff=lfs merge=lfs -text
+vast-mc1-vis/public/data/neighbourhoods_info.json filter=lfs diff=lfs merge=lfs -text
+vast-mc1-vis/public/data/processed/bsts_results/timeline_data.json filter=lfs diff=lfs merge=lfs -text
+vast-mc1-vis/public/data/mc1-reports-data.json filter=lfs diff=lfs merge=lfs -text
+vast-mc1-vis/public/data/processed/all_summary_aggregated.json filter=lfs diff=lfs merge=lfs -text
+vast-mc1-vis/public/data/processed/prepared_data.csv filter=lfs diff=lfs merge=lfs -text

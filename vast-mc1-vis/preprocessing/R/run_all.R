@@ -79,9 +79,9 @@ run_script <- function(script_path, script_name) {
 
 # Create output directories if they don't exist
 output_dirs <- c(
-  "src/data/processed",
-  "src/data/processed/bsts_results",
-  "src/data/processed/bsts_results/summary"
+  "public/data/processed",
+  "public/data/processed/bsts_results",
+  "public/data/processed/bsts_results/summary"
 )
 
 for (dir in output_dirs) {
@@ -92,8 +92,8 @@ for (dir in output_dirs) {
 }
 
 # Check for input data
-if (!file.exists("src/data/mc1-reports-data.csv")) {
-  stop("Input data file not found. Please place mc1-reports-data.csv in the src/data directory.")
+if (!file.exists("public/data/mc1-reports-data.csv")) {
+  stop("Input data file not found. Please place mc1-reports-data.csv in the public/data directory.")
 }
 
 # Run scripts in sequence
@@ -118,9 +118,9 @@ if (!analysis_success) {
 
 # Verify outputs exist
 expected_outputs <- c(
-  "src/data/processed/prepared_data.csv",
-  "src/data/processed/mc1-reports-data-long.csv",
-  "src/data/processed/mc1_processed_data.json"
+  "public/data/processed/prepared_data.csv",
+  "public/data/processed/mc1-reports-data-long.csv",
+  "public/data/processed/mc1_processed_data.json"
 )
 
 missing_outputs <- c()
@@ -139,7 +139,7 @@ if (length(missing_outputs) > 0) {
 
 # Final status report
 cat("\nData processing pipeline complete!\n")
-cat("Files are available in src/data/processed/\n")
+cat("Files are available in public/data/processed/\n")
 cat("Visualization data is ready to be used by the web application.\n")
 
 # Step 4: Post-processing
@@ -150,11 +150,11 @@ cat("Post-processing complete.\n\n")
 # Step 5: Verify output files
 cat("STEP 5: Verifying output files...\n")
 expected_files <- c(
-  "src/data/processed/frontend_data.json",
-  "src/data/processed/map_data.json",
-  "src/data/processed/visualization_data.json",
-  "src/data/processed/bsts_results/all_bsts_results.json",
-  "src/data/processed/neighborhood_map.json"
+  "public/data/processed/frontend_data.json",
+  "public/data/processed/map_data.json",
+  "public/data/processed/visualization_data.json",
+  "public/data/processed/bsts_results/all_bsts_results.json",
+  "public/data/processed/neighborhood_map.json"
 )
 
 missing_files <- expected_files[!file.exists(expected_files)]
@@ -170,7 +170,7 @@ if (length(missing_files) > 0) {
 # Completion message
 cat("=======================================================\n")
 cat("Processing pipeline complete!\n")
-cat("Results are available in src/data/processed/\n")
+cat("Results are available in public/data/processed/\n")
 cat("=======================================================\n")
 cat("The following files are ready for visualization:\n")
 cat("- frontend_data.json: Combined data for the web application\n")

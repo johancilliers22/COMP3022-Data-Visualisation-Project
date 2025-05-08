@@ -37,11 +37,11 @@ if (!set_correct_directory()) {
 
 # Configuration
 # --- UPDATED PATHS ---
-# Assuming input CSV is also moved to src/data. Adjust if it's elsewhere.
-INPUT_CSV <- "src/data/mc1-reports-data.csv" 
-# Output directory is now within src/data
-OUTPUT_DIR <- "src/data/processed/"
-# Output file paths are relative to the project root, pointing into src/data/processed
+# Assuming input CSV is also moved to public/data. Adjust if it's elsewhere.
+INPUT_CSV <- "public/data/mc1-reports-data.csv" 
+# Output directory is now within public/data
+OUTPUT_DIR <- "public/data/processed/"
+# Output file paths are relative to the project root, pointing into public/data/processed
 OUTPUT_CSV <- file.path(OUTPUT_DIR, "prepared_data.csv") 
 LONG_FORMAT_CSV <- file.path(OUTPUT_DIR, "mc1-reports-data-long.csv")
 # --- END UPDATED PATHS ---
@@ -109,7 +109,7 @@ write_csv(dataset_long, LONG_FORMAT_CSV)
 cat("Long format data saved to", LONG_FORMAT_CSV, "\n")
 
 # Save long format data as JSON
-OUTPUT_JSON_RAW_REPORTS <- "src/data/mc1-reports-data.json" # Define the output path
+OUTPUT_JSON_RAW_REPORTS <- "public/data/mc1-reports-data.json" # Define the output path
 jsonlite::write_json(dataset_long, OUTPUT_JSON_RAW_REPORTS, pretty = TRUE, auto_unbox = TRUE)
 cat("Long format data also saved to", OUTPUT_JSON_RAW_REPORTS, "\n")
 
