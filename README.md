@@ -1,5 +1,7 @@
 # Earthquake Damage Visualization - St. Himark (VAST Challenge 2019)
 
+**GitHub Repository:** [https://github.com/johancilliers22/COMP3022-Data-Visualisation-Project](https://github.com/johancilliers22/COMP3022-Data-Visualisation-Project)
+
 This project is an interactive web-based application developed as a React implementation for the VAST Challenge 2019 Mini-Challenge 1. It visualizes earthquake damage reports from the fictional city of St. Himark, enabling analysis of damage severity, uncertainty, and temporal trends to support simulated emergency response decision-making.
 
 [![Dashboard Screenshot 1](vast-mc1-vis/docs/images/dashboard-overview-initial.png)](vast-mc1-vis/docs/images/dashboard-overview-initial.png)
