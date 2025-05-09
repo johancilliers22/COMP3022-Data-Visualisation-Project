@@ -6,6 +6,7 @@
 **Group Name/Number:** Group 16 (Solo Project)
 **Date:** May 9, 2025 (Submitted: May 9, 2025, Due: May 7, 2025)
 **Author:** Johannes Cilliers (University ID: 20228856, Username: psyjc20)
+**Word Count**: 4000
 
 **GitHub Repository:** [https://github.com/johancilliers22/COMP3022-Data-Visualisation-Project](https://github.com/johancilliers22/COMP3022-Data-Visualisation-Project)
 **Key Runtime Requirements:** Node.js (v18.x or v14+ recommended), R (version 4.3.1 or newer for preprocessing), Modern Web Browser (e.g., Chrome, Firefox, Edge, Safari).
