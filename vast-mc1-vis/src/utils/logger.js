@@ -32,8 +32,8 @@ const LOG_LEVELS = {
 };
 
 // Current log level - DEBUG in dev, INFO in production
-//const currentLevel = LOG_LEVELS.INFO; // Default to INFO
-const currentLevel = LOG_LEVELS.DEBUG; // Uncomment for debug mode
+const currentLevel = LOG_LEVELS.INFO; // Default to INFO
+// const currentLevel = LOG_LEVELS.DEBUG; // Uncomment for debug mode
 
 /**
  * Logger object with methods for different log levels
